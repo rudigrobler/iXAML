@@ -26,9 +26,15 @@ Add the following stylesheet to your application
     </Style>
 </Stylesheet>
 ```
+Load the style sheet from the main bundle
 
-![Interface Builder](https://github.com/rudigrobler/iXAML/blob/master/Documentation/SetStyleInIB.jpg)
+```Objective-C
+NSURL *url = [[NSURL alloc] initFileURLWithPath:[[NSBundle mainBundle] pathForResource:@"dark-stylesheet" ofType:@"xaml"]];
+iXStylesheet *stylesheet = [[iXStylesheet alloc] initWithContentsOfURL:url];
+[UIApplication sharedApplication].stylesheet = stylesheet;
+```
 
+![Interface Builder](https://github.com/rudigrobler/iXAML/blob/master/Documentation/SetStyleInIB.jpg?raw=true)
 
 * Open Interface Builder
 * Click on the UIView (control) to apply the style too
@@ -36,3 +42,8 @@ Add the following stylesheet to your application
 * Set the style value to match the name of the style from the stylesheet
 
 ## Binding
+
+
+
+
+by Rudi Grobler (@rudigrobler)
