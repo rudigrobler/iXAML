@@ -1,0 +1,18 @@
+<Stylesheet>
+    <Style name="textHeaderStyle">
+        <Setter property="textColor" value="#FFFFFF" />
+        <Setter property="font" value="SegoeUI-Bold" />
+    </Style>
+    <Style name="textBodyStyle">
+        <Setter property="textColor" value="#F1F1F1" />
+        <Setter property="font" value="SegoeUI-Light" />
+    </Style>
+    <Style name="pageStyle">
+        <Setter property="backgroundColor" value="#222222" />
+    </Style>
+    <Style name="buttonStyle">
+        <Setter property="backgroundColor" value="#FFFFFF" />
+        <Setter property="textColor" value="#000000" />
+        <Setter property="font" value="SegoeUI-Light" />
+    </Style>
+</Stylesheet>

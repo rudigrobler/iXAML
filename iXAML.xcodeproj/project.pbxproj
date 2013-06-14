@@ -1,0 +1,438 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9DF170D0176A2F700049ADD5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DF170CF176A2F700049ADD5 /* UIKit.framework */; };
+		9DF170D2176A2F700049ADD5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DF170D1176A2F700049ADD5 /* Foundation.framework */; };
+		9DF170D4176A2F700049ADD5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DF170D3176A2F700049ADD5 /* CoreGraphics.framework */; };
+		9DF170DA176A2F700049ADD5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9DF170D8176A2F700049ADD5 /* InfoPlist.strings */; };
+		9DF170DC176A2F700049ADD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF170DB176A2F700049ADD5 /* main.m */; };
+		9DF170E0176A2F700049ADD5 /* iXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF170DF176A2F700049ADD5 /* iXAppDelegate.m */; };
+		9DF170E2176A2F700049ADD5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DF170E1176A2F700049ADD5 /* Default.png */; };
+		9DF170E4176A2F700049ADD5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DF170E3176A2F700049ADD5 /* Default@2x.png */; };
+		9DF170E6176A2F700049ADD5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DF170E5176A2F700049ADD5 /* Default-568h@2x.png */; };
+		9DF170E9176A2F700049ADD5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DF170E7176A2F700049ADD5 /* MainStoryboard.storyboard */; };
+		9DF170EC176A2F700049ADD5 /* iXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF170EB176A2F700049ADD5 /* iXViewController.m */; };
+		9DF170F4176A2FFD0049ADD5 /* UIView+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF170F3176A2FFD0049ADD5 /* UIView+Extensions.m */; };
+		9DF170F7176A47710049ADD5 /* UIApplication+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF170F6176A47710049ADD5 /* UIApplication+Extensions.m */; };
+		9DF170FC176A4B2D0049ADD5 /* iXStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF170F9176A48050049ADD5 /* iXStyle.m */; };
+		9DF170FD176A4B300049ADD5 /* iXStylesheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF170FB176A48050049ADD5 /* iXStylesheet.m */; };
+		9DF17100176A4FEE0049ADD5 /* UIColor+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF170FF176A4FEE0049ADD5 /* UIColor+Extensions.m */; };
+		9DF17103176A80DE0049ADD5 /* light-stylesheet.xaml in Resources */ = {isa = PBXBuildFile; fileRef = 9DF17102176A80DE0049ADD5 /* light-stylesheet.xaml */; };
+		9DF1710F176AAE4C0049ADD5 /* segoepr.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DF17104176AAE4C0049ADD5 /* segoepr.ttf */; };
+		9DF17110176AAE4C0049ADD5 /* segoeprb.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DF17105176AAE4C0049ADD5 /* segoeprb.ttf */; };
+		9DF17111176AAE4C0049ADD5 /* segoesc.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DF17106176AAE4C0049ADD5 /* segoesc.ttf */; };
+		9DF17112176AAE4C0049ADD5 /* segoescb.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DF17107176AAE4C0049ADD5 /* segoescb.ttf */; };
+		9DF17113176AAE4C0049ADD5 /* segoeui.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DF17108176AAE4C0049ADD5 /* segoeui.ttf */; };
+		9DF17114176AAE4C0049ADD5 /* segoeuib.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DF17109176AAE4C0049ADD5 /* segoeuib.ttf */; };
+		9DF17115176AAE4C0049ADD5 /* segoeuii.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DF1710A176AAE4C0049ADD5 /* segoeuii.ttf */; };
+		9DF17116176AAE4C0049ADD5 /* segoeuil.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DF1710B176AAE4C0049ADD5 /* segoeuil.ttf */; };
+		9DF17117176AAE4C0049ADD5 /* segoeuiz.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DF1710C176AAE4C0049ADD5 /* segoeuiz.ttf */; };
+		9DF17118176AAE4C0049ADD5 /* seguisb.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DF1710D176AAE4C0049ADD5 /* seguisb.ttf */; };
+		9DF17119176AAE4C0049ADD5 /* seguisym.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DF1710E176AAE4C0049ADD5 /* seguisym.ttf */; };
+		9DF1711C176AAE5D0049ADD5 /* UIFont+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF1711B176AAE5D0049ADD5 /* UIFont+Extensions.m */; };
+		9DF1711F176AAF200049ADD5 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DF1711E176AAF200049ADD5 /* CoreText.framework */; };
+		9DF17128176AD9D40049ADD5 /* button.disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DF17126176AD9D40049ADD5 /* button.disabled.png */; };
+		9DF17129176AD9D40049ADD5 /* button.default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DF17127176AD9D40049ADD5 /* button.default.png */; };
+		9DF1712B176AF42C0049ADD5 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DF1712A176AF42C0049ADD5 /* icon.png */; };
+		9DF1712E176B05E70049ADD5 /* dark-stylesheet.xaml in Resources */ = {isa = PBXBuildFile; fileRef = 9DF1712D176B05E70049ADD5 /* dark-stylesheet.xaml */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9DF170CC176A2F700049ADD5 /* iXAML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iXAML.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DF170CF176A2F700049ADD5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9DF170D1176A2F700049ADD5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9DF170D3176A2F700049ADD5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9DF170D7176A2F700049ADD5 /* iXAML-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iXAML-Info.plist"; sourceTree = "<group>"; };
+		9DF170D9176A2F700049ADD5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9DF170DB176A2F700049ADD5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9DF170DD176A2F700049ADD5 /* iXAML-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iXAML-Prefix.pch"; sourceTree = "<group>"; };
+		9DF170DE176A2F700049ADD5 /* iXAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iXAppDelegate.h; sourceTree = "<group>"; };
+		9DF170DF176A2F700049ADD5 /* iXAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iXAppDelegate.m; sourceTree = "<group>"; };
+		9DF170E1176A2F700049ADD5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		9DF170E3176A2F700049ADD5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		9DF170E5176A2F700049ADD5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9DF170E8176A2F700049ADD5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		9DF170EA176A2F700049ADD5 /* iXViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iXViewController.h; sourceTree = "<group>"; };
+		9DF170EB176A2F700049ADD5 /* iXViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iXViewController.m; sourceTree = "<group>"; };
+		9DF170F2176A2FFD0049ADD5 /* UIView+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extensions.h"; sourceTree = "<group>"; };
+		9DF170F3176A2FFD0049ADD5 /* UIView+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extensions.m"; sourceTree = "<group>"; };
+		9DF170F5176A47710049ADD5 /* UIApplication+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Extensions.h"; sourceTree = "<group>"; };
+		9DF170F6176A47710049ADD5 /* UIApplication+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Extensions.m"; sourceTree = "<group>"; };
+		9DF170F8176A48050049ADD5 /* iXStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iXStyle.h; sourceTree = "<group>"; };
+		9DF170F9176A48050049ADD5 /* iXStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iXStyle.m; sourceTree = "<group>"; };
+		9DF170FA176A48050049ADD5 /* iXStylesheet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iXStylesheet.h; sourceTree = "<group>"; };
+		9DF170FB176A48050049ADD5 /* iXStylesheet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iXStylesheet.m; sourceTree = "<group>"; };
+		9DF170FE176A4FEE0049ADD5 /* UIColor+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extensions.h"; sourceTree = "<group>"; };
+		9DF170FF176A4FEE0049ADD5 /* UIColor+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extensions.m"; sourceTree = "<group>"; };
+		9DF17102176A80DE0049ADD5 /* light-stylesheet.xaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "light-stylesheet.xaml"; sourceTree = "<group>"; };
+		9DF17104176AAE4C0049ADD5 /* segoepr.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = segoepr.ttf; sourceTree = "<group>"; };
+		9DF17105176AAE4C0049ADD5 /* segoeprb.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = segoeprb.ttf; sourceTree = "<group>"; };
+		9DF17106176AAE4C0049ADD5 /* segoesc.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = segoesc.ttf; sourceTree = "<group>"; };
+		9DF17107176AAE4C0049ADD5 /* segoescb.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = segoescb.ttf; sourceTree = "<group>"; };
+		9DF17108176AAE4C0049ADD5 /* segoeui.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = segoeui.ttf; sourceTree = "<group>"; };
+		9DF17109176AAE4C0049ADD5 /* segoeuib.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = segoeuib.ttf; sourceTree = "<group>"; };
+		9DF1710A176AAE4C0049ADD5 /* segoeuii.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = segoeuii.ttf; sourceTree = "<group>"; };
+		9DF1710B176AAE4C0049ADD5 /* segoeuil.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = segoeuil.ttf; sourceTree = "<group>"; };
+		9DF1710C176AAE4C0049ADD5 /* segoeuiz.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = segoeuiz.ttf; sourceTree = "<group>"; };
+		9DF1710D176AAE4C0049ADD5 /* seguisb.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = seguisb.ttf; sourceTree = "<group>"; };
+		9DF1710E176AAE4C0049ADD5 /* seguisym.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = seguisym.ttf; sourceTree = "<group>"; };
+		9DF1711A176AAE5D0049ADD5 /* UIFont+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Extensions.h"; sourceTree = "<group>"; };
+		9DF1711B176AAE5D0049ADD5 /* UIFont+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Extensions.m"; sourceTree = "<group>"; };
+		9DF1711E176AAF200049ADD5 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		9DF17126176AD9D40049ADD5 /* button.disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.disabled.png; sourceTree = "<group>"; };
+		9DF17127176AD9D40049ADD5 /* button.default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.default.png; sourceTree = "<group>"; };
+		9DF1712A176AF42C0049ADD5 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
+		9DF1712D176B05E70049ADD5 /* dark-stylesheet.xaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "dark-stylesheet.xaml"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9DF170C9176A2F700049ADD5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DF1711F176AAF200049ADD5 /* CoreText.framework in Frameworks */,
+				9DF170D0176A2F700049ADD5 /* UIKit.framework in Frameworks */,
+				9DF170D2176A2F700049ADD5 /* Foundation.framework in Frameworks */,
+				9DF170D4176A2F700049ADD5 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9DF170C3176A2F700049ADD5 = {
+			isa = PBXGroup;
+			children = (
+				9DF170D5176A2F700049ADD5 /* iXAML */,
+				9DF170CE176A2F700049ADD5 /* Frameworks */,
+				9DF170D6176A2F700049ADD5 /* Supporting Files */,
+				9DF170CD176A2F700049ADD5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9DF170CD176A2F700049ADD5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9DF170CC176A2F700049ADD5 /* iXAML.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9DF170CE176A2F700049ADD5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9DF1711E176AAF200049ADD5 /* CoreText.framework */,
+				9DF170CF176A2F700049ADD5 /* UIKit.framework */,
+				9DF170D1176A2F700049ADD5 /* Foundation.framework */,
+				9DF170D3176A2F700049ADD5 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9DF170D5176A2F700049ADD5 /* iXAML */ = {
+			isa = PBXGroup;
+			children = (
+				9DF17101176A52320049ADD5 /* iXAML */,
+				9DF170DE176A2F700049ADD5 /* iXAppDelegate.h */,
+				9DF170DF176A2F700049ADD5 /* iXAppDelegate.m */,
+				9DF170EA176A2F700049ADD5 /* iXViewController.h */,
+				9DF170EB176A2F700049ADD5 /* iXViewController.m */,
+				9DF170E7176A2F700049ADD5 /* MainStoryboard.storyboard */,
+				9DF17102176A80DE0049ADD5 /* light-stylesheet.xaml */,
+				9DF1712D176B05E70049ADD5 /* dark-stylesheet.xaml */,
+			);
+			path = iXAML;
+			sourceTree = "<group>";
+		};
+		9DF170D6176A2F700049ADD5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9DF1712C176AF57F0049ADD5 /* Images */,
+				9DF1711D176AAE780049ADD5 /* Fonts */,
+				9DF170D7176A2F700049ADD5 /* iXAML-Info.plist */,
+				9DF170D8176A2F700049ADD5 /* InfoPlist.strings */,
+				9DF170DB176A2F700049ADD5 /* main.m */,
+				9DF170DD176A2F700049ADD5 /* iXAML-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			path = iXAML;
+			sourceTree = "<group>";
+		};
+		9DF17101176A52320049ADD5 /* iXAML */ = {
+			isa = PBXGroup;
+			children = (
+				9DF1711A176AAE5D0049ADD5 /* UIFont+Extensions.h */,
+				9DF1711B176AAE5D0049ADD5 /* UIFont+Extensions.m */,
+				9DF170FE176A4FEE0049ADD5 /* UIColor+Extensions.h */,
+				9DF170FF176A4FEE0049ADD5 /* UIColor+Extensions.m */,
+				9DF170F8176A48050049ADD5 /* iXStyle.h */,
+				9DF170F9176A48050049ADD5 /* iXStyle.m */,
+				9DF170FA176A48050049ADD5 /* iXStylesheet.h */,
+				9DF170FB176A48050049ADD5 /* iXStylesheet.m */,
+				9DF170F2176A2FFD0049ADD5 /* UIView+Extensions.h */,
+				9DF170F3176A2FFD0049ADD5 /* UIView+Extensions.m */,
+				9DF170F5176A47710049ADD5 /* UIApplication+Extensions.h */,
+				9DF170F6176A47710049ADD5 /* UIApplication+Extensions.m */,
+			);
+			name = iXAML;
+			sourceTree = "<group>";
+		};
+		9DF1711D176AAE780049ADD5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9DF17104176AAE4C0049ADD5 /* segoepr.ttf */,
+				9DF17105176AAE4C0049ADD5 /* segoeprb.ttf */,
+				9DF17106176AAE4C0049ADD5 /* segoesc.ttf */,
+				9DF17107176AAE4C0049ADD5 /* segoescb.ttf */,
+				9DF17108176AAE4C0049ADD5 /* segoeui.ttf */,
+				9DF17109176AAE4C0049ADD5 /* segoeuib.ttf */,
+				9DF1710A176AAE4C0049ADD5 /* segoeuii.ttf */,
+				9DF1710B176AAE4C0049ADD5 /* segoeuil.ttf */,
+				9DF1710C176AAE4C0049ADD5 /* segoeuiz.ttf */,
+				9DF1710D176AAE4C0049ADD5 /* seguisb.ttf */,
+				9DF1710E176AAE4C0049ADD5 /* seguisym.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		9DF1712C176AF57F0049ADD5 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				9DF1712A176AF42C0049ADD5 /* icon.png */,
+				9DF17126176AD9D40049ADD5 /* button.disabled.png */,
+				9DF17127176AD9D40049ADD5 /* button.default.png */,
+				9DF170E1176A2F700049ADD5 /* Default.png */,
+				9DF170E3176A2F700049ADD5 /* Default@2x.png */,
+				9DF170E5176A2F700049ADD5 /* Default-568h@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9DF170CB176A2F700049ADD5 /* iXAML */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DF170EF176A2F700049ADD5 /* Build configuration list for PBXNativeTarget "iXAML" */;
+			buildPhases = (
+				9DF170C8176A2F700049ADD5 /* Sources */,
+				9DF170C9176A2F700049ADD5 /* Frameworks */,
+				9DF170CA176A2F700049ADD5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iXAML;
+			productName = iXAML;
+			productReference = 9DF170CC176A2F700049ADD5 /* iXAML.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9DF170C4176A2F700049ADD5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = iX;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Rudi Grobler";
+			};
+			buildConfigurationList = 9DF170C7176A2F700049ADD5 /* Build configuration list for PBXProject "iXAML" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9DF170C3176A2F700049ADD5;
+			productRefGroup = 9DF170CD176A2F700049ADD5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9DF170CB176A2F700049ADD5 /* iXAML */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9DF170CA176A2F700049ADD5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DF170DA176A2F700049ADD5 /* InfoPlist.strings in Resources */,
+				9DF170E2176A2F700049ADD5 /* Default.png in Resources */,
+				9DF170E4176A2F700049ADD5 /* Default@2x.png in Resources */,
+				9DF170E6176A2F700049ADD5 /* Default-568h@2x.png in Resources */,
+				9DF170E9176A2F700049ADD5 /* MainStoryboard.storyboard in Resources */,
+				9DF17103176A80DE0049ADD5 /* light-stylesheet.xaml in Resources */,
+				9DF1710F176AAE4C0049ADD5 /* segoepr.ttf in Resources */,
+				9DF17110176AAE4C0049ADD5 /* segoeprb.ttf in Resources */,
+				9DF17111176AAE4C0049ADD5 /* segoesc.ttf in Resources */,
+				9DF17112176AAE4C0049ADD5 /* segoescb.ttf in Resources */,
+				9DF17113176AAE4C0049ADD5 /* segoeui.ttf in Resources */,
+				9DF17114176AAE4C0049ADD5 /* segoeuib.ttf in Resources */,
+				9DF17115176AAE4C0049ADD5 /* segoeuii.ttf in Resources */,
+				9DF17116176AAE4C0049ADD5 /* segoeuil.ttf in Resources */,
+				9DF17117176AAE4C0049ADD5 /* segoeuiz.ttf in Resources */,
+				9DF17118176AAE4C0049ADD5 /* seguisb.ttf in Resources */,
+				9DF17119176AAE4C0049ADD5 /* seguisym.ttf in Resources */,
+				9DF17128176AD9D40049ADD5 /* button.disabled.png in Resources */,
+				9DF17129176AD9D40049ADD5 /* button.default.png in Resources */,
+				9DF1712B176AF42C0049ADD5 /* icon.png in Resources */,
+				9DF1712E176B05E70049ADD5 /* dark-stylesheet.xaml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9DF170C8176A2F700049ADD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DF170DC176A2F700049ADD5 /* main.m in Sources */,
+				9DF170E0176A2F700049ADD5 /* iXAppDelegate.m in Sources */,
+				9DF170EC176A2F700049ADD5 /* iXViewController.m in Sources */,
+				9DF170F4176A2FFD0049ADD5 /* UIView+Extensions.m in Sources */,
+				9DF170F7176A47710049ADD5 /* UIApplication+Extensions.m in Sources */,
+				9DF170FC176A4B2D0049ADD5 /* iXStyle.m in Sources */,
+				9DF170FD176A4B300049ADD5 /* iXStylesheet.m in Sources */,
+				9DF17100176A4FEE0049ADD5 /* UIColor+Extensions.m in Sources */,
+				9DF1711C176AAE5D0049ADD5 /* UIFont+Extensions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9DF170D8176A2F700049ADD5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9DF170D9176A2F700049ADD5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9DF170E7176A2F700049ADD5 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9DF170E8176A2F700049ADD5 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9DF170ED176A2F700049ADD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		9DF170EE176A2F700049ADD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9DF170F0176A2F700049ADD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iXAML/iXAML-Prefix.pch";
+				INFOPLIST_FILE = "iXAML/iXAML-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9DF170F1176A2F700049ADD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iXAML/iXAML-Prefix.pch";
+				INFOPLIST_FILE = "iXAML/iXAML-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9DF170C7176A2F700049ADD5 /* Build configuration list for PBXProject "iXAML" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DF170ED176A2F700049ADD5 /* Debug */,
+				9DF170EE176A2F700049ADD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DF170EF176A2F700049ADD5 /* Build configuration list for PBXNativeTarget "iXAML" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DF170F0176A2F700049ADD5 /* Debug */,
+				9DF170F1176A2F700049ADD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9DF170C4176A2F700049ADD5 /* Project object */;
+}
