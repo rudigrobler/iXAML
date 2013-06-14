@@ -34,12 +34,11 @@ iXStylesheet *stylesheet = [[iXStylesheet alloc] initWithContentsOfURL:url];
 [UIApplication sharedApplication].stylesheet = stylesheet;
 ```
 
+Open Interface Builder and click on the UIView (control) you want to style
+
 ![Interface Builder](https://github.com/rudigrobler/iXAML/blob/master/Documentation/SetStyleInIB.jpg?raw=true)
 
-* Open Interface Builder
-* Click on the UIView (control) to apply the style too
-* In the User Defined Runtime Attributes, add a new string called 'style'
-* Set the style value to match the name of the style from the stylesheet
+Add a 'style' User Defined Runtime Attributes and set it... and iXAML will do the rest!
 
 ## Binding
 
