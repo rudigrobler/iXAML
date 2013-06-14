@@ -4,6 +4,8 @@ iXAML is a proof of concept to add VERY basic binding & styling support for iOS.
 
 ## Styling
 
+Add the following stylesheet to your application
+
 ```xml
 <Stylesheet>
     <Style name="textHeaderStyle">
@@ -25,12 +27,12 @@ iXAML is a proof of concept to add VERY basic binding & styling support for iOS.
 </Stylesheet>
 ```
 
-https://github.com/rudigrobler/iXAML/blob/master/Documentation/SetStyleInIB.jpg
+![Interface Builder](https://github.com/rudigrobler/iXAML/blob/master/Documentation/SetStyleInIB.jpg)
 
-Open Interface Builder
-Click on the UIView (control) to apply the style too
-In the User Defined Runtime Attributes, add a new string called 'style'
-Set the style value to match the name of the style from the stylesheet
 
+* Open Interface Builder
+* Click on the UIView (control) to apply the style too
+* In the User Defined Runtime Attributes, add a new string called 'style'
+* Set the style value to match the name of the style from the stylesheet
 
 ## Binding
