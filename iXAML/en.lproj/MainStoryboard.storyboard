@@ -139,20 +139,6 @@
         <image name="button.default.png" width="150" height="44"/>
         <image name="button.disabled.png" width="150" height="44"/>
     </resources>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="iXViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/iXViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="onDark:"/>
-                <relationship kind="action" name="onLight:"/>
-                <relationship kind="action" name="onReset:"/>
-                <relationship kind="action" name="onUpdate:"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
