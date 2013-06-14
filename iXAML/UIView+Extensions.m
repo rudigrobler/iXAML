@@ -1,3 +1,4 @@
+#import "UIFont+Extensions.h"
 #import "UIView+Extensions.h"
 #import "UIApplication+Extensions.h"
 #import "UIColor+Extensions.h"
@@ -97,7 +98,7 @@
                         }
                     }
                     else if ([key isEqualToString:@"font"]) {
-                        UIFont *font = [UIFont fontWithName:value size:17];
+                        UIFont *font = [UIFont fontWithNameAndSize:value];
                         if (font) {
                             [self setValue:font forKey:key];
                         }
@@ -164,6 +165,10 @@
 }
 
 - (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:@"StylesheetNotification"
+                                                  object:nil];
+
     if ([self context]) {
         [[self viewController] removeObserver:self forKeyPath:[self binding] context:(__bridge void *) ([self context])];
     }
