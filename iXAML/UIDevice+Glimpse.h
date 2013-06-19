@@ -1,6 +1,6 @@
 #import <UIKit/UIKit.h>
 
-@interface UIView (Glimpse)
+@interface UIDevice (Glimpse)
 
 + (void)glimpse;
 

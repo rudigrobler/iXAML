@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9D3FF6B91772582E00C99096 /* Glimpse.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D3FF6B61772582E00C99096 /* Glimpse.m */; };
 		9D3FF6BA1772582E00C99096 /* GlimpseVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D3FF6B81772582E00C99096 /* GlimpseVersion.m */; };
+		9D3FF6BE17725F0800C99096 /* UIDevice+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D3FF6BD17725F0800C99096 /* UIDevice+Extensions.m */; };
+		9D3FF6C117725F5A00C99096 /* UIDevice+Glimpse.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D3FF6C017725F5A00C99096 /* UIDevice+Glimpse.m */; };
 		9D614CE31772316F00534C5F /* UIViewController+Binding.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D614CE21772316F00534C5F /* UIViewController+Binding.m */; };
 		9D8A2EE81771A3BE00307626 /* UIView+Styling.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8A2EE71771A3BE00307626 /* UIView+Styling.m */; };
 		9D8A2EED1771A5CD00307626 /* UIView+Binding.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8A2EEC1771A5CD00307626 /* UIView+Binding.m */; };
@@ -60,6 +62,10 @@
 		9D3FF6B61772582E00C99096 /* Glimpse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Glimpse.m; sourceTree = "<group>"; };
 		9D3FF6B71772582E00C99096 /* GlimpseVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlimpseVersion.h; sourceTree = "<group>"; };
 		9D3FF6B81772582E00C99096 /* GlimpseVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlimpseVersion.m; sourceTree = "<group>"; };
+		9D3FF6BC17725F0800C99096 /* UIDevice+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Extensions.h"; sourceTree = "<group>"; };
+		9D3FF6BD17725F0800C99096 /* UIDevice+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Extensions.m"; sourceTree = "<group>"; };
+		9D3FF6BF17725F5A00C99096 /* UIDevice+Glimpse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Glimpse.h"; sourceTree = "<group>"; };
+		9D3FF6C017725F5A00C99096 /* UIDevice+Glimpse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Glimpse.m"; sourceTree = "<group>"; };
 		9D614CE11772316F00534C5F /* UIViewController+Binding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Binding.h"; sourceTree = "<group>"; };
 		9D614CE21772316F00534C5F /* UIViewController+Binding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Binding.m"; sourceTree = "<group>"; };
 		9D69DB4F176B6C910024E847 /* iXComplexViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iXComplexViewController.h; sourceTree = "<group>"; };
@@ -144,6 +150,8 @@
 		9D3FF6B31772572D00C99096 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				9D3FF6BC17725F0800C99096 /* UIDevice+Extensions.h */,
+				9D3FF6BD17725F0800C99096 /* UIDevice+Extensions.m */,
 				9DDA4973176B663200B4045E /* NSObject+Extensions.h */,
 				9DDA4974176B663200B4045E /* NSObject+Extensions.m */,
 			);
@@ -216,6 +224,8 @@
 				9D3FF6B31772572D00C99096 /* Extensions */,
 				9DDA4975176B663200B4045E /* UIView+Glimpse.h */,
 				9DDA4976176B663200B4045E /* UIView+Glimpse.m */,
+				9D3FF6BF17725F5A00C99096 /* UIDevice+Glimpse.h */,
+				9D3FF6C017725F5A00C99096 /* UIDevice+Glimpse.m */,
 			);
 			name = Glimpse;
 			sourceTree = "<group>";
@@ -439,6 +449,8 @@
 				9D614CE31772316F00534C5F /* UIViewController+Binding.m in Sources */,
 				9D3FF6B91772582E00C99096 /* Glimpse.m in Sources */,
 				9D3FF6BA1772582E00C99096 /* GlimpseVersion.m in Sources */,
+				9D3FF6BE17725F0800C99096 /* UIDevice+Extensions.m in Sources */,
+				9D3FF6C117725F5A00C99096 /* UIDevice+Glimpse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

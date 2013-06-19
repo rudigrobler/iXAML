@@ -69,7 +69,7 @@
                 }
                 else
                 {
-                    NSLog(@"Property '%@' not found on '%@'", property, className);
+                    //NSLog(@"Property '%@' not found on '%@'", property, className);
                 }
             }
             else if ([className isEqualToString:@"UILabel"])
@@ -85,7 +85,7 @@
                 }
                 else
                 {
-                    NSLog(@"Property '%@' not found on '%@'", property, className);
+                    //NSLog(@"Property '%@' not found on '%@'", property, className);
                 }
             }
             else if ([className isEqualToString:@"UITextField"])

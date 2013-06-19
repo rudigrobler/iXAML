@@ -3,10 +3,15 @@
 #import "iXStylesheet.h"
 #import "UIApplication+Styling.h"
 #import "iXAML.h"
+#import "Glimpse.h"
+#import "UIDevice+Glimpse.h"
 
 @implementation iXAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    NSLog(@"Glimpse %@", [Glimpse version]);
+    [UIDevice glimpse];
+    
     NSLog(@"iXAML %@", [iXAML version]);
     
     [UIFont registerCustomFonts];

@@ -1,7 +1,7 @@
 #import "NSObject+Extensions.h"
 #import "UIView+Glimpse.h"
 
-@implementation UIView (Swizzle)
+@implementation UIView (Glimpse)
 
 + (void)glimpse {
     [UIView swizzleMethod:NSSelectorFromString(@"init") withMethod:NSSelectorFromString(@"swizzle_init") error:nil];
