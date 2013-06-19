@@ -25,8 +25,7 @@ Add the following stylesheet to your application
     <Style name="buttonStyle">
         <Setter property="background-color" value="#333333" />
         <Setter property="text-color" value="#F1F1F1" />
-        <Setter property="border-color" value="#FF0000" />
-        <Setter property="border-width" value="1" />
+        <Setter property="border-color" value="#FF0000" />        <Setter property="border-width" value="1" />
         <Setter property="corner-radius" value="5" />
         <Setter property="font" value="SegoeUI-Light 17" />
     </Style>
@@ -49,4 +48,12 @@ Open Interface Builder and click on the UIView (control) you want to style
 
 Add a 'style' User Defined Runtime Attributes and set it... and iXAML will do the rest!
 
-by Rudi Grobler (@rudigrobler)
+## Similar
+
+* https://github.com/cssapply/CSSApply
+* https://github.com/tombenner/nui
+* https://github.com/juliengomes/iCSS
+* https://github.com/facebook/three20
+* https://github.com/jverkoey/nimbus
+
+by Rudi Grobler (![@rudigrobler](http://twitter.com/rudigrobler))
