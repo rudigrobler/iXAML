@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>iXAML by rudigrobler</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>iXAML</h1>
+        <h2>when UIAppearance is not enough</h2>
+        <a href="https://github.com/rudigrobler/iXAML" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <p><a href="http://nshipster.com/uiappearance/">UIAppearance</a> allows the appearance of views and controls to be consistently defined across the entire application.</p>
+
+<p><strong>If UIAppearance is so great, why do we need iXAML?</strong></p>
+
+<p>A major shortcoming of UIAppearance is that styles are imperative (applied it runtime in code), not declarative.</p>
+
+<p>iXAML adds support for declarative stylesheets</p>
+
+<h2>
+<a name="design-goals-of-ixaml" class="anchor" href="#design-goals-of-ixaml"><span class="octicon octicon-link"></span></a>Design goals of iXAML</h2>
+
+<ul>
+<li>Interface Builder support</li>
+<li>Switching themes at runtime</li>
+<li>Support multiple stylesheet formats (plist, xaml, css, less, etc.)</li>
+<li>Be light-weight and non-intrusive</li>
+<li>No overriding of framework methods</li>
+<li>No swizzling</li>
+<li>No custom base UIView or UIViewController</li>
+</ul><h2>
+<a name="styling" class="anchor" href="#styling"><span class="octicon octicon-link"></span></a>Styling</h2>
+
+<p>Add a stylesheet to your application</p>
+
+<div class="highlight"><pre><span class="nt">&lt;Stylesheet&gt;</span>
+    <span class="nt">&lt;Style</span> <span class="na">name=</span><span class="s">"textHeaderStyle"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;Setter</span> <span class="na">property=</span><span class="s">"text-color"</span> <span class="na">value=</span><span class="s">"#333333"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;Setter</span> <span class="na">property=</span><span class="s">"font"</span> <span class="na">value=</span><span class="s">"SegoeUI-Bold 20"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/Style&gt;</span>
+    <span class="nt">&lt;Style</span> <span class="na">name=</span><span class="s">"textBodyStyle"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;Setter</span> <span class="na">property=</span><span class="s">"text-color"</span> <span class="na">value=</span><span class="s">"#333333"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;Setter</span> <span class="na">property=</span><span class="s">"font"</span> <span class="na">value=</span><span class="s">"SegoeUI-Light 17"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/Style&gt;</span>
+    <span class="nt">&lt;Style</span> <span class="na">name=</span><span class="s">"pageStyle"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;Setter</span> <span class="na">property=</span><span class="s">"background-color"</span> <span class="na">value=</span><span class="s">"#F1F1F1"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;Setter</span> <span class="na">property=</span><span class="s">"border-color"</span> <span class="na">value=</span><span class="s">"#0000FF"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;Setter</span> <span class="na">property=</span><span class="s">"border-width"</span> <span class="na">value=</span><span class="s">"10"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;Setter</span> <span class="na">property=</span><span class="s">"corner-radius"</span> <span class="na">value=</span><span class="s">"0"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/Style&gt;</span>
+    <span class="nt">&lt;Style</span> <span class="na">name=</span><span class="s">"buttonStyle"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;Setter</span> <span class="na">property=</span><span class="s">"background-color"</span> <span class="na">value=</span><span class="s">"#333333"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;Setter</span> <span class="na">property=</span><span class="s">"text-color"</span> <span class="na">value=</span><span class="s">"#F1F1F1"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;Setter</span> <span class="na">property=</span><span class="s">"border-color"</span> <span class="na">value=</span><span class="s">"#FF0000"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;Setter</span> <span class="na">property=</span><span class="s">"border-width"</span> <span class="na">value=</span><span class="s">"1"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;Setter</span> <span class="na">property=</span><span class="s">"corner-radius"</span> <span class="na">value=</span><span class="s">"5"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;Setter</span> <span class="na">property=</span><span class="s">"font"</span> <span class="na">value=</span><span class="s">"SegoeUI-Light 17"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/Style&gt;</span>
+<span class="nt">&lt;/Stylesheet&gt;</span>
+</pre></div>
+
+<p>Load the style sheet</p>
+
+<div class="highlight"><pre><span class="n">NSURL</span> <span class="o">*</span><span class="n">url</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSURL</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">initWithXAML</span><span class="o">:</span><span class="n">url</span><span class="o">:</span><span class="p">[[</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="p">]</span> 
+                         <span class="n">pathForResource</span><span class="o">:</span><span class="s">@"dark-stylesheet"</span>
+                                  <span class="nl">ofType:</span><span class="s">@"xaml"</span><span class="p">]];</span>
+
+<span class="n">iXStylesheet</span> <span class="o">*</span><span class="n">stylesheet</span> <span class="o">=</span> <span class="p">[[</span><span class="n">iXStylesheet</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">initWithContentsOfURL</span><span class="o">:</span><span class="n">url</span><span class="p">];</span>
+
+<span class="p">[[</span><span class="n">UIApplication</span> <span class="n">sharedApplication</span><span class="p">]</span> <span class="n">setStylesheet</span><span class="o">:</span><span class="n">stylesheet</span><span class="p">];</span>
+</pre></div>
+
+<p>Open Interface Builder, click on the control you want to style and open the identity inspector</p>
+
+<p><img src="https://github.com/rudigrobler/iXAML/blob/master/Documentation/interface_builder_UILabel_identity_inspector_style_textHeaderStyle.jpg?raw=true" alt="Interface Builder"></p>
+
+<p>Add a 'style' User Defined Runtime Attributes and iXAML will do the rest!</p>
+
+<h2>
+<a name="similar" class="anchor" href="#similar"><span class="octicon octicon-link"></span></a>Similar</h2>
+
+<ul>
+<li><a href="https://github.com/tombenner/nui">https://github.com/tombenner/nui</a></li>
+<li><a href="https://github.com/cssapply/CSSApply">https://github.com/cssapply/CSSApply</a></li>
+<li><a href="https://github.com/juliengomes/iCSS">https://github.com/juliengomes/iCSS</a></li>
+<li><a href="https://github.com/facebook/three20">https://github.com/facebook/three20</a></li>
+<li><a href="https://github.com/jverkoey/nimbus">https://github.com/jverkoey/nimbus</a></li>
+</ul><p>by <a href="http://twitter.com/rudigrobler/">@rudigrobler</a></p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/rudigrobler/iXAML/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/rudigrobler/iXAML/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/rudigrobler/iXAML"></a> is maintained by <a href="https://github.com/rudigrobler">rudigrobler</a>.</p>
+
+          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
