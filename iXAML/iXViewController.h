@@ -6,7 +6,7 @@
 
 @property NSString *timestamp;
 
-@property BOOL canUpdate;
+//@property BOOL canUpdate;
 
 - (IBAction)onUpdate:(id)sender;
 

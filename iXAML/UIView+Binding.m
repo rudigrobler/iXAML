@@ -32,46 +32,23 @@
 
 - (void)setBinding:(id)binding {
     objc_setAssociatedObject(self, @"___binding", binding, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (id)context {
-    return objc_getAssociatedObject(self, @"___context");
-}
-
-- (void)setContext:(id)context {
-    objc_setAssociatedObject(self, @"___context", context, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self applyBinding];
+    });
 }
 
 - (void)applyBinding {
-    if ([self context]) {
-    }
-    else {
-        NSString *binding = [self binding];
-        if (binding) {
-            UIViewController *viewController = [self viewController];
-            if (viewController) {
-                if ([viewController respondsToSelector:NSSelectorFromString(binding)]) {
-                    [self setContext:[NSString stringWithFormat:@"%@+%@+0x%lx", NSStringFromClass([self class]), binding, (unsigned long) [self hash]]];
-
-                    [viewController addObserver:self forKeyPath:binding options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial) context:(__bridge void *) ([self context])];
+    NSString *binding = [self binding];
+    if (binding) {
+        UIViewController *viewController = [self viewController];
+        if (viewController) {
+            if ([viewController respondsToSelector:NSSelectorFromString(binding)]) {
+                if ([NSStringFromClass([self class]) isEqualToString:@"UILabel"])
+                {
+                    ((UILabel*)self).text = [viewController performSelector:NSSelectorFromString(binding)];
                 }
             }
-        }
-    }
-}
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-
-    if (keyPath == [self binding]) {
-        if ([NSStringFromClass([self class]) isEqualToString:@"UILabel"]) {
-            UILabel *label = (UILabel *) self;
-            label.text = [change valueForKey:@"new"];
-        }
-        else if ([NSStringFromClass([self class]) isEqualToString:@"UIButton"]) {
-            UIButton *button = (UIButton *) self;
-            BOOL isEnabled = [[change valueForKey:@"new"] boolValue];
-            [button setUserInteractionEnabled:isEnabled];
-            [button setEnabled:isEnabled];
         }
     }
 }

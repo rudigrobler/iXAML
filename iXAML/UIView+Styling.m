@@ -96,12 +96,11 @@
 }
 
 - (void)applyStyle {
-    NSString *styleName = [self style];
-    if (styleName) {
+    NSString *style = [self style];
+    if (style) {
         iXStylesheet *stylesheet = [UIApplication sharedApplication].stylesheet;
         if (stylesheet) {
-            iXStyle *style = [stylesheet valueForKey:styleName];
-            [self applyStyle:style];
+            [self applyStyle:[stylesheet valueForKey:style]];
         }
     }
 }

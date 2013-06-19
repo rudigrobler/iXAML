@@ -16,7 +16,7 @@
     if (self) {
         dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"MM/dd/yyyy hh:mm:ss"];
-        _canUpdate = YES;
+        //_canUpdate = YES;
     }
     return self;
 }
@@ -33,14 +33,14 @@
     }
     else {
         self.timestamp = @"DONE";
-        self.canUpdate = NO;
+        //self.canUpdate = NO;
     }
 }
 
 - (IBAction)onReset:(id)sender {
     self.timestamp = [dateFormatter stringFromDate:[NSDate dateWithTimeIntervalSinceNow:0]];
     clickCount = 0;
-    self.canUpdate = YES;
+    //self.canUpdate = YES;
 }
 
 - (IBAction)onLight:(id)sender {
