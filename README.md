@@ -25,7 +25,8 @@ Add the following stylesheet to your application
     <Style name="buttonStyle">
         <Setter property="background-color" value="#333333" />
         <Setter property="text-color" value="#F1F1F1" />
-        <Setter property="border-color" value="#FF0000" />        <Setter property="border-width" value="1" />
+        <Setter property="border-color" value="#FF0000" />        
+        <Setter property="border-width" value="1" />
         <Setter property="corner-radius" value="5" />
         <Setter property="font" value="SegoeUI-Light 17" />
     </Style>
@@ -35,18 +36,18 @@ Load the style sheet from the main bundle
 
 ```Objective-C
 NSURL *url = [[NSURL alloc] initFileURLWithPath:[[NSBundle mainBundle] 
-                                pathForResource:@"dark-stylesheet" 
-                                         ofType:@"xaml"]];
-iXStylesheet *stylesheet = [[iXStylesheet alloc] initWithContentsOfURL:url];
-
-[UIApplication sharedApplication].stylesheet = stylesheet;
-```
 
 Open Interface Builder and click on the UIView (control) you want to style
 
 ![Interface Builder](https://github.com/rudigrobler/iXAML/blob/master/Documentation/SetStyleInIB.jpg?raw=true)
 
-Add a 'style' User Defined Runtime Attributes and set it... and iXAML will do the rest!
+Add a 'style' User Defined Runtime Attributes and                                 pathForResource:@"dark-stylesheet" 
+                                         ofType:@"xaml"]];
+iXStylesheet *stylesheet = [[iXStylesheet alloc] initWithContentsOfURL:url];
+
+[UIApplication sharedApplication].stylesheet = stylesheet;
+```
+set it... and iXAML will do the rest!
 
 ## Similar
 
@@ -56,4 +57,4 @@ Add a 'style' User Defined Runtime Attributes and set it... and iXAML will do th
 * https://github.com/facebook/three20
 * https://github.com/jverkoey/nimbus
 
-by Rudi Grobler (![@rudigrobler](http://twitter.com/rudigrobler))
+[by ](http://twitter.com/rudigrobler/ "@rudigrobler")
