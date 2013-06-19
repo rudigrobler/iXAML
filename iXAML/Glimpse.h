@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 
-@interface iXAML : NSObject
+@interface Glimpse : NSObject
 
 + (NSString *)version;
 

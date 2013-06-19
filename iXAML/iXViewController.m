@@ -26,9 +26,6 @@
 }
 
 - (IBAction)onLight:(id)sender {
-    
-    [self applyBinding:@"timestamp"];
-    
     NSURL *url = [[NSURL alloc] initFileURLWithPath:[[NSBundle mainBundle] pathForResource:@"light-stylesheet" ofType:@"xaml"]];
     iXStylesheet *stylesheet = [[iXStylesheet alloc] initWithXAML:url];
     

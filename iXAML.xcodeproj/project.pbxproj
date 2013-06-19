@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D3FF6B91772582E00C99096 /* Glimpse.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D3FF6B61772582E00C99096 /* Glimpse.m */; };
+		9D3FF6BA1772582E00C99096 /* GlimpseVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D3FF6B81772582E00C99096 /* GlimpseVersion.m */; };
 		9D614CE31772316F00534C5F /* UIViewController+Binding.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D614CE21772316F00534C5F /* UIViewController+Binding.m */; };
 		9D8A2EE81771A3BE00307626 /* UIView+Styling.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8A2EE71771A3BE00307626 /* UIView+Styling.m */; };
 		9D8A2EED1771A5CD00307626 /* UIView+Binding.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8A2EEC1771A5CD00307626 /* UIView+Binding.m */; };
@@ -26,7 +28,6 @@
 		9DF170E6176A2F700049ADD5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DF170E5176A2F700049ADD5 /* Default-568h@2x.png */; };
 		9DF170E9176A2F700049ADD5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DF170E7176A2F700049ADD5 /* MainStoryboard.storyboard */; };
 		9DF170EC176A2F700049ADD5 /* iXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF170EB176A2F700049ADD5 /* iXViewController.m */; };
-		9DF170F4176A2FFD0049ADD5 /* UIView+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF170F3176A2FFD0049ADD5 /* UIView+Extensions.m */; };
 		9DF170F7176A47710049ADD5 /* UIApplication+Styling.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF170F6176A47710049ADD5 /* UIApplication+Styling.m */; };
 		9DF170FC176A4B2D0049ADD5 /* iXStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF170F9176A48050049ADD5 /* iXStyle.m */; };
 		9DF170FD176A4B300049ADD5 /* iXStylesheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF170FB176A48050049ADD5 /* iXStylesheet.m */; };
@@ -55,6 +56,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D3FF6B51772582E00C99096 /* Glimpse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Glimpse.h; sourceTree = "<group>"; };
+		9D3FF6B61772582E00C99096 /* Glimpse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Glimpse.m; sourceTree = "<group>"; };
+		9D3FF6B71772582E00C99096 /* GlimpseVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlimpseVersion.h; sourceTree = "<group>"; };
+		9D3FF6B81772582E00C99096 /* GlimpseVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlimpseVersion.m; sourceTree = "<group>"; };
 		9D614CE11772316F00534C5F /* UIViewController+Binding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Binding.h"; sourceTree = "<group>"; };
 		9D614CE21772316F00534C5F /* UIViewController+Binding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Binding.m"; sourceTree = "<group>"; };
 		9D69DB4F176B6C910024E847 /* iXComplexViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iXComplexViewController.h; sourceTree = "<group>"; };
@@ -86,8 +91,6 @@
 		9DF170E8176A2F700049ADD5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		9DF170EA176A2F700049ADD5 /* iXViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iXViewController.h; sourceTree = "<group>"; };
 		9DF170EB176A2F700049ADD5 /* iXViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iXViewController.m; sourceTree = "<group>"; };
-		9DF170F2176A2FFD0049ADD5 /* UIView+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extensions.h"; sourceTree = "<group>"; };
-		9DF170F3176A2FFD0049ADD5 /* UIView+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extensions.m"; sourceTree = "<group>"; };
 		9DF170F5176A47710049ADD5 /* UIApplication+Styling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Styling.h"; sourceTree = "<group>"; };
 		9DF170F6176A47710049ADD5 /* UIApplication+Styling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Styling.m"; sourceTree = "<group>"; };
 		9DF170F8176A48050049ADD5 /* iXStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iXStyle.h; sourceTree = "<group>"; };
@@ -138,6 +141,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D3FF6B31772572D00C99096 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9DDA4973176B663200B4045E /* NSObject+Extensions.h */,
+				9DDA4974176B663200B4045E /* NSObject+Extensions.m */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		9D3FF6B41772575300C99096 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9DF1717E176B21740049ADD5 /* iXAML.h */,
+				9DF1717F176B21740049ADD5 /* iXAML.m */,
+				9DF17180176B21740049ADD5 /* iXAMLVersion.h */,
+				9DF17181176B21740049ADD5 /* iXAMLVersion.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		9D3FF6BB1772589C00C99096 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9D3FF6B51772582E00C99096 /* Glimpse.h */,
+				9D3FF6B61772582E00C99096 /* Glimpse.m */,
+				9D3FF6B71772582E00C99096 /* GlimpseVersion.h */,
+				9D3FF6B81772582E00C99096 /* GlimpseVersion.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
 		9D8A2EE91771A59D00307626 /* Styling */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,8 +212,8 @@
 		9DDA4979176B663800B4045E /* Glimpse */ = {
 			isa = PBXGroup;
 			children = (
-				9DDA4973176B663200B4045E /* NSObject+Extensions.h */,
-				9DDA4974176B663200B4045E /* NSObject+Extensions.m */,
+				9D3FF6BB1772589C00C99096 /* Common */,
+				9D3FF6B31772572D00C99096 /* Extensions */,
 				9DDA4975176B663200B4045E /* UIView+Glimpse.h */,
 				9DDA4976176B663200B4045E /* UIView+Glimpse.m */,
 			);
@@ -201,7 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				9DF1712F176B1A5D0049ADD5 /* README.md */,
-				9DF170D5176A2F700049ADD5 /* iXAML */,
+				9DF170D5176A2F700049ADD5 /* iXAML-Sample */,
 				9DF170CE176A2F700049ADD5 /* Frameworks */,
 				9DF170D6176A2F700049ADD5 /* Supporting Files */,
 				9DF170CD176A2F700049ADD5 /* Products */,
@@ -228,7 +262,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		9DF170D5176A2F700049ADD5 /* iXAML */ = {
+		9DF170D5176A2F700049ADD5 /* iXAML-Sample */ = {
 			isa = PBXGroup;
 			children = (
 				9DDA4979176B663800B4045E /* Glimpse */,
@@ -241,6 +275,7 @@
 				9D69DB50176B6C910024E847 /* iXComplexViewController.m */,
 				9DF170E7176A2F700049ADD5 /* MainStoryboard.storyboard */,
 			);
+			name = "iXAML-Sample";
 			path = iXAML;
 			sourceTree = "<group>";
 		};
@@ -262,15 +297,10 @@
 		9DF17101176A52320049ADD5 /* iXAML */ = {
 			isa = PBXGroup;
 			children = (
-				9DF1717E176B21740049ADD5 /* iXAML.h */,
-				9DF1717F176B21740049ADD5 /* iXAML.m */,
-				9DF17180176B21740049ADD5 /* iXAMLVersion.h */,
-				9DF17181176B21740049ADD5 /* iXAMLVersion.m */,
+				9D3FF6B41772575300C99096 /* Common */,
 				9D8A2EEF1771A5E900307626 /* Extensions */,
 				9D8A2EE91771A59D00307626 /* Styling */,
 				9D8A2EEE1771A5D000307626 /* Binding */,
-				9DF170F2176A2FFD0049ADD5 /* UIView+Extensions.h */,
-				9DF170F3176A2FFD0049ADD5 /* UIView+Extensions.m */,
 			);
 			name = iXAML;
 			sourceTree = "<group>";
@@ -395,7 +425,6 @@
 				9DF170DC176A2F700049ADD5 /* main.m in Sources */,
 				9DF170E0176A2F700049ADD5 /* iXAppDelegate.m in Sources */,
 				9DF170EC176A2F700049ADD5 /* iXViewController.m in Sources */,
-				9DF170F4176A2FFD0049ADD5 /* UIView+Extensions.m in Sources */,
 				9DF170F7176A47710049ADD5 /* UIApplication+Styling.m in Sources */,
 				9DF170FC176A4B2D0049ADD5 /* iXStyle.m in Sources */,
 				9DF170FD176A4B300049ADD5 /* iXStylesheet.m in Sources */,
@@ -408,6 +437,8 @@
 				9D8A2EE81771A3BE00307626 /* UIView+Styling.m in Sources */,
 				9D8A2EED1771A5CD00307626 /* UIView+Binding.m in Sources */,
 				9D614CE31772316F00534C5F /* UIViewController+Binding.m in Sources */,
+				9D3FF6B91772582E00C99096 /* Glimpse.m in Sources */,
+				9D3FF6BA1772582E00C99096 /* GlimpseVersion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

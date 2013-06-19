@@ -6,12 +6,6 @@
 
 @property NSString *timestamp;
 
-//@property BOOL canUpdate;
-
-- (IBAction)onUpdate:(id)sender;
-
-- (IBAction)onReset:(id)sender;
-
 - (IBAction)onLight:(id)sender;
 
 - (IBAction)onDark:(id)sender;

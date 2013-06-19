@@ -1,22 +1,22 @@
-#import "iXAML.h"
-#import "iXAMLVersion.h"
+#import "Glimpse.h"
+#import "GlimpseVersion.h"
 
-@implementation iXAML
+@implementation Glimpse
 
 + (NSInteger)majorVersion {
-    return [[[iXAMLVersion componentsSeparatedByString:@"."] objectAtIndex:0] intValue];
+    return [[[GlimpseVersion componentsSeparatedByString:@"."] objectAtIndex:0] intValue];
 }
 
 + (NSInteger)minorVersion {
-    return [[[iXAMLVersion componentsSeparatedByString:@"."] objectAtIndex:1] intValue];
+    return [[[GlimpseVersion componentsSeparatedByString:@"."] objectAtIndex:1] intValue];
 }
 
 + (NSInteger)bugfixVersion {
-    return [[[iXAMLVersion componentsSeparatedByString:@"."] objectAtIndex:2] intValue];
+    return [[[GlimpseVersion componentsSeparatedByString:@"."] objectAtIndex:2] intValue];
 }
 
 + (NSInteger)hotfixVersion {
-    NSArray *components = [iXAMLVersion componentsSeparatedByString:@"."];
+    NSArray *components = [GlimpseVersion componentsSeparatedByString:@"."];
     if ([components count] > 3) {
         return [[components objectAtIndex:3] intValue];
 
@@ -26,7 +26,7 @@
 }
 
 + (NSString *)version {
-    return iXAMLVersion;
+    return GlimpseVersion;
 }
 
 @end

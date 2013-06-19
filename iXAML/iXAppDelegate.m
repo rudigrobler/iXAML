@@ -2,16 +2,25 @@
 #import "iXAppDelegate.h"
 #import "iXStylesheet.h"
 #import "UIApplication+Styling.h"
+#import "iXAML.h"
 
 @implementation iXAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    NSLog(@"iXAML %@", [iXAML version]);
+    
     [UIFont registerCustomFonts];
 
-//    NSURL *url = [[NSURL alloc] initFileURLWithPath:[[NSBundle mainBundle] pathForResource:@"dark-stylesheet" ofType:@"xaml"]];
-//    iXStylesheet *stylesheet = [[iXStylesheet alloc] initWithXAML:url];
+    // Loading stylesheet from XAML
+    // NSURL *url = [[NSURL alloc] initFileURLWithPath:[[NSBundle mainBundle]
+    //                                 pathForResource:@"dark-stylesheet"
+    //                                          ofType:@"xaml"]];
+    // iXStylesheet *stylesheet = [[iXStylesheet alloc] initWithXAML:url];
 
-    NSURL *url = [[NSURL alloc] initFileURLWithPath:[[NSBundle mainBundle] pathForResource:@"dark-stylesheet" ofType:@"plist"]];
+    // Loading stylesheet from plist
+    NSURL *url = [[NSURL alloc] initFileURLWithPath:[[NSBundle mainBundle]
+                                    pathForResource:@"dark-stylesheet"
+                                            ofType:@"plist"]];
     iXStylesheet *stylesheet = [[iXStylesheet alloc] initWithContentsOfURL:url];
 
     [[UIApplication sharedApplication] setStylesheet:stylesheet];
