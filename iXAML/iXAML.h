@@ -2,7 +2,7 @@
 
 @interface iXAML : NSObject
 
-+ (NSString*)version;
++ (NSString *)version;
 
 + (NSInteger)majorVersion;
 

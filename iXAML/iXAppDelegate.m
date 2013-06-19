@@ -1,6 +1,6 @@
 #import "UIFont+Extensions.h"
 #import "iXAppDelegate.h"
-#import "UIApplication+Extensions.h"
+#import "UIApplication+Styling.h"
 
 @implementation iXAppDelegate
 

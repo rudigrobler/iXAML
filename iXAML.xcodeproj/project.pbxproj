@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D8A2EE81771A3BE00307626 /* UIView+Styling.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8A2EE71771A3BE00307626 /* UIView+Styling.m */; };
+		9D8A2EED1771A5CD00307626 /* UIView+Binding.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8A2EEC1771A5CD00307626 /* UIView+Binding.m */; };
 		9DDA4977176B663200B4045E /* NSObject+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDA4974176B663200B4045E /* NSObject+Extensions.m */; };
 		9DDA4978176B663200B4045E /* UIView+Glimpse.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDA4976176B663200B4045E /* UIView+Glimpse.m */; };
 		9DF170D0176A2F700049ADD5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DF170CF176A2F700049ADD5 /* UIKit.framework */; };
@@ -21,7 +23,7 @@
 		9DF170E9176A2F700049ADD5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DF170E7176A2F700049ADD5 /* MainStoryboard.storyboard */; };
 		9DF170EC176A2F700049ADD5 /* iXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF170EB176A2F700049ADD5 /* iXViewController.m */; };
 		9DF170F4176A2FFD0049ADD5 /* UIView+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF170F3176A2FFD0049ADD5 /* UIView+Extensions.m */; };
-		9DF170F7176A47710049ADD5 /* UIApplication+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF170F6176A47710049ADD5 /* UIApplication+Extensions.m */; };
+		9DF170F7176A47710049ADD5 /* UIApplication+Styling.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF170F6176A47710049ADD5 /* UIApplication+Styling.m */; };
 		9DF170FC176A4B2D0049ADD5 /* iXStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF170F9176A48050049ADD5 /* iXStyle.m */; };
 		9DF170FD176A4B300049ADD5 /* iXStylesheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF170FB176A48050049ADD5 /* iXStylesheet.m */; };
 		9DF17100176A4FEE0049ADD5 /* UIColor+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF170FF176A4FEE0049ADD5 /* UIColor+Extensions.m */; };
@@ -49,6 +51,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D69DB4F176B6C910024E847 /* iXComplexViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iXComplexViewController.h; sourceTree = "<group>"; };
+		9D69DB50176B6C910024E847 /* iXComplexViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iXComplexViewController.m; sourceTree = "<group>"; };
+		9D8A2EE61771A3BE00307626 /* UIView+Styling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Styling.h"; sourceTree = "<group>"; };
+		9D8A2EE71771A3BE00307626 /* UIView+Styling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Styling.m"; sourceTree = "<group>"; };
+		9D8A2EEB1771A5CD00307626 /* UIView+Binding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Binding.h"; sourceTree = "<group>"; };
+		9D8A2EEC1771A5CD00307626 /* UIView+Binding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Binding.m"; sourceTree = "<group>"; };
 		9DDA4973176B663200B4045E /* NSObject+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Extensions.h"; sourceTree = "<group>"; };
 		9DDA4974176B663200B4045E /* NSObject+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Extensions.m"; sourceTree = "<group>"; };
 		9DDA4975176B663200B4045E /* UIView+Glimpse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Glimpse.h"; sourceTree = "<group>"; };
@@ -71,8 +79,8 @@
 		9DF170EB176A2F700049ADD5 /* iXViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iXViewController.m; sourceTree = "<group>"; };
 		9DF170F2176A2FFD0049ADD5 /* UIView+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extensions.h"; sourceTree = "<group>"; };
 		9DF170F3176A2FFD0049ADD5 /* UIView+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extensions.m"; sourceTree = "<group>"; };
-		9DF170F5176A47710049ADD5 /* UIApplication+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Extensions.h"; sourceTree = "<group>"; };
-		9DF170F6176A47710049ADD5 /* UIApplication+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Extensions.m"; sourceTree = "<group>"; };
+		9DF170F5176A47710049ADD5 /* UIApplication+Styling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Styling.h"; sourceTree = "<group>"; };
+		9DF170F6176A47710049ADD5 /* UIApplication+Styling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Styling.m"; sourceTree = "<group>"; };
 		9DF170F8176A48050049ADD5 /* iXStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iXStyle.h; sourceTree = "<group>"; };
 		9DF170F9176A48050049ADD5 /* iXStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iXStyle.m; sourceTree = "<group>"; };
 		9DF170FA176A48050049ADD5 /* iXStylesheet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iXStylesheet.h; sourceTree = "<group>"; };
@@ -120,6 +128,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D8A2EE91771A59D00307626 /* Styling */ = {
+			isa = PBXGroup;
+			children = (
+				9DF170F8176A48050049ADD5 /* iXStyle.h */,
+				9DF170F9176A48050049ADD5 /* iXStyle.m */,
+				9DF170FA176A48050049ADD5 /* iXStylesheet.h */,
+				9DF170FB176A48050049ADD5 /* iXStylesheet.m */,
+				9DF170F5176A47710049ADD5 /* UIApplication+Styling.h */,
+				9DF170F6176A47710049ADD5 /* UIApplication+Styling.m */,
+				9D8A2EE61771A3BE00307626 /* UIView+Styling.h */,
+				9D8A2EE71771A3BE00307626 /* UIView+Styling.m */,
+			);
+			name = Styling;
+			sourceTree = "<group>";
+		};
+		9D8A2EEE1771A5D000307626 /* Binding */ = {
+			isa = PBXGroup;
+			children = (
+				9D8A2EEB1771A5CD00307626 /* UIView+Binding.h */,
+				9D8A2EEC1771A5CD00307626 /* UIView+Binding.m */,
+			);
+			name = Binding;
+			sourceTree = "<group>";
+		};
+		9D8A2EEF1771A5E900307626 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9DF1711A176AAE5D0049ADD5 /* UIFont+Extensions.h */,
+				9DF1711B176AAE5D0049ADD5 /* UIFont+Extensions.m */,
+				9DF170FE176A4FEE0049ADD5 /* UIColor+Extensions.h */,
+				9DF170FF176A4FEE0049ADD5 /* UIColor+Extensions.m */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		9DDA4979176B663800B4045E /* Glimpse */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +213,8 @@
 				9DF170DF176A2F700049ADD5 /* iXAppDelegate.m */,
 				9DF170EA176A2F700049ADD5 /* iXViewController.h */,
 				9DF170EB176A2F700049ADD5 /* iXViewController.m */,
+				9D69DB4F176B6C910024E847 /* iXComplexViewController.h */,
+				9D69DB50176B6C910024E847 /* iXComplexViewController.m */,
 				9DF170E7176A2F700049ADD5 /* MainStoryboard.storyboard */,
 				9DF17102176A80DE0049ADD5 /* light-stylesheet.xaml */,
 				9DF1712D176B05E70049ADD5 /* dark-stylesheet.xaml */,
@@ -198,18 +243,11 @@
 				9DF1717F176B21740049ADD5 /* iXAML.m */,
 				9DF17180176B21740049ADD5 /* iXAMLVersion.h */,
 				9DF17181176B21740049ADD5 /* iXAMLVersion.m */,
-				9DF1711A176AAE5D0049ADD5 /* UIFont+Extensions.h */,
-				9DF1711B176AAE5D0049ADD5 /* UIFont+Extensions.m */,
-				9DF170FE176A4FEE0049ADD5 /* UIColor+Extensions.h */,
-				9DF170FF176A4FEE0049ADD5 /* UIColor+Extensions.m */,
-				9DF170F8176A48050049ADD5 /* iXStyle.h */,
-				9DF170F9176A48050049ADD5 /* iXStyle.m */,
-				9DF170FA176A48050049ADD5 /* iXStylesheet.h */,
-				9DF170FB176A48050049ADD5 /* iXStylesheet.m */,
+				9D8A2EEF1771A5E900307626 /* Extensions */,
+				9D8A2EE91771A59D00307626 /* Styling */,
+				9D8A2EEE1771A5D000307626 /* Binding */,
 				9DF170F2176A2FFD0049ADD5 /* UIView+Extensions.h */,
 				9DF170F3176A2FFD0049ADD5 /* UIView+Extensions.m */,
-				9DF170F5176A47710049ADD5 /* UIApplication+Extensions.h */,
-				9DF170F6176A47710049ADD5 /* UIApplication+Extensions.m */,
 			);
 			name = iXAML;
 			sourceTree = "<group>";
@@ -333,7 +371,7 @@
 				9DF170E0176A2F700049ADD5 /* iXAppDelegate.m in Sources */,
 				9DF170EC176A2F700049ADD5 /* iXViewController.m in Sources */,
 				9DF170F4176A2FFD0049ADD5 /* UIView+Extensions.m in Sources */,
-				9DF170F7176A47710049ADD5 /* UIApplication+Extensions.m in Sources */,
+				9DF170F7176A47710049ADD5 /* UIApplication+Styling.m in Sources */,
 				9DF170FC176A4B2D0049ADD5 /* iXStyle.m in Sources */,
 				9DF170FD176A4B300049ADD5 /* iXStylesheet.m in Sources */,
 				9DF17100176A4FEE0049ADD5 /* UIColor+Extensions.m in Sources */,
@@ -342,6 +380,8 @@
 				9DF17183176B21740049ADD5 /* iXAMLVersion.m in Sources */,
 				9DDA4977176B663200B4045E /* NSObject+Extensions.m in Sources */,
 				9DDA4978176B663200B4045E /* UIView+Glimpse.m in Sources */,
+				9D8A2EE81771A3BE00307626 /* UIView+Styling.m in Sources */,
+				9D8A2EED1771A5CD00307626 /* UIView+Binding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

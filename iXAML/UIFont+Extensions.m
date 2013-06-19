@@ -35,7 +35,6 @@
         {
             if (nameAndSize.length == range.length)
             {
-                NSLog(@"%@ %f", fontName, [UIFont systemFontSize]);
                 return [UIFont fontWithName:nameAndSize size:[UIFont systemFontSize]];
             }
             else if (range.location > 0)
@@ -45,7 +44,6 @@
                 
                 if (fontSize > 0)
                 {
-                    NSLog(@"%@ [%ld]", fontName, (long)fontSize);
                     return [UIFont fontWithName:nameAndSize size:[UIFont systemFontSize]];
                 }
             }
@@ -56,7 +54,6 @@
                 
                 if (fontSize > 0)
                 {
-                    NSLog(@"%@ [%ld]", fontName, (long)fontSize);
                     return [UIFont fontWithName:nameAndSize size:[UIFont systemFontSize]];
                 }
             }

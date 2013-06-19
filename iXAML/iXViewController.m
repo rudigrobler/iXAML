@@ -1,7 +1,7 @@
 #import "iXStyle.h"
 #import "iXStylesheet.h"
 #import "iXViewController.h"
-#import "UIApplication+Extensions.h"
+#import "UIApplication+Styling.h"
 
 @interface iXViewController () {
     NSDateFormatter *dateFormatter;
