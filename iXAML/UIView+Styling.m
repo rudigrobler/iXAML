@@ -3,12 +3,11 @@
 #import "UIApplication+Styling.h"
 #import "UIFont+Extensions.h"
 #import "iXStyle.h"
-#import "iXStylesheet.h"
 #import <objc/runtime.h>
 
 @implementation UIView (Style)
 
-- (void)setStyle:(id)style {
+- (void)setStyle:(NSString *)style {
     objc_setAssociatedObject(self, @"___style", style, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -16,7 +15,7 @@
     });
 }
 
-- (id)style {
+- (NSString *)style {
     return objc_getAssociatedObject(self, @"___style");
 }
 
@@ -29,22 +28,19 @@
             if (style) {
                 for (NSString *key in style.keyEnumerator) {
                     id value = [style valueForKey:key];
-                    if ([key isEqualToString:@"backgroundColor"])
-                    {
+                    if ([key isEqualToString:@"backgroundColor"]) {
                         UIColor *color = [UIColor colorFromString:value];
                         if (color) {
                             [self setValue:color forKey:key];
                         }
                     }
-                    else if ([key isEqualToString:@"textColor"])
-                    {
+                    else if ([key isEqualToString:@"textColor"]) {
                         UIColor *color = [UIColor colorFromString:value];
                         if (color) {
                             if ([NSStringFromClass([self class]) isEqualToString:@"UIButton"]) {
-                                ((UIButton*)self).titleLabel.textColor = color;
+                                ((UIButton *) self).titleLabel.textColor = color;
                             }
-                            else
-                            {
+                            else {
                                 [self setValue:color forKey:key];
                             }
                         }

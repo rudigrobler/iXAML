@@ -4,24 +4,29 @@
 
 @implementation UIApplication (Extensions)
 
-- (void)applyStyle:(UIView*)view{
-    if (view.style)
-    {
+- (void)applyStylesheet {
+    for (UIWindow *window in self.windows) {
+        for (UIView *subview in window.subviews) {
+            [self applyStyleToView:subview];
+        }
+    }
+}
+
+- (void)applyStyleToView:(UIView *)view {
+    if (view.style) {
         [view applyStyle];
     }
     for (UIView *subview in view.subviews) {
-        [self applyStyle:subview];
+        [self applyStyleToView:subview];
     }
 }
 
 - (void)setStylesheet:(iXStylesheet *)stylesheet {
     objc_setAssociatedObject(self, @"___stylesheet", stylesheet, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 
-    for (UIWindow *window in self.windows) {
-        for (UIView *subview in window.subviews) {
-            [self applyStyle:subview];
-        }
-    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self applyStylesheet];
+    });
 }
 
 - (iXStylesheet *)stylesheet {

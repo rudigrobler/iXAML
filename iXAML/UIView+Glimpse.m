@@ -3,7 +3,7 @@
 
 @implementation UIView (Swizzle)
 
-+ (void)glimpse {    
++ (void)glimpse {
     [UIView swizzleMethod:NSSelectorFromString(@"init") withMethod:NSSelectorFromString(@"swizzle_init") error:nil];
     [UIView swizzleMethod:NSSelectorFromString(@"initWithCoder:") withMethod:NSSelectorFromString(@"swizzle_initWithCoder:") error:nil];
     [UIView swizzleMethod:NSSelectorFromString(@"initWithFrame:") withMethod:NSSelectorFromString(@"swizzle_initWithFrame:") error:nil];
@@ -22,11 +22,10 @@
     [UIView swizzleMethod:NSSelectorFromString(@"didMoveToWindow") withMethod:NSSelectorFromString(@"swizzle_didMoveToWindow") error:nil];
 }
 
--(void)log:(SEL) aSelector {
-    if ([NSStringFromClass([self class]) isEqualToString:@"UIView"])
-         {
-    NSLog(@"%@+%@", NSStringFromClass([self class]), NSStringFromSelector(aSelector));
-         }
+- (void)log:(SEL)aSelector {
+    if ([NSStringFromClass([self class]) isEqualToString:@"UIView"]) {
+        NSLog(@"%@+%@", NSStringFromClass([self class]), NSStringFromSelector(aSelector));
+    }
 }
 
 - (id)swizzle_init {
@@ -44,86 +43,72 @@
     return [self swizzle_initWithFrame:frame];
 }
 
-- (void)swizzle_removeFromSuperview
-{
+- (void)swizzle_removeFromSuperview {
     [self log:_cmd];
     [self swizzle_removeFromSuperview];
 }
 
-- (void)swizzle_insertSubview:(UIView *)view atIndex:(NSInteger)index
-{
+- (void)swizzle_insertSubview:(UIView *)view atIndex:(NSInteger)index {
     [self log:_cmd];
     [self swizzle_insertSubview:view atIndex:index];
 }
 
-- (void)swizzle_exchangeSubviewAtIndex:(NSInteger)index1 withSubviewAtIndex:(NSInteger)index2
-{
+- (void)swizzle_exchangeSubviewAtIndex:(NSInteger)index1 withSubviewAtIndex:(NSInteger)index2 {
     [self log:_cmd];
     [self swizzle_exchangeSubviewAtIndex:index1 withSubviewAtIndex:index2];
 }
 
-- (void)swizzle_addSubview:(UIView *)view
-{
+- (void)swizzle_addSubview:(UIView *)view {
     [self log:_cmd];
     [self swizzle_addSubview:view];
 }
 
-- (void)swizzle_insertSubview:(UIView *)view belowSubview:(UIView *)siblingSubview
-{
+- (void)swizzle_insertSubview:(UIView *)view belowSubview:(UIView *)siblingSubview {
     [self log:_cmd];
     [self swizzle_insertSubview:view belowSubview:siblingSubview];
 }
 
-- (void)swizzle_insertSubview:(UIView *)view aboveSubview:(UIView *)siblingSubview
-{
+- (void)swizzle_insertSubview:(UIView *)view aboveSubview:(UIView *)siblingSubview {
     [self log:_cmd];
     [self swizzle_insertSubview:view aboveSubview:siblingSubview];
 }
 
-- (void)swizzle_bringSubviewToFront:(UIView *)view
-{
+- (void)swizzle_bringSubviewToFront:(UIView *)view {
     [self log:_cmd];
     [self swizzle_bringSubviewToFront:view];
 }
 
-- (void)swizzle_sendSubviewToBack:(UIView *)view
-{
+- (void)swizzle_sendSubviewToBack:(UIView *)view {
     NSLog(@"%@+%@", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
     [self swizzle_sendSubviewToBack:view];
 }
 
-- (void)swizzle_didAddSubview:(UIView *)subview
-{
+- (void)swizzle_didAddSubview:(UIView *)subview {
     [self log:_cmd];
     [self swizzle_didAddSubview:subview];
 }
 
-- (void)swizzle_willRemoveSubview:(UIView *)subview
-{
+- (void)swizzle_willRemoveSubview:(UIView *)subview {
     [self log:_cmd];
     [self swizzle_willRemoveSubview:subview];
 }
 
-- (void)swizzle_willMoveToSuperview:(UIView *)newSuperview
-{
+- (void)swizzle_willMoveToSuperview:(UIView *)newSuperview {
     [self log:_cmd];
     [self swizzle_willMoveToSuperview:newSuperview];
 }
 
-- (void)swizzle_didMoveToSuperview
-{
+- (void)swizzle_didMoveToSuperview {
     [self log:_cmd];
     [self swizzle_didMoveToSuperview];
 }
 
-- (void)swizzle_willMoveToWindow:(UIWindow *)newWindow
-{
+- (void)swizzle_willMoveToWindow:(UIWindow *)newWindow {
     [self log:_cmd];
     [self swizzle_willMoveToWindow:newWindow];
 }
 
-- (void)swizzle_didMoveToWindow
-{
+- (void)swizzle_didMoveToWindow {
     [self log:_cmd];
     [self swizzle_didMoveToWindow];
 }

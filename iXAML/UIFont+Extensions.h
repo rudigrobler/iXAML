@@ -4,6 +4,6 @@
 
 + (void)registerCustomFonts;
 
-+ (UIFont*)fontWithNameAndSize:(NSString*)nameAndSize;
++ (UIFont *)fontWithNameAndSize:(NSString *)nameAndSize;
 
 @end

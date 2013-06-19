@@ -1,11 +1,11 @@
 <Stylesheet>
     <Style name="textHeaderStyle">
         <Setter property="textColor" value="#00000" />
-        <Setter property="font" value="SegoeUI-Bold" />
+        <Setter property="font" value="SegoeUI-Bold 20" />
     </Style>
     <Style name="textBodyStyle">
         <Setter property="textColor" value="#888888" />
-        <Setter property="font" value="SegoeUI-Light" />
+        <Setter property="font" value="SegoeUI-Light 17" />
     </Style>
     <Style name="pageStyle">
         <Setter property="backgroundColor" value="#F1F1F1" />
@@ -13,6 +13,6 @@
     <Style name="buttonStyle">
         <Setter property="backgroundColor" value="#000000" />
         <Setter property="textColor" value="#FFFFFF" />
-        <Setter property="font" value="SegoeUI-Light" />
+        <Setter property="font" value="SegoeUI-Light 17" />
     </Style>
 </Stylesheet>

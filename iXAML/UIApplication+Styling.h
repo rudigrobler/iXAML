@@ -5,4 +5,6 @@
 
 @property iXStylesheet *stylesheet;
 
+- (void)applyStylesheet;
+
 @end

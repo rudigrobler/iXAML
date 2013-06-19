@@ -4,6 +4,6 @@
 
 - (void)applyStyle;
 
-@property id style;
+@property NSString *style;
 
 @end

@@ -11,4 +11,4 @@
  *
  * The .HOTFIX version will only be present if hotfixVersion is > 0.
  */
-extern NSString* const iXAMLVersion;
+extern NSString *const iXAMLVersion;

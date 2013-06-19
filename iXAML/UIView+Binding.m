@@ -7,7 +7,7 @@
     UIViewController *viewController = objc_getAssociatedObject(self, @"___viewController");
     if (viewController)
         return viewController;
-    
+
     viewController = [self traverseResponderChainForUIViewController];
     if (viewController) {
         objc_setAssociatedObject(self, @"___viewController", viewController, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -52,7 +52,7 @@
             if (viewController) {
                 if ([viewController respondsToSelector:NSSelectorFromString(binding)]) {
                     [self setContext:[NSString stringWithFormat:@"%@+%@+0x%lx", NSStringFromClass([self class]), binding, (unsigned long) [self hash]]];
-                    
+
                     [viewController addObserver:self forKeyPath:binding options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial) context:(__bridge void *) ([self context])];
                 }
             }
@@ -61,7 +61,7 @@
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-    
+
     if (keyPath == [self binding]) {
         if ([NSStringFromClass([self class]) isEqualToString:@"UILabel"]) {
             UILabel *label = (UILabel *) self;

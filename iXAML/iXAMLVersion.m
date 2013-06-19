@@ -1,3 +1,3 @@
 #import "iXAMLVersion.h"
 
-NSString* const iXAMLVersion = @"1.0.0";
+NSString *const iXAMLVersion = @"1.0.0";

@@ -1,4 +1,3 @@
-#import "iXStyle.h"
 #import "iXStylesheet.h"
 #import "iXViewController.h"
 #import "UIApplication+Styling.h"
