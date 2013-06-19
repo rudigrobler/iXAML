@@ -1,16 +1,26 @@
 # iXAML
 
-iXAML is a proof of concept to add VERY basic binding & styling support for iOS. The API design is based on XAML.
+[UIAppearance](http://nshipster.com/uiappearance/) allows the appearance of views and controls to be consistently defined across the entire application.
+
+If UIAppearance is so great, why do we need iXAML?
+
+A major shortcoming of UIAppearance is that style rules are imperative, rather than declarative. That is, styling is applied at runtime in code, rather than being interpreted from a list of style rules.
+
+iXAML enable loading (and applying) declarative stylesheets!
 
 ## Design goals of iXAML
 
+* Interface Builder support
+* Switching themes at runtime
+* Support multiple stylesheet formats (plist, xaml, css, less, etc.)
 * Be light-weight and non-intrusive
 * No overriding of framework methods
 * No swizzling
+* No custom base UIView or UIViewController
 
 ## Styling
 
-Add the following stylesheet to your application
+Add a stylesheet to your application
 
 ```xml
 <Stylesheet>
@@ -31,24 +41,25 @@ Add the following stylesheet to your application
     <Style name="buttonStyle">
         <Setter property="background-color" value="#333333" />
         <Setter property="text-color" value="#F1F1F1" />
-        <Setter property="border-color" value="#FF0000" />        
+        <Setter property="border-color" value="#FF0000" />
         <Setter property="border-width" value="1" />
         <Setter property="corner-radius" value="5" />
         <Setter property="font" value="SegoeUI-Light 17" />
     </Style>
 </Stylesheet>
 ```
-Load the style sheet from the main bundle
+Load the style sheet
 
 ```Objective-C
-NSURL *url = [[NSURL alloc] initFileURLWithPath:[[NSBundle mainBundle] 
-                                pathForResource:@"dark-stylesheet"
-                                         ofType:@"xaml"]];
+NSURL *url = [[NSURL alloc] initWithXAML:url:[[NSBundle mainBundle] 
+                         pathForResource:@"dark-stylesheet"
+                                  ofType:@"xaml"]];
 
 iXStylesheet *stylesheet = [[iXStylesheet alloc] initWithContentsOfURL:url];
 
-[UIApplication sharedApplication].stylesheet = stylesheet;
+[[UIApplication sharedApplication] setStylesheet:stylesheet];
 ```
+
 Open Interface Builder and click on the UIView (control) you want to style
 
 ![Interface Builder](https://github.com/rudigrobler/iXAML/blob/master/Documentation/SetStyleInIB.jpg?raw=true)
