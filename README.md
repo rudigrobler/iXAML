@@ -2,11 +2,11 @@
 
 [UIAppearance](http://nshipster.com/uiappearance/) allows the appearance of views and controls to be consistently defined across the entire application.
 
-If UIAppearance is so great, why do we need iXAML?
+**If UIAppearance is so great, why do we need iXAML?**
 
-A major shortcoming of UIAppearance is that style rules are imperative, rather than declarative. That is, styling is applied at runtime in code, rather than being interpreted from a list of style rules.
+A major shortcoming of UIAppearance is that styles are imperative (applied it runtime in code), not declarative.
 
-iXAML enable loading (and applying) declarative stylesheets!
+iXAML adds support for declarative stylesheets
 
 ## Design goals of iXAML
 
