@@ -68,21 +68,21 @@ Add a 'style' User Defined Runtime Attributes and iXAML will do the rest!
 
 ### TODO
 
-- [ ] .css parser
-- [ ] .less parser
-- [x] Set style using UIAppearance
-- [ ] Improve UIColor colorFromString
-- [ ] Improve UIFont fontWithNameAndSize
-- [ ] Navigation bar styling
-- [ ] Switch styling
-- [ ] Check box styling
-- [ ] Slider styling
-- [ ] Stepper styling
-- [ ] Update docs to show loading from plist & xaml
-- [ ] Update docs to show how to add user defined runtime attributes
-- [ ] Update docs to show how to apply style using code
-- [ ] Create 2 default themes
-- [ ] Recreate twitter bootstrap
+- .css parser
+- .less parser
+- Set style using UIAppearance
+- Improve UIColor colorFromString
+- Improve UIFont fontWithNameAndSize
+- Navigation bar styling
+- Switch styling
+- Check box styling
+- Slider styling
+- Stepper styling
+- Update docs to show loading from plist & xaml
+- Update docs to show how to add user defined runtime attributes
+- Update docs to show how to apply style using code
+- Create 2 default themes
+- Recreate twitter bootstrap
 
 ## Similar
 
