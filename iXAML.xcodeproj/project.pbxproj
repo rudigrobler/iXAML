@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D614CE31772316F00534C5F /* UIViewController+Binding.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D614CE21772316F00534C5F /* UIViewController+Binding.m */; };
 		9D8A2EE81771A3BE00307626 /* UIView+Styling.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8A2EE71771A3BE00307626 /* UIView+Styling.m */; };
 		9D8A2EED1771A5CD00307626 /* UIView+Binding.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8A2EEC1771A5CD00307626 /* UIView+Binding.m */; };
 		9DDA4977176B663200B4045E /* NSObject+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDA4974176B663200B4045E /* NSObject+Extensions.m */; };
@@ -52,6 +53,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D614CE11772316F00534C5F /* UIViewController+Binding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Binding.h"; sourceTree = "<group>"; };
+		9D614CE21772316F00534C5F /* UIViewController+Binding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Binding.m"; sourceTree = "<group>"; };
 		9D69DB4F176B6C910024E847 /* iXComplexViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iXComplexViewController.h; sourceTree = "<group>"; };
 		9D69DB50176B6C910024E847 /* iXComplexViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iXComplexViewController.m; sourceTree = "<group>"; };
 		9D8A2EE61771A3BE00307626 /* UIView+Styling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Styling.h"; sourceTree = "<group>"; };
@@ -151,6 +154,8 @@
 			children = (
 				9D8A2EEB1771A5CD00307626 /* UIView+Binding.h */,
 				9D8A2EEC1771A5CD00307626 /* UIView+Binding.m */,
+				9D614CE11772316F00534C5F /* UIViewController+Binding.h */,
+				9D614CE21772316F00534C5F /* UIViewController+Binding.m */,
 			);
 			name = Binding;
 			sourceTree = "<group>";
@@ -386,6 +391,7 @@
 				9DDA4978176B663200B4045E /* UIView+Glimpse.m in Sources */,
 				9D8A2EE81771A3BE00307626 /* UIView+Styling.m in Sources */,
 				9D8A2EED1771A5CD00307626 /* UIView+Binding.m in Sources */,
+				9D614CE31772316F00534C5F /* UIViewController+Binding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

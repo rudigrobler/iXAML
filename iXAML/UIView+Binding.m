@@ -26,11 +26,11 @@
     }
 }
 
-- (id)binding {
+- (NSString*)binding {
     return objc_getAssociatedObject(self, @"___binding");
 }
 
-- (void)setBinding:(id)binding {
+- (void)setBinding:(NSString*)binding {
     objc_setAssociatedObject(self, @"___binding", binding, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
     dispatch_async(dispatch_get_main_queue(), ^{

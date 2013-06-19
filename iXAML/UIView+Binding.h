@@ -4,4 +4,9 @@
 
 - (void)applyBinding;
 
+- (NSString*)binding;
+
+- (void)setBinding:(NSString*)binding;
+
+
 @end

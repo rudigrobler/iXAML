@@ -1,5 +1,7 @@
 #import <Foundation/Foundation.h>
 
-@interface iXStylesheet : NSMutableDictionary <NSXMLParserDelegate>
+@interface iXStylesheet : NSMutableDictionary
+
+- (id)initWithXAML:(NSURL *)url;
 
 @end

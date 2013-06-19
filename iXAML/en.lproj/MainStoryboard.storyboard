@@ -49,49 +49,12 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="binding" value="timestamp"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ON0-BB-ytp">
-                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="o76-Hh-GuM"/>
-                                    <constraint firstAttribute="width" constant="150" id="r48-qL-7pe"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <color key="tintColor" red="0.49034954019999999" green="0.47924119570000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Update" image="button.default.png">
-                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="1" green="0.87433952920000002" blue="0.085452626360000006" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <state key="disabled" title="Disabled" image="button.disabled.png"/>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="binding" value="canUpdate"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="onUpdate:" destination="2" eventType="touchUpInside" id="Gpb-F8-hyc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7VH-2c-aIF">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="136" id="FH1-Zp-C7O"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="reset">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="style" value="buttonStyle"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="onReset:" destination="2" eventType="touchUpInside" id="NJR-9s-rqF"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKT-z2-CTb">
+                                <color key="backgroundColor" red="1" green="0.87433952920000002" blue="0.085452626360000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="136" id="Oic-MD-VMc"/>
+                                    <constraint firstAttribute="height" constant="44" id="dn0-1H-Atn"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="light">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -108,6 +71,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWP-0e-Ff5">
+                                <color key="backgroundColor" red="1" green="0.87433952920000002" blue="0.085452626360000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="VE7-Ro-1yO"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="dark">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -123,15 +90,22 @@
                                     <action selector="onDark:" destination="2" eventType="touchUpInside" id="AFc-eZ-Cik"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NdL-sK-CNG">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NdL-sK-CNG">
+                                <color key="backgroundColor" red="1" green="0.87433952920000002" blue="0.085452626360000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="5Q6-Pl-ciO"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="next">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="style" value="buttonStyle"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="JwQ-aB-9Be" kind="push" id="MP5-cd-BKd"/>
                                 </connections>
@@ -139,23 +113,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="vKT-z2-CTb" firstAttribute="top" secondItem="5" secondAttribute="top" constant="185" id="21y-ay-mLB"/>
                             <constraint firstItem="KEo-pq-gEB" firstAttribute="top" secondItem="5" secondAttribute="top" constant="20" symbolic="YES" type="default" id="BD7-3B-gR5"/>
                             <constraint firstItem="qOs-wl-pQj" firstAttribute="top" secondItem="5" secondAttribute="top" constant="54" id="BQe-8t-myW"/>
-                            <constraint firstItem="NdL-sK-CNG" firstAttribute="top" secondItem="5" secondAttribute="top" constant="375" id="E7u-rx-7CH"/>
-                            <constraint firstItem="ON0-BB-ytp" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="M2V-d7-IvR"/>
-                            <constraint firstAttribute="trailing" secondItem="NdL-sK-CNG" secondAttribute="trailing" constant="106" id="SxA-ds-l70"/>
-                            <constraint firstItem="7VH-2c-aIF" firstAttribute="top" secondItem="5" secondAttribute="top" constant="136" id="TUj-SM-s0N"/>
+                            <constraint firstItem="NdL-sK-CNG" firstAttribute="trailing" secondItem="jWP-0e-Ff5" secondAttribute="trailing" type="default" id="ITE-YF-lrU"/>
+                            <constraint firstItem="NdL-sK-CNG" firstAttribute="top" secondItem="jWP-0e-Ff5" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="JYK-xe-dIh"/>
                             <constraint firstItem="jWP-0e-Ff5" firstAttribute="trailing" secondItem="vKT-z2-CTb" secondAttribute="trailing" type="default" id="WBJ-BA-rkC"/>
-                            <constraint firstItem="vKT-z2-CTb" firstAttribute="leading" secondItem="7VH-2c-aIF" secondAttribute="leading" type="default" id="bQX-el-W8d"/>
+                            <constraint firstItem="NdL-sK-CNG" firstAttribute="leading" secondItem="jWP-0e-Ff5" secondAttribute="leading" type="default" id="deD-p9-Emq"/>
+                            <constraint firstItem="jWP-0e-Ff5" firstAttribute="top" secondItem="vKT-z2-CTb" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="drk-f3-hZa"/>
                             <constraint firstItem="qOs-wl-pQj" firstAttribute="trailing" secondItem="KEo-pq-gEB" secondAttribute="trailing" type="default" id="gvb-VT-OOz"/>
-                            <constraint firstItem="vKT-z2-CTb" firstAttribute="trailing" secondItem="7VH-2c-aIF" secondAttribute="trailing" type="default" id="hHe-uy-NA3"/>
-                            <constraint firstAttribute="trailing" secondItem="jWP-0e-Ff5" secondAttribute="trailing" constant="146" id="k9R-2a-bQf"/>
                             <constraint firstItem="jWP-0e-Ff5" firstAttribute="leading" secondItem="vKT-z2-CTb" secondAttribute="leading" type="default" id="kK1-Zx-v37"/>
-                            <constraint firstItem="jWP-0e-Ff5" firstAttribute="top" secondItem="5" secondAttribute="top" constant="228" id="nVn-2I-cxf"/>
                             <constraint firstItem="KEo-pq-gEB" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="qg6-Ft-QD8"/>
+                            <constraint firstItem="vKT-z2-CTb" firstAttribute="top" secondItem="5" secondAttribute="top" constant="164" id="tCu-eJ-WgE"/>
                             <constraint firstItem="qOs-wl-pQj" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="uGO-CG-7Na"/>
-                            <constraint firstItem="ON0-BB-ytp" firstAttribute="top" secondItem="5" secondAttribute="top" constant="105" id="zTD-gd-WwA"/>
+                            <constraint firstAttribute="trailing" secondItem="vKT-z2-CTb" secondAttribute="trailing" constant="146" id="yGO-mD-Udb"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="string" keyPath="style" value="pageStyle"/>
@@ -200,10 +170,20 @@
             <point key="canvasLocation" x="-81" y="-1827"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="button.default.png" width="150" height="44"/>
-        <image name="button.disabled.png" width="150" height="44"/>
-    </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="iXViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/iXViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="onDark:"/>
+                <relationship kind="action" name="onLight:"/>
+                <relationship kind="action" name="onReset:"/>
+                <relationship kind="action" name="onUpdate:"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

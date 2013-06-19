@@ -1,5 +1,6 @@
 #import "UIFont+Extensions.h"
 #import "iXAppDelegate.h"
+#import "iXStylesheet.h"
 #import "UIApplication+Styling.h"
 
 @implementation iXAppDelegate
@@ -8,7 +9,7 @@
     [UIFont registerCustomFonts];
 
     NSURL *url = [[NSURL alloc] initFileURLWithPath:[[NSBundle mainBundle] pathForResource:@"dark-stylesheet" ofType:@"xaml"]];
-    iXStylesheet *stylesheet = [[iXStylesheet alloc] initWithContentsOfURL:url];
+    iXStylesheet *stylesheet = [[iXStylesheet alloc] initWithXAML:url];
     
     [[UIApplication sharedApplication] setStylesheet:stylesheet];
 

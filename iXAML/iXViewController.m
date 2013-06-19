@@ -1,10 +1,10 @@
 #import "iXStylesheet.h"
 #import "iXViewController.h"
 #import "UIApplication+Styling.h"
+#import "UIViewController+Binding.h"
 
 @interface iXViewController () {
     NSDateFormatter *dateFormatter;
-    int clickCount;
 }
 
 @end
@@ -16,7 +16,6 @@
     if (self) {
         dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"MM/dd/yyyy hh:mm:ss"];
-        //_canUpdate = YES;
     }
     return self;
 }
@@ -26,33 +25,21 @@
     self.timestamp = [dateFormatter stringFromDate:[NSDate dateWithTimeIntervalSinceNow:0]];
 }
 
-- (IBAction)onUpdate:(id)sender {
-    if (clickCount < 3) {
-        self.timestamp = [dateFormatter stringFromDate:[NSDate dateWithTimeIntervalSinceNow:0]];
-        clickCount++;
-    }
-    else {
-        self.timestamp = @"DONE";
-        //self.canUpdate = NO;
-    }
-}
-
-- (IBAction)onReset:(id)sender {
-    self.timestamp = [dateFormatter stringFromDate:[NSDate dateWithTimeIntervalSinceNow:0]];
-    clickCount = 0;
-    //self.canUpdate = YES;
-}
-
 - (IBAction)onLight:(id)sender {
+    
+    [self applyBinding:@"timestamp"];
+    
     NSURL *url = [[NSURL alloc] initFileURLWithPath:[[NSBundle mainBundle] pathForResource:@"light-stylesheet" ofType:@"xaml"]];
-    iXStylesheet *stylesheet = [[iXStylesheet alloc] initWithContentsOfURL:url];
-    [UIApplication sharedApplication].stylesheet = stylesheet;
+    iXStylesheet *stylesheet = [[iXStylesheet alloc] initWithXAML:url];
+    
+    [[UIApplication sharedApplication] setStylesheet:stylesheet];
 }
 
 - (IBAction)onDark:(id)sender {
     NSURL *url = [[NSURL alloc] initFileURLWithPath:[[NSBundle mainBundle] pathForResource:@"dark-stylesheet" ofType:@"xaml"]];
-    iXStylesheet *stylesheet = [[iXStylesheet alloc] initWithContentsOfURL:url];
-    [UIApplication sharedApplication].stylesheet = stylesheet;
+    iXStylesheet *stylesheet = [[iXStylesheet alloc] initWithXAML:url];
+
+    [[UIApplication sharedApplication] setStylesheet:stylesheet];
 }
 
 @end
