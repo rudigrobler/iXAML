@@ -13,9 +13,8 @@
 }
 
 - (void)applyStyleToView:(UIView *)view {
-    if (view.style) {
-        [view applyStyle];
-    }
+    [view applyStyle];
+    
     for (UIView *subview in view.subviews) {
         [self applyStyleToView:subview];
     }

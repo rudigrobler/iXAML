@@ -9,7 +9,8 @@
 
     NSURL *url = [[NSURL alloc] initFileURLWithPath:[[NSBundle mainBundle] pathForResource:@"dark-stylesheet" ofType:@"xaml"]];
     iXStylesheet *stylesheet = [[iXStylesheet alloc] initWithContentsOfURL:url];
-    [UIApplication sharedApplication].stylesheet = stylesheet;
+    
+    [[UIApplication sharedApplication] setStylesheet:stylesheet];
 
     return YES;
 }

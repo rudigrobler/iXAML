@@ -1,9 +1,10 @@
+#import "iXStyle.h"
 #import <UIKit/UIKit.h>
 
 @interface UIView (Style)
 
 - (void)applyStyle;
 
-@property NSString *style;
+- (void)applyStyle:(iXStyle*)style;
 
 @end
