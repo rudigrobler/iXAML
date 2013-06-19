@@ -2,6 +2,12 @@
 
 iXAML is a proof of concept to add VERY basic binding & styling support for iOS. The API design is based on XAML.
 
+## Design goals of iXAML
+
+* Be light-weight and non-intrusive
+* No overriding of framework methods
+* No swizzling
+
 ## Styling
 
 Add the following stylesheet to your application
