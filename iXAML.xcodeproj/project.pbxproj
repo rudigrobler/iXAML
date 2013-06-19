@@ -12,6 +12,8 @@
 		9D8A2EED1771A5CD00307626 /* UIView+Binding.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8A2EEC1771A5CD00307626 /* UIView+Binding.m */; };
 		9DDA4977176B663200B4045E /* NSObject+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDA4974176B663200B4045E /* NSObject+Extensions.m */; };
 		9DDA4978176B663200B4045E /* UIView+Glimpse.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDA4976176B663200B4045E /* UIView+Glimpse.m */; };
+		9DE0AD61177237B0004328B8 /* light-stylesheet.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DE0AD60177237B0004328B8 /* light-stylesheet.plist */; };
+		9DE0AD64177239F2004328B8 /* dark-stylesheet.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DE0AD63177239F2004328B8 /* dark-stylesheet.plist */; };
 		9DE690DC1771DCF5006283B8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DE690DB1771DCF5006283B8 /* QuartzCore.framework */; };
 		9DF170D0176A2F700049ADD5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DF170CF176A2F700049ADD5 /* UIKit.framework */; };
 		9DF170D2176A2F700049ADD5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DF170D1176A2F700049ADD5 /* Foundation.framework */; };
@@ -65,6 +67,8 @@
 		9DDA4974176B663200B4045E /* NSObject+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Extensions.m"; sourceTree = "<group>"; };
 		9DDA4975176B663200B4045E /* UIView+Glimpse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Glimpse.h"; sourceTree = "<group>"; };
 		9DDA4976176B663200B4045E /* UIView+Glimpse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Glimpse.m"; sourceTree = "<group>"; };
+		9DE0AD60177237B0004328B8 /* light-stylesheet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "light-stylesheet.plist"; sourceTree = "<group>"; };
+		9DE0AD63177239F2004328B8 /* dark-stylesheet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "dark-stylesheet.plist"; sourceTree = "<group>"; };
 		9DE690DB1771DCF5006283B8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		9DF170CC176A2F700049ADD5 /* iXAML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iXAML.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DF170CF176A2F700049ADD5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -182,6 +186,17 @@
 			name = Glimpse;
 			sourceTree = "<group>";
 		};
+		9DE0AD62177239AB004328B8 /* Stylesheets */ = {
+			isa = PBXGroup;
+			children = (
+				9DE0AD63177239F2004328B8 /* dark-stylesheet.plist */,
+				9DF17102176A80DE0049ADD5 /* light-stylesheet.xaml */,
+				9DE0AD60177237B0004328B8 /* light-stylesheet.plist */,
+				9DF1712D176B05E70049ADD5 /* dark-stylesheet.xaml */,
+			);
+			name = Stylesheets;
+			sourceTree = "<group>";
+		};
 		9DF170C3176A2F700049ADD5 = {
 			isa = PBXGroup;
 			children = (
@@ -225,8 +240,6 @@
 				9D69DB4F176B6C910024E847 /* iXComplexViewController.h */,
 				9D69DB50176B6C910024E847 /* iXComplexViewController.m */,
 				9DF170E7176A2F700049ADD5 /* MainStoryboard.storyboard */,
-				9DF17102176A80DE0049ADD5 /* light-stylesheet.xaml */,
-				9DF1712D176B05E70049ADD5 /* dark-stylesheet.xaml */,
 			);
 			path = iXAML;
 			sourceTree = "<group>";
@@ -234,6 +247,7 @@
 		9DF170D6176A2F700049ADD5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9DE0AD62177239AB004328B8 /* Stylesheets */,
 				9DF1712C176AF57F0049ADD5 /* Images */,
 				9DF1711D176AAE780049ADD5 /* Fonts */,
 				9DF170D7176A2F700049ADD5 /* iXAML-Info.plist */,
@@ -366,6 +380,8 @@
 				9DF1712B176AF42C0049ADD5 /* icon.png in Resources */,
 				9DF1712E176B05E70049ADD5 /* dark-stylesheet.xaml in Resources */,
 				9DF17130176B1A5D0049ADD5 /* README.md in Resources */,
+				9DE0AD61177237B0004328B8 /* light-stylesheet.plist in Resources */,
+				9DE0AD64177239F2004328B8 /* dark-stylesheet.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
