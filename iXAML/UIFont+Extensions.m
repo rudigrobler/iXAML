@@ -47,7 +47,7 @@
                     return [UIFont fontWithName:fontName size:fontSize];
                 }
             }
-            
+
             return [UIFont fontWithName:nameAndSize size:[UIFont systemFontSize]];
         }
     }

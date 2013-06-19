@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>textFieldStyle</key>
-	<dict>
-		<key>text-color</key>
-		<string>#333333</string>
-		<key>background-color</key>
-		<string>#F1F1F1</string>
-		<key>font</key>
-		<string>SegoeUI-Light 17</string>
-	</dict>
-	<key>textHeaderStyle</key>
-	<dict>
-		<key>text-color</key>
-		<string>#F1F1F1</string>
-		<key>font</key>
-		<string>SegoeUI-Bold 20</string>
-	</dict>
-	<key>textBodyStyle</key>
-	<dict>
-		<key>text-color</key>
-		<string>#F1F1F1</string>
-		<key>font</key>
-		<string>SegoeUI-Light 17</string>
-	</dict>
-	<key>pageStyle</key>
-	<dict>
-		<key>background-color</key>
-		<string>#333333</string>
-		<key>border-color</key>
-		<string>#F1F1F1</string>
-		<key>border-width</key>
-		<string>3</string>
-		<key>corner-radius</key>
-		<string>15</string>
-	</dict>
-	<key>buttonStyle</key>
-	<dict>
-		<key>font</key>
-		<string>SegoeUI-Light 17</string>
-		<key>background-color</key>
-		<string>#F1F1F1</string>
-		<key>text-color</key>
-		<string>#333333</string>
-		<key>border-color</key>
-		<string>#FF0000</string>
-		<key>border-width</key>
-		<string>1</string>
-		<key>corner-radius</key>
-		<string>5</string>
-	</dict>
-</dict>
+    <dict>
+        <key>textFieldStyle</key>
+        <dict>
+            <key>text-color</key>
+            <string>#333333</string>
+            <key>background-color</key>
+            <string>#F1F1F1</string>
+            <key>font</key>
+            <string>SegoeUI-Light 17</string>
+        </dict>
+        <key>textHeaderStyle</key>
+        <dict>
+            <key>text-color</key>
+            <string>#F1F1F1</string>
+            <key>font</key>
+            <string>SegoeUI-Bold 20</string>
+        </dict>
+        <key>textBodyStyle</key>
+        <dict>
+            <key>text-color</key>
+            <string>#F1F1F1</string>
+            <key>font</key>
+            <string>SegoeUI-Light 17</string>
+        </dict>
+        <key>pageStyle</key>
+        <dict>
+            <key>background-color</key>
+            <string>#333333</string>
+            <key>border-color</key>
+            <string>#F1F1F1</string>
+            <key>border-width</key>
+            <string>3</string>
+            <key>corner-radius</key>
+            <string>15</string>
+        </dict>
+        <key>buttonStyle</key>
+        <dict>
+            <key>font</key>
+            <string>SegoeUI-Light 17</string>
+            <key>background-color</key>
+            <string>#F1F1F1</string>
+            <key>text-color</key>
+            <string>#333333</string>
+            <key>border-color</key>
+            <string>#FF0000</string>
+            <key>border-width</key>
+            <string>1</string>
+            <key>corner-radius</key>
+            <string>5</string>
+        </dict>
+    </dict>
 </plist>

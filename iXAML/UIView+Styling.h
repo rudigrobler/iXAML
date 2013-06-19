@@ -5,6 +5,6 @@
 
 - (void)applyStyle;
 
-- (void)applyStyle:(iXStyle*)style;
+- (void)applyStyle:(iXStyle *)style;
 
 @end

@@ -1,7 +1,6 @@
 #import "iXStylesheet.h"
 #import "iXViewController.h"
 #import "UIApplication+Styling.h"
-#import "UIViewController+Binding.h"
 
 @interface iXViewController () {
     NSDateFormatter *dateFormatter;
@@ -28,7 +27,7 @@
 - (IBAction)onLight:(id)sender {
     NSURL *url = [[NSURL alloc] initFileURLWithPath:[[NSBundle mainBundle] pathForResource:@"light-stylesheet" ofType:@"xaml"]];
     iXStylesheet *stylesheet = [[iXStylesheet alloc] initWithXAML:url];
-    
+
     [[UIApplication sharedApplication] setStylesheet:stylesheet];
 }
 

@@ -26,13 +26,13 @@
     }
 }
 
-- (NSString*)binding {
+- (NSString *)binding {
     return objc_getAssociatedObject(self, @"___binding");
 }
 
-- (void)setBinding:(NSString*)binding {
+- (void)setBinding:(NSString *)binding {
     objc_setAssociatedObject(self, @"___binding", binding, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    
+
     dispatch_async(dispatch_get_main_queue(), ^{
         [self applyBinding];
     });
@@ -44,9 +44,8 @@
         UIViewController *viewController = [self viewController];
         if (viewController) {
             if ([viewController respondsToSelector:NSSelectorFromString(binding)]) {
-                if ([NSStringFromClass([self class]) isEqualToString:@"UILabel"])
-                {
-                    ((UILabel*)self).text = [viewController performSelector:NSSelectorFromString(binding)];
+                if ([NSStringFromClass([self class]) isEqualToString:@"UILabel"]) {
+                    ((UILabel *) self).text = [viewController performSelector:NSSelectorFromString(binding)];
                 }
             }
         }

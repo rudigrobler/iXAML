@@ -2,6 +2,6 @@
 
 @interface UIViewController (Binding)
 
--(void)applyBinding: (NSString*)binding;
+- (void)applyBinding:(NSString *)binding;
 
 @end

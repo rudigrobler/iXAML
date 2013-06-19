@@ -14,7 +14,7 @@
 
 - (void)applyStyleToView:(UIView *)view {
     [view applyStyle];
-    
+
     for (UIView *subview in view.subviews) {
         [self applyStyleToView:subview];
     }

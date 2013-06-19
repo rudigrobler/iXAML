@@ -4,7 +4,7 @@
 @implementation iXStylesheet {
     NSMutableDictionary *_currentElement;
     NSXMLParser *_parser;
-    
+
     NSMutableDictionary *_proxy;
 }
 
@@ -52,16 +52,15 @@
     if ([elementName isEqualToString:@"Style"]) {
         NSString *styleName = [_currentElement valueForKey:@"style-name"];
         iXStyle *style = [[iXStyle alloc] init];
-        
+
         for (NSString *key in [_currentElement keyEnumerator]) {
             [style setValue:[_currentElement valueForKey:key] forKey:key];
         }
-        
+
         [_proxy setValue:style forKey:styleName];
         _currentElement = nil;
     }
-    else if ([elementName isEqualToString:@"Stylesheet"])
-    {
+    else if ([elementName isEqualToString:@"Stylesheet"]) {
     }
 }
 
@@ -69,11 +68,11 @@
     if (self = [super init]) {
         _proxy = [[NSMutableDictionary alloc] init];
         _parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
-        
+
         [_parser setDelegate:self];
         [_parser parse];
     }
-    
+
     return self;
 }
 

@@ -1,9 +1,7 @@
-#import <QuartzCore/QuartzCore.h>
 #import "UIView+Styling.h"
 #import "UIColor+Extensions.h"
 #import "UIApplication+Styling.h"
 #import "UIFont+Extensions.h"
-#import "iXStyle.h"
 #import <objc/runtime.h>
 
 @implementation UIView (Styling)
@@ -20,98 +18,79 @@
     return objc_getAssociatedObject(self, @"___style");
 }
 
-- (BOOL)updateLayer:(NSString*)property value:(NSString*)value {
+- (BOOL)updateLayer:(NSString *)property value:(NSString *)value {
     CALayer *layer = [self layer];
-    if ([property isEqualToString:@"background-color"])
-    {
+    if ([property isEqualToString:@"background-color"]) {
         [layer setBackgroundColor:[UIColor colorFromString:value].CGColor];
         return YES;
     }
-    else if ([property isEqualToString:@"border-color"])
-    {
+    else if ([property isEqualToString:@"border-color"]) {
         [layer setBorderColor:[UIColor colorFromString:value].CGColor];
         return YES;
     }
-    else if ([property isEqualToString:@"border-width"])
-    {
+    else if ([property isEqualToString:@"border-width"]) {
         [layer setBorderWidth:[value floatValue]];
         return YES;
     }
-    else if ([property isEqualToString:@"corner-radius"])
-    {
+    else if ([property isEqualToString:@"corner-radius"]) {
         [layer setCornerRadius:[value floatValue]];
         return YES;
     }
     return NO;
 }
 
-- (void)applyStyle:(iXStyle*)style {
+- (void)applyStyle:(iXStyle *)style {
     if (style) {
         for (NSString *property in style.keyEnumerator) {
             NSString *value = [style valueForKey:property];
             NSString *className = NSStringFromClass([self class]);
-            
-            if ([self updateLayer:property value:value])
-            {
+
+            if ([self updateLayer:property value:value]) {
                 // Layer property...
             }
-            
-            if ([className isEqualToString:@"UIButton"])
-            {
-                UIButton *button = (UIButton*)self;
-                if ([property isEqualToString:@"text-color"])
-                {
+
+            if ([className isEqualToString:@"UIButton"]) {
+                UIButton *button = (UIButton *) self;
+                if ([property isEqualToString:@"text-color"]) {
                     [button.titleLabel setTextColor:[UIColor colorFromString:value]];
                 }
-                else if ([property isEqualToString:@"font"])
-                {
+                else if ([property isEqualToString:@"font"]) {
                     [button.titleLabel setFont:[UIFont fontWithNameAndSize:value]];
                 }
-                else
-                {
+                else {
                     //NSLog(@"Property '%@' not found on '%@'", property, className);
                 }
             }
-            else if ([className isEqualToString:@"UILabel"])
-            {
-                UILabel *label = (UILabel*)self;
-                if ([property isEqualToString:@"text-color"])
-                {
+            else if ([className isEqualToString:@"UILabel"]) {
+                UILabel *label = (UILabel *) self;
+                if ([property isEqualToString:@"text-color"]) {
                     [label setTextColor:[UIColor colorFromString:value]];
                 }
-                else if ([property isEqualToString:@"font"])
-                {
+                else if ([property isEqualToString:@"font"]) {
                     [label setFont:[UIFont fontWithNameAndSize:value]];
                 }
-                else
-                {
+                else {
                     //NSLog(@"Property '%@' not found on '%@'", property, className);
                 }
             }
-            else if ([className isEqualToString:@"UITextField"])
-            {
-                UITextField *field = (UITextField*)self;
-                if ([property isEqualToString:@"background-color"])
-                {
+            else if ([className isEqualToString:@"UITextField"]) {
+                UITextField *field = (UITextField *) self;
+                if ([property isEqualToString:@"background-color"]) {
                     [field setBackgroundColor:[UIColor colorFromString:value]];
                 }
-                else if ([property isEqualToString:@"text-color"])
-                {
+                else if ([property isEqualToString:@"text-color"]) {
                     [field setTextColor:[UIColor colorFromString:value]];
                 }
-                else if ([property isEqualToString:@"font"])
-                {
+                else if ([property isEqualToString:@"font"]) {
                     [field setFont:[UIFont fontWithNameAndSize:value]];
                 }
-                else
-                {
+                else {
                     //NSLog(@"Property '%@' not found on '%@'", property, className);
                 }
             }
-            else
-            {
+            else {
                 //NSLog(@"'%@' is not supported", className);
-            }            
+            }
         }
     }
 }
