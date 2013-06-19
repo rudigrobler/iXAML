@@ -60,9 +60,9 @@ iXStylesheet *stylesheet = [[iXStylesheet alloc] initWithContentsOfURL:url];
 [[UIApplication sharedApplication] setStylesheet:stylesheet];
 ```
 
-Open Interface Builder and click on the UIView (control) you want to style
+Open Interface Builder, click on the control you want to style and open the identity inspector
 
-![Interface Builder](https://github.com/rudigrobler/iXAML/blob/master/Documentation/SetStyleInIB.jpg?raw=true)
+![Interface Builder](https://github.com/rudigrobler/iXAML/blob/master/Documentation/interface_builder_UILabel_identity_inspector_style_textHeaderStyle.jpg?raw=true)
 
 Add a 'style' User Defined Runtime Attributes and iXAML will do the rest!
 
