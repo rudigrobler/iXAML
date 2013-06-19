@@ -1,6 +1,6 @@
 #import <UIKit/UIKit.h>
 
-@interface UIFont (CustomFonts)
+@interface UIFont (Extensions)
 
 + (void)registerCustomFonts;
 

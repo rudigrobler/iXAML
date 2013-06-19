@@ -6,7 +6,7 @@
 #import "iXStyle.h"
 #import <objc/runtime.h>
 
-@implementation UIView (Style)
+@implementation UIView (Styling)
 
 - (void)setStyle:(NSString *)style {
     objc_setAssociatedObject(self, @"___style", style, OBJC_ASSOCIATION_RETAIN_NONATOMIC);

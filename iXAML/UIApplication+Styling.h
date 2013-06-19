@@ -1,7 +1,7 @@
 #import <UIKit/UIKit.h>
 #import "iXStylesheet.h"
 
-@interface UIApplication (Extensions)
+@interface UIApplication (Styling)
 
 @property iXStylesheet *stylesheet;
 

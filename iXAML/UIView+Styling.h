@@ -1,7 +1,7 @@
 #import "iXStyle.h"
 #import <UIKit/UIKit.h>
 
-@interface UIView (Style)
+@interface UIView (Styling)
 
 - (void)applyStyle;
 

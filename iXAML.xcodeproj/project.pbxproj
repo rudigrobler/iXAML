@@ -48,8 +48,6 @@
 		9DF17119176AAE4C0049ADD5 /* seguisym.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DF1710E176AAE4C0049ADD5 /* seguisym.ttf */; };
 		9DF1711C176AAE5D0049ADD5 /* UIFont+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF1711B176AAE5D0049ADD5 /* UIFont+Extensions.m */; };
 		9DF1711F176AAF200049ADD5 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DF1711E176AAF200049ADD5 /* CoreText.framework */; };
-		9DF17128176AD9D40049ADD5 /* button.disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DF17126176AD9D40049ADD5 /* button.disabled.png */; };
-		9DF17129176AD9D40049ADD5 /* button.default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DF17127176AD9D40049ADD5 /* button.default.png */; };
 		9DF1712B176AF42C0049ADD5 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DF1712A176AF42C0049ADD5 /* icon.png */; };
 		9DF1712E176B05E70049ADD5 /* dark-stylesheet.xaml in Resources */ = {isa = PBXBuildFile; fileRef = 9DF1712D176B05E70049ADD5 /* dark-stylesheet.xaml */; };
 		9DF17130176B1A5D0049ADD5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9DF1712F176B1A5D0049ADD5 /* README.md */; };
@@ -120,8 +118,6 @@
 		9DF1711A176AAE5D0049ADD5 /* UIFont+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Extensions.h"; sourceTree = "<group>"; };
 		9DF1711B176AAE5D0049ADD5 /* UIFont+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Extensions.m"; sourceTree = "<group>"; };
 		9DF1711E176AAF200049ADD5 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		9DF17126176AD9D40049ADD5 /* button.disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.disabled.png; sourceTree = "<group>"; };
-		9DF17127176AD9D40049ADD5 /* button.default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.default.png; sourceTree = "<group>"; };
 		9DF1712A176AF42C0049ADD5 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
 		9DF1712D176B05E70049ADD5 /* dark-stylesheet.xaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "dark-stylesheet.xaml"; sourceTree = "<group>"; };
 		9DF1712F176B1A5D0049ADD5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
@@ -337,8 +333,6 @@
 			isa = PBXGroup;
 			children = (
 				9DF1712A176AF42C0049ADD5 /* icon.png */,
-				9DF17126176AD9D40049ADD5 /* button.disabled.png */,
-				9DF17127176AD9D40049ADD5 /* button.default.png */,
 				9DF170E1176A2F700049ADD5 /* Default.png */,
 				9DF170E3176A2F700049ADD5 /* Default@2x.png */,
 				9DF170E5176A2F700049ADD5 /* Default-568h@2x.png */,
@@ -415,8 +409,6 @@
 				9DF17117176AAE4C0049ADD5 /* segoeuiz.ttf in Resources */,
 				9DF17118176AAE4C0049ADD5 /* seguisb.ttf in Resources */,
 				9DF17119176AAE4C0049ADD5 /* seguisym.ttf in Resources */,
-				9DF17128176AD9D40049ADD5 /* button.disabled.png in Resources */,
-				9DF17129176AD9D40049ADD5 /* button.default.png in Resources */,
 				9DF1712B176AF42C0049ADD5 /* icon.png in Resources */,
 				9DF1712E176B05E70049ADD5 /* dark-stylesheet.xaml in Resources */,
 				9DF17130176B1A5D0049ADD5 /* README.md in Resources */,

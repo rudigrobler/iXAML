@@ -5,7 +5,7 @@
 
 #import "UIDevice+Extensions.h"
 
-@implementation UIDevice (Hardware)
+@implementation UIDevice (Extensions)
 /*
  Platforms
  

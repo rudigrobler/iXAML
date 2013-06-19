@@ -2,7 +2,7 @@
 #import <objc/runtime.h>
 #import "UIView+Styling.h"
 
-@implementation UIApplication (Extensions)
+@implementation UIApplication (Styling)
 
 - (void)applyStylesheet {
     for (UIWindow *window in self.windows) {

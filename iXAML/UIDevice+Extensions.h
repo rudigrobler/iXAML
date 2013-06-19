@@ -80,7 +80,8 @@ typedef enum {
 
 } UIDeviceFamily;
 
-@interface UIDevice (Hardware)
+@interface UIDevice (Extensions)
+
 - (NSString *)platform;
 
 - (NSString *)hwmodel;
@@ -108,4 +109,5 @@ typedef enum {
 - (BOOL)hasRetinaDisplay;
 
 - (UIDeviceFamily)deviceFamily;
+
 @end
