@@ -70,7 +70,7 @@ Add a 'style' User Defined Runtime Attributes and iXAML will do the rest!
 
 - [ ] .css parser
 - [ ] .less parser
-- [ ] Set style using UIAppearance
+- [x] Set style using UIAppearance
 - [ ] Improve UIColor colorFromString
 - [ ] Improve UIFont fontWithNameAndSize
 - [ ] Navigation bar styling
