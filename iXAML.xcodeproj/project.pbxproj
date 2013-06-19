@@ -180,7 +180,6 @@
 		9DF170C3176A2F700049ADD5 = {
 			isa = PBXGroup;
 			children = (
-				9DE690DB1771DCF5006283B8 /* QuartzCore.framework */,
 				9DF1712F176B1A5D0049ADD5 /* README.md */,
 				9DF170D5176A2F700049ADD5 /* iXAML */,
 				9DF170CE176A2F700049ADD5 /* Frameworks */,
@@ -200,6 +199,7 @@
 		9DF170CE176A2F700049ADD5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9DE690DB1771DCF5006283B8 /* QuartzCore.framework */,
 				9DF1711E176AAF200049ADD5 /* CoreText.framework */,
 				9DF170CF176A2F700049ADD5 /* UIKit.framework */,
 				9DF170D1176A2F700049ADD5 /* Foundation.framework */,

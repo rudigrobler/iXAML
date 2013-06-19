@@ -9,19 +9,25 @@ Add the following stylesheet to your application
 ```xml
 <Stylesheet>
     <Style name="textHeaderStyle">
-        <Setter property="textColor" value="#00000" />
+        <Setter property="text-color" value="#333333" />
         <Setter property="font" value="SegoeUI-Bold 20" />
     </Style>
     <Style name="textBodyStyle">
-        <Setter property="textColor" value="#888888" />
+        <Setter property="text-color" value="#333333" />
         <Setter property="font" value="SegoeUI-Light 17" />
     </Style>
     <Style name="pageStyle">
-        <Setter property="backgroundColor" value="#F1F1F1" />
+        <Setter property="background-color" value="#F1F1F1" />
+        <Setter property="border-color" value="#0000FF" />
+        <Setter property="border-width" value="10" />
+        <Setter property="corner-radius" value="0" />
     </Style>
     <Style name="buttonStyle">
-        <Setter property="backgroundColor" value="#000000" />
-        <Setter property="textColor" value="#FFFFFF" />
+        <Setter property="background-color" value="#333333" />
+        <Setter property="text-color" value="#F1F1F1" />
+        <Setter property="border-color" value="#FF0000" />
+        <Setter property="border-width" value="1" />
+        <Setter property="corner-radius" value="5" />
         <Setter property="font" value="SegoeUI-Light 17" />
     </Style>
 </Stylesheet>

@@ -9,6 +9,9 @@
     </Style>
     <Style name="pageStyle">
         <Setter property="background-color" value="#333333" />
+        <Setter property="border-color" value="#00FF00" />
+        <Setter property="border-width" value="10" />
+        <Setter property="corner-radius" value="35" />
     </Style>
     <Style name="buttonStyle">
         <Setter property="background-color" value="#F1F1F1" />
