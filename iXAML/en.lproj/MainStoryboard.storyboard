@@ -73,7 +73,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWP-0e-Ff5">
                                 <color key="backgroundColor" red="1" green="0.87433952920000002" blue="0.085452626360000006" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="VE7-Ro-1yO"/>
+                                    <constraint firstAttribute="width" constant="136" id="yXu-97-YZS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="dark">
@@ -93,10 +93,10 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NdL-sK-CNG">
                                 <color key="backgroundColor" red="1" green="0.87433952920000002" blue="0.085452626360000006" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="5Q6-Pl-ciO"/>
+                                    <constraint firstAttribute="width" constant="136" id="c4T-Vd-yaz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="next">
+                                <state key="normal" title="next ->">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -113,19 +113,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="vKT-z2-CTb" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="3VE-gH-je9"/>
                             <constraint firstItem="KEo-pq-gEB" firstAttribute="top" secondItem="5" secondAttribute="top" constant="20" symbolic="YES" type="default" id="BD7-3B-gR5"/>
                             <constraint firstItem="qOs-wl-pQj" firstAttribute="top" secondItem="5" secondAttribute="top" constant="54" id="BQe-8t-myW"/>
-                            <constraint firstItem="NdL-sK-CNG" firstAttribute="trailing" secondItem="jWP-0e-Ff5" secondAttribute="trailing" type="default" id="ITE-YF-lrU"/>
-                            <constraint firstItem="NdL-sK-CNG" firstAttribute="top" secondItem="jWP-0e-Ff5" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="JYK-xe-dIh"/>
-                            <constraint firstItem="jWP-0e-Ff5" firstAttribute="trailing" secondItem="vKT-z2-CTb" secondAttribute="trailing" type="default" id="WBJ-BA-rkC"/>
-                            <constraint firstItem="NdL-sK-CNG" firstAttribute="leading" secondItem="jWP-0e-Ff5" secondAttribute="leading" type="default" id="deD-p9-Emq"/>
-                            <constraint firstItem="jWP-0e-Ff5" firstAttribute="top" secondItem="vKT-z2-CTb" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="drk-f3-hZa"/>
+                            <constraint firstItem="NdL-sK-CNG" firstAttribute="bottom" secondItem="jWP-0e-Ff5" secondAttribute="bottom" type="default" id="GV0-Pa-B0w"/>
+                            <constraint firstItem="NdL-sK-CNG" firstAttribute="leading" secondItem="jWP-0e-Ff5" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Hqq-4Z-NGQ"/>
+                            <constraint firstItem="vKT-z2-CTb" firstAttribute="top" secondItem="5" secondAttribute="top" constant="100" id="Xax-qf-cYC"/>
+                            <constraint firstItem="jWP-0e-Ff5" firstAttribute="bottom" secondItem="vKT-z2-CTb" secondAttribute="bottom" type="default" id="XrY-ty-2dX"/>
+                            <constraint firstItem="jWP-0e-Ff5" firstAttribute="leading" secondItem="vKT-z2-CTb" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Zdt-aX-zBt"/>
                             <constraint firstItem="qOs-wl-pQj" firstAttribute="trailing" secondItem="KEo-pq-gEB" secondAttribute="trailing" type="default" id="gvb-VT-OOz"/>
-                            <constraint firstItem="jWP-0e-Ff5" firstAttribute="leading" secondItem="vKT-z2-CTb" secondAttribute="leading" type="default" id="kK1-Zx-v37"/>
+                            <constraint firstItem="NdL-sK-CNG" firstAttribute="top" secondItem="jWP-0e-Ff5" secondAttribute="top" type="default" id="ieR-ZF-2OD"/>
+                            <constraint firstItem="jWP-0e-Ff5" firstAttribute="top" secondItem="vKT-z2-CTb" secondAttribute="top" type="default" id="mZj-LY-TNb"/>
                             <constraint firstItem="KEo-pq-gEB" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="qg6-Ft-QD8"/>
-                            <constraint firstItem="vKT-z2-CTb" firstAttribute="top" secondItem="5" secondAttribute="top" constant="164" id="tCu-eJ-WgE"/>
                             <constraint firstItem="qOs-wl-pQj" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="uGO-CG-7Na"/>
-                            <constraint firstAttribute="trailing" secondItem="vKT-z2-CTb" secondAttribute="trailing" constant="146" id="yGO-mD-Udb"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="string" keyPath="style" value="pageStyle"/>
@@ -145,19 +145,52 @@
                         <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rvj-q8-Zfv">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="first name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rvj-q8-Zfv">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="style" value="textHeaderStyle"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="style" value="textBodyStyle"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1up-Jf-87a">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Fsb-Fx-q9Z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="style" value="textFieldStyle"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="last name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZvY-uJ-A8a">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="style" value="textBodyStyle"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Ae-jC-giI">
+                                <color key="backgroundColor" red="1" green="0.87433952920000002" blue="0.085452626360000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="style" value="textFieldStyle"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Rvj-q8-Zfv" firstAttribute="top" secondItem="UNy-QY-r0b" secondAttribute="top" constant="83" id="UJK-nv-CBn"/>
-                            <constraint firstItem="Rvj-q8-Zfv" firstAttribute="leading" secondItem="UNy-QY-r0b" secondAttribute="leading" constant="253" id="w1e-B6-U25"/>
+                            <constraint firstItem="5Ae-jC-giI" firstAttribute="leading" secondItem="1up-Jf-87a" secondAttribute="leading" type="default" id="CP9-AS-6At"/>
+                            <constraint firstItem="ZvY-uJ-A8a" firstAttribute="top" secondItem="UNy-QY-r0b" secondAttribute="top" constant="103" id="Ee6-QL-Nrs"/>
+                            <constraint firstItem="5Ae-jC-giI" firstAttribute="top" secondItem="1up-Jf-87a" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="JCB-Im-VBk"/>
+                            <constraint firstItem="1up-Jf-87a" firstAttribute="leading" secondItem="UNy-QY-r0b" secondAttribute="leading" constant="227" id="LOV-ZT-wmO"/>
+                            <constraint firstItem="Rvj-q8-Zfv" firstAttribute="leading" secondItem="ZvY-uJ-A8a" secondAttribute="leading" type="default" id="Qwb-FY-IGM"/>
+                            <constraint firstItem="5Ae-jC-giI" firstAttribute="trailing" secondItem="1up-Jf-87a" secondAttribute="trailing" type="default" id="dNE-av-ONS"/>
+                            <constraint firstItem="1up-Jf-87a" firstAttribute="top" secondItem="UNy-QY-r0b" secondAttribute="top" constant="61" id="k3O-Ld-uJS"/>
+                            <constraint firstItem="Rvj-q8-Zfv" firstAttribute="leading" secondItem="UNy-QY-r0b" secondAttribute="leading" constant="97" id="uy9-sP-sOC"/>
+                            <constraint firstItem="1up-Jf-87a" firstAttribute="baseline" secondItem="Rvj-q8-Zfv" secondAttribute="baseline" type="default" id="zid-BV-eTJ"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="string" keyPath="style" value="pageStyle"/>
@@ -179,8 +212,6 @@
             <relationships>
                 <relationship kind="action" name="onDark:"/>
                 <relationship kind="action" name="onLight:"/>
-                <relationship kind="action" name="onReset:"/>
-                <relationship kind="action" name="onUpdate:"/>
             </relationships>
         </class>
     </classes>

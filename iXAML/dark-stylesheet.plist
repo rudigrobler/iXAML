@@ -2,6 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>textFieldStyle</key>
+	<dict>
+		<key>text-color</key>
+		<string>#333333</string>
+		<key>background-color</key>
+		<string>#F1F1F1</string>
+		<key>font</key>
+		<string>SegoeUI-Light 17</string>
+	</dict>
 	<key>textHeaderStyle</key>
 	<dict>
 		<key>text-color</key>
@@ -21,11 +30,11 @@
 		<key>background-color</key>
 		<string>#333333</string>
 		<key>border-color</key>
-		<string>#0000FF</string>
+		<string>#F1F1F1</string>
 		<key>border-width</key>
-		<string>10</string>
+		<string>3</string>
 		<key>corner-radius</key>
-		<string>35</string>
+		<string>15</string>
 	</dict>
 	<key>buttonStyle</key>
 	<dict>

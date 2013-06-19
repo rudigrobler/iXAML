@@ -55,7 +55,8 @@
             {
                 // Layer property...
             }
-            else if ([className isEqualToString:@"UIButton"])
+            
+            if ([className isEqualToString:@"UIButton"])
             {
                 UIButton *button = (UIButton*)self;
                 if ([property isEqualToString:@"text-color"])
@@ -87,9 +88,29 @@
                     NSLog(@"Property '%@' not found on '%@'", property, className);
                 }
             }
+            else if ([className isEqualToString:@"UITextField"])
+            {
+                UITextField *field = (UITextField*)self;
+                if ([property isEqualToString:@"background-color"])
+                {
+                    [field setBackgroundColor:[UIColor colorFromString:value]];
+                }
+                else if ([property isEqualToString:@"text-color"])
+                {
+                    [field setTextColor:[UIColor colorFromString:value]];
+                }
+                else if ([property isEqualToString:@"font"])
+                {
+                    [field setFont:[UIFont fontWithNameAndSize:value]];
+                }
+                else
+                {
+                    //NSLog(@"Property '%@' not found on '%@'", property, className);
+                }
+            }
             else
             {
-                NSLog(@"'%@' is not supported", className);
+                //NSLog(@"'%@' is not supported", className);
             }            
         }
     }

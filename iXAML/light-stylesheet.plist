@@ -21,11 +21,11 @@
 		<key>background-color</key>
 		<string>#F1F1F1</string>
 		<key>border-color</key>
-		<string>#00FF00</string>
+		<string>#333333</string>
 		<key>border-width</key>
-		<string>10</string>
+		<string>3</string>
 		<key>corner-radius</key>
-		<string>0</string>
+		<string>15</string>
 	</dict>
 	<key>buttonStyle</key>
 	<dict>
@@ -41,6 +41,15 @@
 		<string>1</string>
 		<key>corner-radius</key>
 		<string>5</string>
+	</dict>
+	<key>textFieldStyle</key>
+	<dict>
+		<key>text-color</key>
+		<string>#F1F1F1</string>
+		<key>background-color</key>
+		<string>#333333</string>
+		<key>font</key>
+		<string>SegoeUI-Light 17</string>
 	</dict>
 </dict>
 </plist>
