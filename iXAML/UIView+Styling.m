@@ -3,6 +3,7 @@
 #import "UIApplication+Styling.h"
 #import "UIFont+Extensions.h"
 #import <objc/runtime.h>
+#import <QuartzCore/QuartzCore.h>
 
 @implementation UIView (Styling)
 
