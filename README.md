@@ -36,18 +36,18 @@ Load the style sheet from the main bundle
 
 ```Objective-C
 NSURL *url = [[NSURL alloc] initFileURLWithPath:[[NSBundle mainBundle] 
-
-Open Interface Builder and click on the UIView (control) you want to style
-
-![Interface Builder](https://github.com/rudigrobler/iXAML/blob/master/Documentation/SetStyleInIB.jpg?raw=true)
-
-Add a 'style' User Defined Runtime Attributes and                                 pathForResource:@"dark-stylesheet" 
+                                pathForResource:@"dark-stylesheet"
                                          ofType:@"xaml"]];
+
 iXStylesheet *stylesheet = [[iXStylesheet alloc] initWithContentsOfURL:url];
 
 [UIApplication sharedApplication].stylesheet = stylesheet;
 ```
-set it... and iXAML will do the rest!
+Open Interface Builder and click on the UIView (control) you want to style
+
+![Interface Builder](https://github.com/rudigrobler/iXAML/blob/master/Documentation/SetStyleInIB.jpg?raw=true)
+
+Add a 'style' User Defined Runtime Attributes and iXAML will do the rest!
 
 ## Similar
 
@@ -57,4 +57,4 @@ set it... and iXAML will do the rest!
 * https://github.com/facebook/three20
 * https://github.com/jverkoey/nimbus
 
-[by ](http://twitter.com/rudigrobler/ "@rudigrobler")
+by [@rudigrobler](http://twitter.com/rudigrobler/)
