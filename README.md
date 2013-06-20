@@ -71,11 +71,12 @@ Add a 'style' User Defined Runtime Attributes and iXAML will do the rest!
 [NUI](https://github.com/tombenner/nui) by Tom Benner
 > NUI is a drop-in UI kit for iOS that lets you style UI elements using a style sheet, similar to CSS. It lets you style an entire app in minutes.
 
-Very cool library with CSS and Interface Builder support but heavy use of swizzling.
+Comments
+* Very cool library with CSS and Interface Builder support
+* Heavy use of swizzling
+* No runtime theme change support
 
-* https://github.com/cssapply/CSSApply
-* https://github.com/juliengomes/iCSS
-* https://github.com/facebook/three20
-* https://github.com/jverkoey/nimbus
+[CSSApply](https://github.com/cssapply/CSSApply)
+> Extremely lightweight skinning system for iOS. It allows you to load a CSS file and skin UIView elements. The system also allows you to do simple searches for subviews like jQuery with CSS selectors.
 
 by [@rudigrobler](http://twitter.com/rudigrobler/)
