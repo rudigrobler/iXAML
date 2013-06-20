@@ -31,7 +31,10 @@
     Method origMethod = class_getInstanceMethod(self, origSel_);
     if (!origMethod) {
 #if TARGET_OS_IPHONE
-        SetNSError(error_, @"original method %@ not found for class %@", NSStringFromSelector(origSel_), [self class]);
+        if (error_) {
+            *error_ = [NSError errorWithDomain:@"NSCocoaErrorDomain" code:-1 userInfo:[[NSDictionary alloc] init]];
+        }
+        //SetNSError(error_, @"original method %@ not found for class %@", NSStringFromSelector(origSel_), [self class]);
 #else
 		SetNSError(error_, @"original method %@ not found for class %@", NSStringFromSelector(origSel_), [self className]);
 #endif
@@ -41,7 +44,10 @@
     Method altMethod = class_getInstanceMethod(self, altSel_);
     if (!altMethod) {
 #if TARGET_OS_IPHONE
-        SetNSError(error_, @"alternate method %@ not found for class %@", NSStringFromSelector(altSel_), [self class]);
+        if (error_) {
+            *error_ = [NSError errorWithDomain:@"NSCocoaErrorDomain" code:-1 userInfo:[[NSDictionary alloc] init]];
+        }
+        //SetNSError(error_, @"alternate method %@ not found for class %@", NSStringFromSelector(altSel_), [self class]);
 #else
 		SetNSError(error_, @"alternate method %@ not found for class %@", NSStringFromSelector(altSel_), [self className]);
 #endif

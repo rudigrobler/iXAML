@@ -125,12 +125,14 @@ CGFloat edgeSizeFromCornerRadius(CGFloat cornerRadius) {
     UIBezierPath *path = [UIBezierPath bezierPath];
     CGPoint mPoint = CGPointMake(CGRectGetMaxX(rect) - radius, rect.origin.y);
     CGPoint ctrlPoint = mPoint;
+    CGFloat endAngle = (CGFloat) M_PI_2;
+    CGFloat startAngle = (CGFloat) M_PI + endAngle;
     [path moveToPoint:mPoint];
 
     ctrlPoint.y += radius;
     mPoint.x += radius;
     mPoint.y += radius;
-    if (radius > 0) [path addArcWithCenter:ctrlPoint radius:radius startAngle:M_PI + M_PI_2 endAngle:0 clockwise:YES];
+    if (radius > 0) [path addArcWithCenter:ctrlPoint radius:radius startAngle:startAngle endAngle:0 clockwise:YES];
 
     mPoint.y = CGRectGetMaxY(rect) - radius;
     [path addLineToPoint:mPoint];
@@ -139,7 +141,7 @@ CGFloat edgeSizeFromCornerRadius(CGFloat cornerRadius) {
     mPoint.y += radius;
     mPoint.x -= radius;
     ctrlPoint.x -= radius;
-    if (radius > 0) [path addArcWithCenter:ctrlPoint radius:radius startAngle:0 endAngle:M_PI_2 clockwise:YES];
+    if (radius > 0) [path addArcWithCenter:ctrlPoint radius:radius startAngle:0 endAngle:endAngle clockwise:YES];
 
     mPoint.x = rect.origin.x + (10.0f);
     [path addLineToPoint:mPoint];
