@@ -68,13 +68,9 @@ Add a 'style' User Defined Runtime Attributes and iXAML will do the rest!
 
 ## Similar
 
-[NUI](https://github.com/tombenner/nui)
-tombenner/nui
-@tombenner
+[NUI](https://github.com/tombenner/nui) by Tom Benner
 > NUI is a drop-in UI kit for iOS that lets you style UI elements using a style sheet, similar to CSS. It lets you style an entire app in minutes.
-
-Comments
-- Heavy use of swizzling
+Heavy use of swizzling
 
 * https://github.com/cssapply/CSSApply
 * https://github.com/juliengomes/iCSS
