@@ -71,12 +71,26 @@ Add a 'style' User Defined Runtime Attributes and iXAML will do the rest!
 [NUI](https://github.com/tombenner/nui) by Tom Benner
 > NUI is a drop-in UI kit for iOS that lets you style UI elements using a style sheet, similar to CSS. It lets you style an entire app in minutes.
 
-Comments
-* Very cool library with CSS and Interface Builder support
+Notes
+* CSS and Interface Builder support
 * Heavy use of swizzling
-* No runtime theme change support
 
 [CSSApply](https://github.com/cssapply/CSSApply)
 > Extremely lightweight skinning system for iOS. It allows you to load a CSS file and skin UIView elements. The system also allows you to do simple searches for subviews like jQuery with CSS selectors.
+
+[Three20](https://github.com/facebook/three20)
+> Three20 is derived from the Facebook iPhone app, which is one of the most downloaded iPhone apps ever.
+
+[Nimbus](https://github.com/jverkoey/nimbus)
+> Nimbus is an iOS framework whose feature set grows only as fast as its documentation.
+
+[FlatUIKit](https://github.com/Grouper/FlatUIKit)
+> FlatUIKit is a collection of iOS components styled with the "Flat UI" aesthetic that we created while building Grouper for iPhone. 
+
+[UI7Kit](https://github.com/youknowone/UI7Kit)
+> UI7Kit is a GUI toolkit to backport flat-style UIKit from iOS7 to iOS5/iOS6. Additionally, UI7Kit can be used to patch legacy UIKit to UI7Kit in runtime.
+
+[FlatUI](https://github.com/piotrbernad/FlatUI)
+> Easy to use User Interface elements which are really similar to design in iOS 7.
 
 by [@rudigrobler](http://twitter.com/rudigrobler/)
