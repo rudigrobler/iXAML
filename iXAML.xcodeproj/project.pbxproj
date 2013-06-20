@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D16B0741773867E00016888 /* UIBarButtonItem+Styling.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D16B0731773867E00016888 /* UIBarButtonItem+Styling.m */; };
 		9D3FF6B91772582E00C99096 /* Glimpse.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D3FF6B61772582E00C99096 /* Glimpse.m */; };
 		9D3FF6BA1772582E00C99096 /* GlimpseVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D3FF6B81772582E00C99096 /* GlimpseVersion.m */; };
 		9D3FF6BE17725F0800C99096 /* UIDevice+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D3FF6BD17725F0800C99096 /* UIDevice+Extensions.m */; };
@@ -59,6 +60,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D16B0721773867E00016888 /* UIBarButtonItem+Styling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Styling.h"; sourceTree = "<group>"; };
+		9D16B0731773867E00016888 /* UIBarButtonItem+Styling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Styling.m"; sourceTree = "<group>"; };
 		9D3FF6B51772582E00C99096 /* Glimpse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Glimpse.h; sourceTree = "<group>"; };
 		9D3FF6B61772582E00C99096 /* Glimpse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Glimpse.m; sourceTree = "<group>"; };
 		9D3FF6B71772582E00C99096 /* GlimpseVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlimpseVersion.h; sourceTree = "<group>"; };
@@ -204,6 +207,8 @@
 				9D5A78281772DCB6002D4DD0 /* UITextField+Styling.m */,
 				9D5A7833177338DC002D4DD0 /* UINavigationBar+Styling.h */,
 				9D5A7834177338DD002D4DD0 /* UINavigationBar+Styling.m */,
+				9D16B0721773867E00016888 /* UIBarButtonItem+Styling.h */,
+				9D16B0731773867E00016888 /* UIBarButtonItem+Styling.m */,
 			);
 			name = Styling;
 			sourceTree = "<group>";
@@ -453,6 +458,7 @@
 				9D5A78291772DCB6002D4DD0 /* UITextField+Styling.m in Sources */,
 				9D5A7832177326FC002D4DD0 /* UIImage+Extensions.m in Sources */,
 				9D5A7835177338DD002D4DD0 /* UINavigationBar+Styling.m in Sources */,
+				9D16B0741773867E00016888 /* UIBarButtonItem+Styling.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
