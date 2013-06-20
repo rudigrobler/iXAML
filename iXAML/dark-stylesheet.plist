@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>textFieldStyle</key>
-	<dict>
-		<key>text-color</key>
-		<string>#000000</string>
-		<key>background-color</key>
-		<string>#FFFFFF</string>
-		<key>font</key>
-		<string>SegoeUI-Light 17</string>
-	</dict>
-	<key>textHeaderStyle</key>
-	<dict>
-		<key>text-color</key>
-		<string>#FFFFFF</string>
-		<key>font</key>
-		<string>SegoeUI-Bold 20</string>
-	</dict>
-	<key>textBodyStyle</key>
-	<dict>
-		<key>text-color</key>
-		<string>#FFFFFF</string>
-		<key>font</key>
-		<string>SegoeUI-Light 17</string>
-	</dict>
-	<key>pageStyle</key>
-	<dict>
-		<key>background-color</key>
-		<string>#000000</string>
-		<key>corner-radius</key>
-		<string>0</string>
-	</dict>
-	<key>buttonStyle</key>
-	<dict>
-		<key>font</key>
-		<string>SegoeUI-Bold 17</string>
-		<key>background-color</key>
-		<string>#FFFFFF</string>
-		<key>text-color</key>
-		<string>#000000</string>
-		<key>corner-radius</key>
-		<string>0</string>
-	</dict>
-</dict>
+    <dict>
+        <key>textFieldStyle</key>
+        <dict>
+            <key>text-color</key>
+            <string>#000000</string>
+            <key>background-color</key>
+            <string>#FFFFFF</string>
+            <key>font</key>
+            <string>SegoeUI-Light 17</string>
+        </dict>
+        <key>textHeaderStyle</key>
+        <dict>
+            <key>text-color</key>
+            <string>#FFFFFF</string>
+            <key>font</key>
+            <string>SegoeUI-Bold 20</string>
+        </dict>
+        <key>textBodyStyle</key>
+        <dict>
+            <key>text-color</key>
+            <string>#FFFFFF</string>
+            <key>font</key>
+            <string>SegoeUI-Light 17</string>
+        </dict>
+        <key>pageStyle</key>
+        <dict>
+            <key>background-color</key>
+            <string>#000000</string>
+            <key>corner-radius</key>
+            <string>0</string>
+        </dict>
+        <key>buttonStyle</key>
+        <dict>
+            <key>font</key>
+            <string>SegoeUI-Bold 17</string>
+            <key>background-color</key>
+            <string>#FFFFFF</string>
+            <key>text-color</key>
+            <string>#000000</string>
+            <key>corner-radius</key>
+            <string>0</string>
+        </dict>
+    </dict>
 </plist>

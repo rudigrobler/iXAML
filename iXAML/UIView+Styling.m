@@ -1,11 +1,11 @@
-#import "UIView+Styling.h"
-#import "UIColor+Extensions.h"
 #import "UIApplication+Styling.h"
-#import <objc/runtime.h>
-#import <QuartzCore/QuartzCore.h>
 #import "UIButton+Styling.h"
+#import "UIColor+Extensions.h"
 #import "UILabel+Styling.h"
 #import "UITextField+Styling.h"
+#import "UIView+Styling.h"
+#import <objc/runtime.h>
+#import <QuartzCore/QuartzCore.h>
 
 @implementation UIView (Styling)
 
@@ -15,9 +15,6 @@
     dispatch_barrier_async(dispatch_get_main_queue(), ^{
         [self applyStyle];
     });
-//    dispatch_async(dispatch_get_main_queue(), ^{
-//        [self applyStyle];
-//    });
 }
 
 - (NSString *)style {
@@ -44,7 +41,6 @@
                 [self applyStyle:[stylesheet valueForKey:style]];
             }
             else {
-                NSLog(@">>> %@ <<<", className);
             }
         }
     }
@@ -70,7 +66,6 @@
                 [self.layer setCornerRadius:[value floatValue]];
             }
             else {
-                NSLog(@"'%@' not found on '%@'", property, NSStringFromClass([self class]));
             }
         }
     }

@@ -191,6 +191,7 @@
 		9D8A2EE91771A59D00307626 /* Styling */ = {
 			isa = PBXGroup;
 			children = (
+				9DC1983F17739AC2008FC4C3 /* UIKit+Styling */,
 				9DF170F8176A48050049ADD5 /* iXStyle.h */,
 				9DF170F9176A48050049ADD5 /* iXStyle.m */,
 				9DF170FA176A48050049ADD5 /* iXStylesheet.h */,
@@ -199,16 +200,6 @@
 				9DF170F6176A47710049ADD5 /* UIApplication+Styling.m */,
 				9D8A2EE61771A3BE00307626 /* UIView+Styling.h */,
 				9D8A2EE71771A3BE00307626 /* UIView+Styling.m */,
-				9D5A78241772DC7E002D4DD0 /* UILabel+Styling.h */,
-				9D5A78251772DC7E002D4DD0 /* UILabel+Styling.m */,
-				9D5A78211772DC6A002D4DD0 /* UIButton+Styling.h */,
-				9D5A78221772DC6A002D4DD0 /* UIButton+Styling.m */,
-				9D5A78271772DCB5002D4DD0 /* UITextField+Styling.h */,
-				9D5A78281772DCB6002D4DD0 /* UITextField+Styling.m */,
-				9D5A7833177338DC002D4DD0 /* UINavigationBar+Styling.h */,
-				9D5A7834177338DD002D4DD0 /* UINavigationBar+Styling.m */,
-				9D16B0721773867E00016888 /* UIBarButtonItem+Styling.h */,
-				9D16B0731773867E00016888 /* UIBarButtonItem+Styling.m */,
 			);
 			name = Styling;
 			sourceTree = "<group>";
@@ -224,6 +215,23 @@
 				9DF170FF176A4FEE0049ADD5 /* UIColor+Extensions.m */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		9DC1983F17739AC2008FC4C3 /* UIKit+Styling */ = {
+			isa = PBXGroup;
+			children = (
+				9D5A78241772DC7E002D4DD0 /* UILabel+Styling.h */,
+				9D5A78251772DC7E002D4DD0 /* UILabel+Styling.m */,
+				9D5A78211772DC6A002D4DD0 /* UIButton+Styling.h */,
+				9D5A78221772DC6A002D4DD0 /* UIButton+Styling.m */,
+				9D5A78271772DCB5002D4DD0 /* UITextField+Styling.h */,
+				9D5A78281772DCB6002D4DD0 /* UITextField+Styling.m */,
+				9D5A7833177338DC002D4DD0 /* UINavigationBar+Styling.h */,
+				9D5A7834177338DD002D4DD0 /* UINavigationBar+Styling.m */,
+				9D16B0721773867E00016888 /* UIBarButtonItem+Styling.h */,
+				9D16B0731773867E00016888 /* UIBarButtonItem+Styling.m */,
+			);
+			name = "UIKit+Styling";
 			sourceTree = "<group>";
 		};
 		9DDA4979176B663800B4045E /* Glimpse */ = {

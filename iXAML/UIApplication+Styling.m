@@ -1,6 +1,6 @@
 #import "UIApplication+Styling.h"
-#import <objc/runtime.h>
 #import "UIView+Styling.h"
+#import <objc/runtime.h>
 
 @implementation UIApplication (Styling)
 

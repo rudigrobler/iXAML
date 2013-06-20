@@ -1,5 +1,5 @@
-#import "UIFont+Extensions.h"
 #import "UIColor+Extensions.h"
+#import "UIFont+Extensions.h"
 #import "UILabel+Styling.h"
 #import <QuartzCore/QuartzCore.h>
 

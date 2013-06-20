@@ -1,6 +1,5 @@
-#import "iXStylesheet.h"
-#import "iXViewController.h"
 #import "UIApplication+Styling.h"
+#import "iXViewController.h"
 
 @interface iXViewController () {
     NSDateFormatter *dateFormatter;
@@ -12,10 +11,12 @@
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
+
     if (self) {
         dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"MM/dd/yyyy hh:mm:ss"];
     }
+
     return self;
 }
 

@@ -1,6 +1,6 @@
-#import "UIFont+Extensions.h"
-#import "UIColor+Extensions.h"
 #import "UIButton+Styling.h"
+#import "UIColor+Extensions.h"
+#import "UIFont+Extensions.h"
 #import <QuartzCore/QuartzCore.h>
 
 @implementation UIButton (Styling)

@@ -1,9 +1,8 @@
-#include <sys/socket.h>
-#include <sys/sysctl.h>
+#import "UIDevice+Extensions.h"
 #include <net/if.h>
 #include <net/if_dl.h>
-
-#import "UIDevice+Extensions.h"
+#include <sys/socket.h>
+#include <sys/sysctl.h>
 
 @implementation UIDevice (Extensions)
 /*

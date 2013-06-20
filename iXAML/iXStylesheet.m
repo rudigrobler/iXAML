@@ -1,6 +1,5 @@
 #import "iXStyle.h"
 #import "iXStylesheet.h"
-#import <QuartzCore/QuartzCore.h>
 
 @interface iXStylesheet ()
 

@@ -1,9 +1,8 @@
-#import "UIBarButtonItem+Styling.h"
-#import "UINavigationBar+Styling.h"
-#import "UIFont+Extensions.h"
-#import "iXAppDelegate.h"
-#import "iXStylesheet.h"
 #import "UIApplication+Styling.h"
+#import "UIBarButtonItem+Styling.h"
+#import "UIFont+Extensions.h"
+#import "UINavigationBar+Styling.h"
+#import "iXAppDelegate.h"
 
 @implementation iXAppDelegate
 
@@ -23,7 +22,7 @@
     // iXStylesheet *stylesheet = [[iXStylesheet alloc] initWithContentsOfURL:url];
 
     [[UIApplication sharedApplication] setStylesheet:stylesheet];
-    
+
     iXStyle *navigationBarStyle = [[iXStyle alloc] init];
     [navigationBarStyle setValue:@"#000000" forKey:@"background-color"];
     [navigationBarStyle setValue:@"#FFFFFF" forKey:@"text-color"];
@@ -35,7 +34,7 @@
     [barButtonItemStyle setValue:@"#FFFFFF" forKey:@"background-color"];
     [barButtonItemStyle setValue:@"#000000" forKey:@"text-color"];
     [barButtonItemStyle setValue:@"SegoeUI-Light 14" forKey:@"font"];
-    
+
     [UIBarButtonItem applyStyle:barButtonItemStyle];
 
     return YES;

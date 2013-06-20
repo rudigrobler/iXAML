@@ -1,5 +1,5 @@
-#import <CoreText/CoreText.h>
 #import "UIFont+Extensions.h"
+#import <CoreText/CoreText.h>
 
 @implementation UIFont (Extensions)
 

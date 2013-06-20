@@ -1,7 +1,8 @@
+#import "UIColor+Extensions.h"
 #import "UIFont+Extensions.h"
 #import "UIImage+Extensions.h"
-#import "UIColor+Extensions.h"
 #import "UINavigationBar+Styling.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation UINavigationBar (Styling)
 
@@ -29,7 +30,7 @@
                 }
                 [attributes setValue:[NSValue valueWithUIOffset:UIOffsetMake(0, 0)] forKey:UITextAttributeTextShadowOffset];
                 [attributes setValue:[UIColor colorFromString:value] forKey:UITextAttributeTextColor];
-                
+
                 [[UINavigationBar appearance] setTitleTextAttributes:attributes];
             }
             else if ([property isEqualToString:@"font"]) {
@@ -39,7 +40,7 @@
                 }
                 [attributes setValue:[NSValue valueWithUIOffset:UIOffsetMake(0, 0)] forKey:UITextAttributeTextShadowOffset];
                 [attributes setValue:[UIFont fontWithNameAndSize:value] forKey:UITextAttributeFont];
-                
+
                 [[UINavigationBar appearance] setTitleTextAttributes:attributes];
             }
             else {

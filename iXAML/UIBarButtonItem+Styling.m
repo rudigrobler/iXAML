@@ -1,7 +1,8 @@
+#import "UIBarButtonItem+Styling.h"
+#import "UIColor+Extensions.h"
 #import "UIFont+Extensions.h"
 #import "UIImage+Extensions.h"
-#import "UIColor+Extensions.h"
-#import "UIBarButtonItem+Styling.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation UIBarButtonItem (Styling)
 
@@ -9,7 +10,7 @@
     if (style) {
         for (NSString *property in style.keyEnumerator) {
             NSString *value = [style valueForKey:property];
-            
+
             if ([property isEqualToString:@"style-name"]) {
             }
             else if ([property isEqualToString:@"background-color"]) {
@@ -45,7 +46,7 @@
                 }
                 [attributes setValue:[NSValue valueWithUIOffset:UIOffsetMake(0, 0)] forKey:UITextAttributeTextShadowOffset];
                 [attributes setValue:[UIFont fontWithNameAndSize:value] forKey:UITextAttributeFont];
-                
+
                 [[UIBarButtonItem appearance] setTitleTextAttributes:attributes forState:UIControlStateNormal];
             }
             else {
