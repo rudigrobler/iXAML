@@ -7,6 +7,8 @@
 @implementation iXAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
+
     [UIFont registerCustomFonts];
 
     // Loading stylesheet from XAML
@@ -41,18 +43,49 @@
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
+}
+
+- (void)applicationDidFinishLaunching:(UIApplication *)application {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
+}
+
+- (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
+    
+    return YES;
+}
+
+- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
+}
+
+- (void)applicationSignificantTimeChange:(UIApplication *)application {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
+}
+
+- (void)applicationProtectedDataWillBecomeUnavailable:(UIApplication *)application {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
+}
+
+- (void)applicationProtectedDataDidBecomeAvailable:(UIApplication *)application {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
 }
 
 @end

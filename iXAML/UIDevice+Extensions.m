@@ -1,8 +1,9 @@
-#import "UIDevice+Extensions.h"
-#include <net/if.h>
-#include <net/if_dl.h>
+//#include <net/if.h>
+//#include <net/if_dl.h>
 #include <sys/socket.h>
 #include <sys/sysctl.h>
+
+#import "UIDevice+Extensions.h"
 
 @implementation UIDevice (Extensions)
 /*
@@ -236,54 +237,6 @@
     if ([platform hasPrefix:@"AppleTV"]) return UIDeviceFamilyAppleTV;
 
     return UIDeviceFamilyUnknown;
-}
-
-#pragma mark MAC addy
-// Return the local MAC addy
-// Courtesy of FreeBSD hackers email list
-// Accidentally munged during previous update. Fixed thanks to mlamb.
-- (NSString *)macaddress {
-    int mib[6];
-    size_t len;
-    char *buf;
-    unsigned char *ptr;
-    struct if_msghdr *ifm;
-    struct sockaddr_dl *sdl;
-
-    mib[0] = CTL_NET;
-    mib[1] = AF_ROUTE;
-    mib[2] = 0;
-    mib[3] = AF_LINK;
-    mib[4] = NET_RT_IFLIST;
-
-    if ((mib[5] = if_nametoindex("en0")) == 0) {
-        printf("Error: if_nametoindex error\n");
-        return NULL;
-    }
-
-    if (sysctl(mib, 6, NULL, &len, NULL, 0) < 0) {
-        printf("Error: sysctl, take 1\n");
-        return NULL;
-    }
-
-    if ((buf = malloc(len)) == NULL) {
-        printf("Error: Memory allocation error\n");
-        return NULL;
-    }
-
-    if (sysctl(mib, 6, buf, &len, NULL, 0) < 0) {
-        printf("Error: sysctl, take 2\n");
-        free(buf); // Thanks, Remy "Psy" Demerest
-        return NULL;
-    }
-
-    ifm = (struct if_msghdr *) buf;
-    sdl = (struct sockaddr_dl *) (ifm + 1);
-    ptr = (unsigned char *) LLADDR(sdl);
-    NSString *outstring = [NSString stringWithFormat:@"%02X:%02X:%02X:%02X:%02X:%02X", *ptr, *(ptr + 1), *(ptr + 2), *(ptr + 3), *(ptr + 4), *(ptr + 5)];
-
-    free(buf);
-    return outstring;
 }
 
 @end
