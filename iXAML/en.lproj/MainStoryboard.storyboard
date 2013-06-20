@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="JBg-9c-02K">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="JBg-9c-02K">
     <dependencies>
         <development version="4600" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
@@ -20,7 +20,7 @@
             </objects>
             <point key="canvasLocation" x="-2067" y="-911"/>
         </scene>
-        <!--IX View Controller-->
+        <!--IX View Controller - iXAML-->
         <scene sceneID="4">
             <objects>
                 <viewController id="2" customClass="iXViewController" sceneMemberID="viewController">
@@ -28,7 +28,7 @@
                         <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEo-pq-gEB">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Header" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEo-pq-gEB">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="259" id="3xG-px-xF9"/>
                                 </constraints>
@@ -37,22 +37,19 @@
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="style" value="textHeaderStyle"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="binding" value="applicationTitle"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOs-wl-pQj">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Body" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOs-wl-pQj">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="style" value="textBodyStyle"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="binding" value="timestamp"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKT-z2-CTb">
                                 <color key="backgroundColor" red="1" green="0.87433952920000002" blue="0.085452626360000006" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="136" id="Oic-MD-VMc"/>
                                     <constraint firstAttribute="height" constant="44" id="dn0-1H-Atn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -96,7 +93,7 @@
                                     <constraint firstAttribute="width" constant="136" id="c4T-Vd-yaz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="next ->">
+                                <state key="normal" title="NEXT">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -117,7 +114,7 @@
                             <constraint firstItem="KEo-pq-gEB" firstAttribute="top" secondItem="5" secondAttribute="top" constant="20" symbolic="YES" type="default" id="BD7-3B-gR5"/>
                             <constraint firstItem="qOs-wl-pQj" firstAttribute="top" secondItem="5" secondAttribute="top" constant="54" id="BQe-8t-myW"/>
                             <constraint firstItem="NdL-sK-CNG" firstAttribute="bottom" secondItem="jWP-0e-Ff5" secondAttribute="bottom" type="default" id="GV0-Pa-B0w"/>
-                            <constraint firstItem="NdL-sK-CNG" firstAttribute="leading" secondItem="jWP-0e-Ff5" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Hqq-4Z-NGQ"/>
+                            <constraint firstAttribute="trailing" secondItem="NdL-sK-CNG" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="KCI-rF-Mjt"/>
                             <constraint firstItem="vKT-z2-CTb" firstAttribute="top" secondItem="5" secondAttribute="top" constant="100" id="Xax-qf-cYC"/>
                             <constraint firstItem="jWP-0e-Ff5" firstAttribute="bottom" secondItem="vKT-z2-CTb" secondAttribute="bottom" type="default" id="XrY-ty-2dX"/>
                             <constraint firstItem="jWP-0e-Ff5" firstAttribute="leading" secondItem="vKT-z2-CTb" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Zdt-aX-zBt"/>
@@ -126,18 +123,19 @@
                             <constraint firstItem="jWP-0e-Ff5" firstAttribute="top" secondItem="vKT-z2-CTb" secondAttribute="top" type="default" id="mZj-LY-TNb"/>
                             <constraint firstItem="KEo-pq-gEB" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="qg6-Ft-QD8"/>
                             <constraint firstItem="qOs-wl-pQj" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="uGO-CG-7Na"/>
+                            <constraint firstItem="jWP-0e-Ff5" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="164" id="urE-4i-UDE"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="string" keyPath="style" value="pageStyle"/>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <navigationItem key="navigationItem" id="yCL-Fu-jgE"/>
+                    <navigationItem key="navigationItem" title="iXAML" id="yCL-Fu-jgE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1069" y="-911"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - iXAML-->
         <scene sceneID="R1Z-Oy-0hS">
             <objects>
                 <viewController id="JwQ-aB-9Be" sceneMemberID="viewController">
@@ -183,20 +181,20 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="5Ae-jC-giI" firstAttribute="leading" secondItem="1up-Jf-87a" secondAttribute="leading" type="default" id="CP9-AS-6At"/>
-                            <constraint firstItem="ZvY-uJ-A8a" firstAttribute="top" secondItem="UNy-QY-r0b" secondAttribute="top" constant="103" id="Ee6-QL-Nrs"/>
+                            <constraint firstItem="1up-Jf-87a" firstAttribute="top" secondItem="UNy-QY-r0b" secondAttribute="top" constant="20" symbolic="YES" type="default" id="DPn-U9-WOK"/>
                             <constraint firstItem="5Ae-jC-giI" firstAttribute="top" secondItem="1up-Jf-87a" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="JCB-Im-VBk"/>
-                            <constraint firstItem="1up-Jf-87a" firstAttribute="leading" secondItem="UNy-QY-r0b" secondAttribute="leading" constant="227" id="LOV-ZT-wmO"/>
-                            <constraint firstItem="Rvj-q8-Zfv" firstAttribute="leading" secondItem="ZvY-uJ-A8a" secondAttribute="leading" type="default" id="Qwb-FY-IGM"/>
+                            <constraint firstItem="1up-Jf-87a" firstAttribute="leading" secondItem="UNy-QY-r0b" secondAttribute="leading" constant="150" id="JCo-jJ-ceb"/>
+                            <constraint firstItem="ZvY-uJ-A8a" firstAttribute="leading" secondItem="UNy-QY-r0b" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="V8p-VL-uLd"/>
+                            <constraint firstItem="ZvY-uJ-A8a" firstAttribute="top" secondItem="UNy-QY-r0b" secondAttribute="top" constant="62" id="aEP-pu-Pe2"/>
                             <constraint firstItem="5Ae-jC-giI" firstAttribute="trailing" secondItem="1up-Jf-87a" secondAttribute="trailing" type="default" id="dNE-av-ONS"/>
-                            <constraint firstItem="1up-Jf-87a" firstAttribute="top" secondItem="UNy-QY-r0b" secondAttribute="top" constant="61" id="k3O-Ld-uJS"/>
-                            <constraint firstItem="Rvj-q8-Zfv" firstAttribute="leading" secondItem="UNy-QY-r0b" secondAttribute="leading" constant="97" id="uy9-sP-sOC"/>
+                            <constraint firstItem="Rvj-q8-Zfv" firstAttribute="leading" secondItem="UNy-QY-r0b" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="lD2-yU-2vL"/>
                             <constraint firstItem="1up-Jf-87a" firstAttribute="baseline" secondItem="Rvj-q8-Zfv" secondAttribute="baseline" type="default" id="zid-BV-eTJ"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="string" keyPath="style" value="pageStyle"/>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <navigationItem key="navigationItem" id="cwu-I3-LDL"/>
+                    <navigationItem key="navigationItem" title="iXAML" id="cwu-I3-LDL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vV9-jB-0m3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
