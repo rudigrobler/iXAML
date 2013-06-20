@@ -250,8 +250,8 @@
 			children = (
 				9DF1712F176B1A5D0049ADD5 /* README.md */,
 				9DF170D5176A2F700049ADD5 /* iXAML-Sample */,
-				9DF170CE176A2F700049ADD5 /* Frameworks */,
 				9DF170D6176A2F700049ADD5 /* Supporting Files */,
+				9DF170CE176A2F700049ADD5 /* Frameworks */,
 				9DF170CD176A2F700049ADD5 /* Products */,
 			);
 			sourceTree = "<group>";

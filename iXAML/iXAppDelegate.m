@@ -7,13 +7,6 @@
 @implementation iXAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    NSLog(@"%@", NSStringFromSelector(_cmd));
-
-    //NSLog(@"Glimpse %@", [Glimpse version]);
-    //[UIDevice glimpse];
-
-    //NSLog(@"iXAML %@", [iXAML version]);
-
     [UIFont registerCustomFonts];
 
     // Loading stylesheet from XAML
@@ -47,23 +40,18 @@
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
-    NSLog(@"%@", NSStringFromSelector(_cmd));
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    NSLog(@"%@", NSStringFromSelector(_cmd));
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    NSLog(@"%@", NSStringFromSelector(_cmd));
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    NSLog(@"%@", NSStringFromSelector(_cmd));
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-    NSLog(@"%@", NSStringFromSelector(_cmd));
 }
 
 @end
