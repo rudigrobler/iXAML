@@ -29,12 +29,8 @@
 	<dict>
 		<key>background-color</key>
 		<string>#333333</string>
-		<key>border-color</key>
-		<string>#F1F1F1</string>
-		<key>border-width</key>
-		<string>3</string>
 		<key>corner-radius</key>
-		<string>15</string>
+		<string>0</string>
 	</dict>
 	<key>buttonStyle</key>
 	<dict>
