@@ -1,9 +1,11 @@
 #import "UIView+Styling.h"
 #import "UIColor+Extensions.h"
 #import "UIApplication+Styling.h"
-#import "UIFont+Extensions.h"
 #import <objc/runtime.h>
-#import <QuartzCore/QuartzCore.h>
+
+#import "UIButton+Styling.h"
+#import "UILabel+Styling.h"
+#import "UITextField+Styling.h"
 
 @implementation UIView (Styling)
 
@@ -19,78 +21,28 @@
     return objc_getAssociatedObject(self, @"___style");
 }
 
-- (BOOL)updateLayer:(NSString *)property value:(NSString *)value {
-    CALayer *layer = [self layer];
-    if ([property isEqualToString:@"background-color"]) {
-        [layer setBackgroundColor:[UIColor colorFromString:value].CGColor];
-        return YES;
-    }
-    else if ([property isEqualToString:@"border-color"]) {
-        [layer setBorderColor:[UIColor colorFromString:value].CGColor];
-        return YES;
-    }
-    else if ([property isEqualToString:@"border-width"]) {
-        [layer setBorderWidth:[value floatValue]];
-        return YES;
-    }
-    else if ([property isEqualToString:@"corner-radius"]) {
-        [layer setCornerRadius:[value floatValue]];
-        return YES;
-    }
-    return NO;
-}
-
 - (void)applyStyle:(iXStyle *)style {
     if (style) {
         for (NSString *property in style.keyEnumerator) {
             NSString *value = [style valueForKey:property];
-            NSString *className = NSStringFromClass([self class]);
 
-            if ([self updateLayer:property value:value]) {
-                // Layer property...
-            }
+            if ([property isEqualToString:@"style-name"]) {
 
-            if ([className isEqualToString:@"UIButton"]) {
-                UIButton *button = (UIButton *) self;
-                if ([property isEqualToString:@"text-color"]) {
-                    [button.titleLabel setTextColor:[UIColor colorFromString:value]];
-                }
-                else if ([property isEqualToString:@"font"]) {
-                    [button.titleLabel setFont:[UIFont fontWithNameAndSize:value]];
-                }
-                else {
-                    //NSLog(@"Property '%@' not found on '%@'", property, className);
-                }
             }
-            else if ([className isEqualToString:@"UILabel"]) {
-                UILabel *label = (UILabel *) self;
-                if ([property isEqualToString:@"text-color"]) {
-                    [label setTextColor:[UIColor colorFromString:value]];
-                }
-                else if ([property isEqualToString:@"font"]) {
-                    [label setFont:[UIFont fontWithNameAndSize:value]];
-                }
-                else {
-                    //NSLog(@"Property '%@' not found on '%@'", property, className);
-                }
+            else if ([property isEqualToString:@"background-color"]) {
+                [self setBackgroundColor:[UIColor colorFromString:value]];
             }
-            else if ([className isEqualToString:@"UITextField"]) {
-                UITextField *field = (UITextField *) self;
-                if ([property isEqualToString:@"background-color"]) {
-                    [field setBackgroundColor:[UIColor colorFromString:value]];
-                }
-                else if ([property isEqualToString:@"text-color"]) {
-                    [field setTextColor:[UIColor colorFromString:value]];
-                }
-                else if ([property isEqualToString:@"font"]) {
-                    [field setFont:[UIFont fontWithNameAndSize:value]];
-                }
-                else {
-                    //NSLog(@"Property '%@' not found on '%@'", property, className);
-                }
+            else if ([property isEqualToString:@"border-color"]) {
+                [self.layer setBorderColor:[UIColor colorFromString:value].CGColor];
+            }
+            else if ([property isEqualToString:@"border-width"]) {
+                [self.layer setBorderWidth:[value floatValue]];
+            }
+            else if ([property isEqualToString:@"corner-radius"]) {
+                [self.layer setCornerRadius:[value floatValue]];
             }
             else {
-                //NSLog(@"'%@' is not supported", className);
+                NSLog(@"'%@' not found on '%@'", property, NSStringFromClass([self class]));
             }
         }
     }
@@ -101,7 +53,20 @@
     if (style) {
         iXStylesheet *stylesheet = [UIApplication sharedApplication].stylesheet;
         if (stylesheet) {
-            [self applyStyle:[stylesheet valueForKey:style]];
+            NSString *className = NSStringFromClass([self class]);
+
+            if ([className isEqualToString:@"UIButton"]) {
+                [((UIButton *) self) applyStyle:[stylesheet valueForKey:style]];
+            }
+            else if ([className isEqualToString:@"UILabel"]) {
+                [((UILabel *) self) applyStyle:[stylesheet valueForKey:style]];
+            }
+            else if ([className isEqualToString:@"UITextField"]) {
+                [((UITextField *) self) applyStyle:[stylesheet valueForKey:style]];
+            }
+            else {
+                [self applyStyle:[stylesheet valueForKey:style]];
+            }
         }
     }
 }

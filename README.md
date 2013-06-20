@@ -78,13 +78,13 @@ Notes
 [CSSApply](https://github.com/cssapply/CSSApply)
 > Extremely lightweight skinning system for iOS. It allows you to load a CSS file and skin UIView elements. The system also allows you to do simple searches for subviews like jQuery with CSS selectors.
 
-[Three20](https://github.com/facebook/three20)
+[Three20](https://github.com/facebook/three20) by Facebook
 > Three20 is derived from the Facebook iPhone app, which is one of the most downloaded iPhone apps ever.
 
 [Nimbus](https://github.com/jverkoey/nimbus)
 > Nimbus is an iOS framework whose feature set grows only as fast as its documentation.
 
-[FlatUIKit](https://github.com/Grouper/FlatUIKit)
+[FlatUIKit](https://github.com/Grouper/FlatUIKit) by Grouper
 > FlatUIKit is a collection of iOS components styled with the "Flat UI" aesthetic that we created while building Grouper for iPhone. 
 
 [UI7Kit](https://github.com/youknowone/UI7Kit)

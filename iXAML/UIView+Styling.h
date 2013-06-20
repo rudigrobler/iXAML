@@ -5,6 +5,4 @@
 
 - (void)applyStyle;
 
-- (void)applyStyle:(iXStyle *)style;
-
 @end

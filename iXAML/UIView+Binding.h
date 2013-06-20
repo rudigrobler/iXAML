@@ -8,5 +8,4 @@
 
 - (void)setBinding:(NSString *)binding;
 
-
 @end

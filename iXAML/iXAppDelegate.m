@@ -30,6 +30,16 @@
 
     [[UIApplication sharedApplication] setStylesheet:stylesheet];
 
+    // iXStyle *style = [[iXStyle alloc] init];
+    // [style setValue:@"#000000" forKey:@"background-color"];
+    // [style setValue:@"#FFFFFF" forKey:@"text-color"];
+    // [style setValue:@"SegoeUI-Light 17" forKey:@"font"];
+
+    // [UITextField applyStyle:style];
+    // [UIButton applyStyle:style];
+    // [UILabel applyStyle:style];
+
+
     return YES;
 }
 
