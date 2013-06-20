@@ -1,6 +1,7 @@
 #import "UIFont+Extensions.h"
 #import "UIColor+Extensions.h"
 #import "UITextField+Styling.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation UITextField (Styling)
 

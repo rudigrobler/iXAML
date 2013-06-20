@@ -34,14 +34,14 @@
                 return [UIFont fontWithName:nameAndSize size:[UIFont systemFontSize]];
             }
             else if (range.location > 0) {
-                NSInteger fontSize = [[[nameAndSize substringToIndex:range.location] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] integerValue];
+                float fontSize = [[[[nameAndSize substringToIndex:range.location] stringByReplacingOccurrencesOfString:@"px" withString:@""] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] floatValue];
 
                 if (fontSize > 0) {
                     return [UIFont fontWithName:fontName size:fontSize];
                 }
             }
             else {
-                NSInteger fontSize = [[[nameAndSize substringFromIndex:range.length] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] integerValue];
+                float fontSize = [[[[nameAndSize substringFromIndex:range.length] stringByReplacingOccurrencesOfString:@"px" withString:@""] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] floatValue];
 
                 if (fontSize > 0) {
                     return [UIFont fontWithName:fontName size:fontSize];

@@ -1,6 +1,7 @@
 #import "UIFont+Extensions.h"
 #import "UIColor+Extensions.h"
 #import "UILabel+Styling.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation UILabel (Styling)
 

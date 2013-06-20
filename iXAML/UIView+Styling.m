@@ -2,6 +2,7 @@
 #import "UIColor+Extensions.h"
 #import "UIApplication+Styling.h"
 #import <objc/runtime.h>
+#import <QuartzCore/QuartzCore.h>
 
 #import "UIButton+Styling.h"
 #import "UILabel+Styling.h"
