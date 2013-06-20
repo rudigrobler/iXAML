@@ -1,13 +1,8 @@
 #import "UINavigationBar+Styling.h"
-#import "iXStyle.h"
 #import "UIFont+Extensions.h"
 #import "iXAppDelegate.h"
 #import "iXStylesheet.h"
 #import "UIApplication+Styling.h"
-#import "iXAML.h"
-#import "Glimpse.h"
-#import "UIDevice+Glimpse.h"
-#import "UIImage+Extensions.h"
 
 @implementation iXAppDelegate
 
@@ -23,8 +18,8 @@
 
     // Loading stylesheet from XAML
     NSURL *url = [[NSURL alloc] initFileURLWithPath:[[NSBundle mainBundle]
-                                    pathForResource:@"light-stylesheet"
-                                             ofType:@"xaml"]];
+            pathForResource:@"light-stylesheet"
+                     ofType:@"xaml"]];
     iXStylesheet *stylesheet = [[iXStylesheet alloc] initWithXAML:url];
 
     // Loading stylesheet from plist
@@ -34,7 +29,7 @@
     // iXStylesheet *stylesheet = [[iXStylesheet alloc] initWithContentsOfURL:url];
 
     [[UIApplication sharedApplication] setStylesheet:stylesheet];
-    
+
 //               
 //    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
 //                                                            [UIColor whiteColor], UITextAttributeTextColor,

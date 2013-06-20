@@ -3,6 +3,8 @@
 #if TARGET_OS_IPHONE
 #import <objc/runtime.h>
 
+@class NSObject;
+
 #else
 	#import <objc/objc-class.h>
 #endif

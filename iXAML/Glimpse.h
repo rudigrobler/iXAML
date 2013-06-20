@@ -1,5 +1,7 @@
 #import <Foundation/Foundation.h>
 
+@class NSObject;
+
 @interface Glimpse : NSObject
 
 + (NSString *)version;

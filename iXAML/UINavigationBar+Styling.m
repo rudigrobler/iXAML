@@ -8,12 +8,12 @@
     if (style) {
         for (NSString *property in style.keyEnumerator) {
             NSString *value = [style valueForKey:property];
-            
+
             if ([property isEqualToString:@"style-name"]) {
             }
             else if ([property isEqualToString:@"background-color"]) {
-                [[UINavigationBar appearance] setBackgroundImage:[UIImage imageWithColor:[UIColor           colorFromString:value] cornerRadius:0]
-                 forBarMetrics:UIBarMetricsDefault & UIBarMetricsLandscapePhone];
+                [[UINavigationBar appearance] setBackgroundImage:[UIImage imageWithColor:[UIColor colorFromString:value] cornerRadius:0]
+                                                   forBarMetrics:UIBarMetricsDefault & UIBarMetricsLandscapePhone];
             }
             else if ([property isEqualToString:@"border-color"]) {
             }

@@ -3,8 +3,7 @@
 @implementation UIColor (Extensions)
 
 + (UIColor *)colorFromString:(NSString *)str {
-    if ([[str substringToIndex:1] isEqualToString:@"#"])
-    {
+    if ([[str substringToIndex:1] isEqualToString:@"#"]) {
         unsigned rgbValue = 0;
         str = [str stringByReplacingOccurrencesOfString:@"#" withString:@""];
         NSScanner *scanner = [NSScanner scannerWithString:str];
@@ -13,8 +12,7 @@
 
         return [UIColor colorWithRed:((rgbValue & 0xFF0000) >> 16) / 255.0 green:((rgbValue & 0xFF00) >> 8) / 255.0 blue:(rgbValue & 0xFF) / 255.0 alpha:1.0];
     }
-    else
-    {
+    else {
         NSString *colorString = [str lowercaseString];
 
         if ([colorString isEqualToString:@"red"])
@@ -40,7 +38,7 @@
         else if ([colorString isEqualToString:@"cyan"])
             return [UIColor whiteColor];
     }
-    
+
     return [UIColor blackColor];
 }
 

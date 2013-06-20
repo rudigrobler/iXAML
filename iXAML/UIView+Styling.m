@@ -3,7 +3,6 @@
 #import "UIApplication+Styling.h"
 #import <objc/runtime.h>
 #import <QuartzCore/QuartzCore.h>
-
 #import "UIButton+Styling.h"
 #import "UILabel+Styling.h"
 #import "UITextField+Styling.h"
@@ -12,7 +11,7 @@
 
 - (void)setStyle:(NSString *)style {
     objc_setAssociatedObject(self, @"___style", style, OBJC_ASSOCIATION_COPY_NONATOMIC);
-    
+
     dispatch_barrier_async(dispatch_get_main_queue(), ^{
         [self applyStyle];
     });
@@ -31,7 +30,7 @@
         iXStylesheet *stylesheet = [UIApplication sharedApplication].stylesheet;
         if (stylesheet) {
             NSString *className = NSStringFromClass([self class]);
-            
+
             if ([className isEqualToString:@"UIButton"]) {
                 [((UIButton *) self) applyStyle:[stylesheet valueForKey:style]];
             }
@@ -42,7 +41,7 @@
                 [((UITextField *) self) applyStyle:[stylesheet valueForKey:style]];
             }
             else if ([className isEqualToString:@"UIView"]) {
-                [((UIView *) self) applyStyle:[stylesheet valueForKey:style]];
+                [self applyStyle:[stylesheet valueForKey:style]];
             }
             else {
                 NSLog(@">>> %@ <<<", className);

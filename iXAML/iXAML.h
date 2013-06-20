@@ -1,5 +1,7 @@
 #import <Foundation/Foundation.h>
 
+@class NSObject;
+
 @interface iXAML : NSObject
 
 + (NSString *)version;

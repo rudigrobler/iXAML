@@ -1,39 +1,44 @@
 #import "iXStyle.h"
 #import "iXStylesheet.h"
+#import <QuartzCore/QuartzCore.h>
+
+@interface iXStylesheet ()
+
+@property NSMutableDictionary *proxy;
+
+@end
 
 @implementation iXStylesheet {
     NSMutableDictionary *_currentElement;
     NSXMLParser *_parser;
-
-    NSMutableDictionary *_proxy;
 }
 
 - (id)init {
-    if (self == [super init]) {
-        _proxy = [[NSMutableDictionary alloc] init];
+    if (self = [super init]) {
+        self.proxy = [[NSMutableDictionary alloc] init];
     }
     return self;
 }
 
 - (void)setObject:(id)obj forKey:(id)key {
     if (obj) {
-        [_proxy setObject:obj forKey:key];
+        [self.proxy setObject:obj forKey:key];
     } else {
-        [_proxy removeObjectForKey:key];
+        [self.proxy removeObjectForKey:key];
     }
 }
 
 - (id)objectForKey:(id)aKey {
-    return [_proxy objectForKey:aKey];
+    return [self.proxy objectForKey:aKey];
 }
 
 - (NSUInteger)count {
-    return _proxy.count;
+    return self.proxy.count;
 }
 
 - (NSEnumerator *)keyEnumerator {
 
-    return _proxy.keyEnumerator;
+    return self.proxy.keyEnumerator;
 }
 
 #pragma mark - XAML
