@@ -23,6 +23,7 @@
             else if ([property isEqualToString:@"corner-radius"]) {
             }
             else if ([property isEqualToString:@"text-color"]) {
+                [[UIButton appearance] setTitleColor:[UIColor colorFromString:value] forState:UIControlStateNormal];
             }
             else if ([property isEqualToString:@"font"]) {
                 [[UIButton appearance] setFont:[UIFont fontWithNameAndSize:value]];
@@ -55,7 +56,7 @@
                 [self.layer setCornerRadius:[value floatValue]];
             }
             else if ([property isEqualToString:@"text-color"]) {
-                [self.titleLabel setTextColor:[UIColor colorFromString:value]];
+                [self setTitleColor:[UIColor colorFromString:value] forState:UIControlStateNormal];
             }
             else if ([property isEqualToString:@"font"]) {
                 [self.titleLabel setFont:[UIFont fontWithNameAndSize:value]];
