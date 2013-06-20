@@ -11,15 +11,44 @@
 @implementation UIView (Styling)
 
 - (void)setStyle:(NSString *)style {
-    objc_setAssociatedObject(self, @"___style", style, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-
-    dispatch_async(dispatch_get_main_queue(), ^{
+    objc_setAssociatedObject(self, @"___style", style, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    
+    dispatch_barrier_async(dispatch_get_main_queue(), ^{
         [self applyStyle];
     });
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [self applyStyle];
+//    });
 }
 
 - (NSString *)style {
     return objc_getAssociatedObject(self, @"___style");
+}
+
+- (void)applyStyle {
+    NSString *style = [self style];
+    if (style) {
+        iXStylesheet *stylesheet = [UIApplication sharedApplication].stylesheet;
+        if (stylesheet) {
+            NSString *className = NSStringFromClass([self class]);
+            
+            if ([className isEqualToString:@"UIButton"]) {
+                [((UIButton *) self) applyStyle:[stylesheet valueForKey:style]];
+            }
+            else if ([className isEqualToString:@"UILabel"]) {
+                [((UILabel *) self) applyStyle:[stylesheet valueForKey:style]];
+            }
+            else if ([className isEqualToString:@"UITextField"]) {
+                [((UITextField *) self) applyStyle:[stylesheet valueForKey:style]];
+            }
+            else if ([className isEqualToString:@"UIView"]) {
+                [((UIView *) self) applyStyle:[stylesheet valueForKey:style]];
+            }
+            else {
+                NSLog(@">>> %@ <<<", className);
+            }
+        }
+    }
 }
 
 - (void)applyStyle:(iXStyle *)style {
@@ -28,7 +57,6 @@
             NSString *value = [style valueForKey:property];
 
             if ([property isEqualToString:@"style-name"]) {
-
             }
             else if ([property isEqualToString:@"background-color"]) {
                 [self setBackgroundColor:[UIColor colorFromString:value]];
@@ -44,29 +72,6 @@
             }
             else {
                 NSLog(@"'%@' not found on '%@'", property, NSStringFromClass([self class]));
-            }
-        }
-    }
-}
-
-- (void)applyStyle {
-    NSString *style = [self style];
-    if (style) {
-        iXStylesheet *stylesheet = [UIApplication sharedApplication].stylesheet;
-        if (stylesheet) {
-            NSString *className = NSStringFromClass([self class]);
-
-            if ([className isEqualToString:@"UIButton"]) {
-                [((UIButton *) self) applyStyle:[stylesheet valueForKey:style]];
-            }
-            else if ([className isEqualToString:@"UILabel"]) {
-                [((UILabel *) self) applyStyle:[stylesheet valueForKey:style]];
-            }
-            else if ([className isEqualToString:@"UITextField"]) {
-                [((UITextField *) self) applyStyle:[stylesheet valueForKey:style]];
-            }
-            else {
-                [self applyStyle:[stylesheet valueForKey:style]];
             }
         }
     }

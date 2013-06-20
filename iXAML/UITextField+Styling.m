@@ -11,7 +11,6 @@
             NSString *value = [style valueForKey:property];
 
             if ([property isEqualToString:@"style-name"]) {
-
             }
             else if ([property isEqualToString:@"background-color"]) {
                 [[UITextField appearance] setBackgroundColor:[UIColor colorFromString:value]];
@@ -41,7 +40,6 @@
             NSString *value = [style valueForKey:property];
 
             if ([property isEqualToString:@"style-name"]) {
-
             }
             else if ([property isEqualToString:@"background-color"]) {
                 [self setBackgroundColor:[UIColor colorFromString:value]];

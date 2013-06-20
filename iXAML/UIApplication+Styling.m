@@ -21,11 +21,14 @@
 }
 
 - (void)setStylesheet:(iXStylesheet *)stylesheet {
-    objc_setAssociatedObject(self, @"___stylesheet", stylesheet, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @"___stylesheet", stylesheet, OBJC_ASSOCIATION_COPY_NONATOMIC);
 
-    dispatch_async(dispatch_get_main_queue(), ^{
+    dispatch_barrier_async(dispatch_get_main_queue(), ^{
         [self applyStylesheet];
     });
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [self applyStylesheet];
+//    });
 }
 
 - (iXStylesheet *)stylesheet {

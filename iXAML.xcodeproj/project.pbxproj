@@ -14,9 +14,9 @@
 		9D5A78231772DC6A002D4DD0 /* UIButton+Styling.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D5A78221772DC6A002D4DD0 /* UIButton+Styling.m */; };
 		9D5A78261772DC7E002D4DD0 /* UILabel+Styling.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D5A78251772DC7E002D4DD0 /* UILabel+Styling.m */; };
 		9D5A78291772DCB6002D4DD0 /* UITextField+Styling.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D5A78281772DCB6002D4DD0 /* UITextField+Styling.m */; };
-		9D614CE31772316F00534C5F /* UIViewController+Binding.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D614CE21772316F00534C5F /* UIViewController+Binding.m */; };
+		9D5A7832177326FC002D4DD0 /* UIImage+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D5A7831177326FC002D4DD0 /* UIImage+Extensions.m */; };
+		9D5A7835177338DD002D4DD0 /* UINavigationBar+Styling.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D5A7834177338DD002D4DD0 /* UINavigationBar+Styling.m */; };
 		9D8A2EE81771A3BE00307626 /* UIView+Styling.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8A2EE71771A3BE00307626 /* UIView+Styling.m */; };
-		9D8A2EED1771A5CD00307626 /* UIView+Binding.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8A2EEC1771A5CD00307626 /* UIView+Binding.m */; };
 		9DDA4977176B663200B4045E /* NSObject+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDA4974176B663200B4045E /* NSObject+Extensions.m */; };
 		9DDA4978176B663200B4045E /* UIView+Glimpse.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDA4976176B663200B4045E /* UIView+Glimpse.m */; };
 		9DE0AD61177237B0004328B8 /* light-stylesheet.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DE0AD60177237B0004328B8 /* light-stylesheet.plist */; };
@@ -73,14 +73,14 @@
 		9D5A78251772DC7E002D4DD0 /* UILabel+Styling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Styling.m"; sourceTree = "<group>"; };
 		9D5A78271772DCB5002D4DD0 /* UITextField+Styling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Styling.h"; sourceTree = "<group>"; };
 		9D5A78281772DCB6002D4DD0 /* UITextField+Styling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Styling.m"; sourceTree = "<group>"; };
-		9D614CE11772316F00534C5F /* UIViewController+Binding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Binding.h"; sourceTree = "<group>"; };
-		9D614CE21772316F00534C5F /* UIViewController+Binding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Binding.m"; sourceTree = "<group>"; };
+		9D5A7830177326FC002D4DD0 /* UIImage+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extensions.h"; sourceTree = "<group>"; };
+		9D5A7831177326FC002D4DD0 /* UIImage+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extensions.m"; sourceTree = "<group>"; };
+		9D5A7833177338DC002D4DD0 /* UINavigationBar+Styling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Styling.h"; sourceTree = "<group>"; };
+		9D5A7834177338DD002D4DD0 /* UINavigationBar+Styling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Styling.m"; sourceTree = "<group>"; };
 		9D69DB4F176B6C910024E847 /* iXComplexViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iXComplexViewController.h; sourceTree = "<group>"; };
 		9D69DB50176B6C910024E847 /* iXComplexViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iXComplexViewController.m; sourceTree = "<group>"; };
 		9D8A2EE61771A3BE00307626 /* UIView+Styling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Styling.h"; sourceTree = "<group>"; };
 		9D8A2EE71771A3BE00307626 /* UIView+Styling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Styling.m"; sourceTree = "<group>"; };
-		9D8A2EEB1771A5CD00307626 /* UIView+Binding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Binding.h"; sourceTree = "<group>"; };
-		9D8A2EEC1771A5CD00307626 /* UIView+Binding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Binding.m"; sourceTree = "<group>"; };
 		9DDA4973176B663200B4045E /* NSObject+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Extensions.h"; sourceTree = "<group>"; };
 		9DDA4974176B663200B4045E /* NSObject+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Extensions.m"; sourceTree = "<group>"; };
 		9DDA4975176B663200B4045E /* UIView+Glimpse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Glimpse.h"; sourceTree = "<group>"; };
@@ -202,24 +202,17 @@
 				9D5A78221772DC6A002D4DD0 /* UIButton+Styling.m */,
 				9D5A78271772DCB5002D4DD0 /* UITextField+Styling.h */,
 				9D5A78281772DCB6002D4DD0 /* UITextField+Styling.m */,
+				9D5A7833177338DC002D4DD0 /* UINavigationBar+Styling.h */,
+				9D5A7834177338DD002D4DD0 /* UINavigationBar+Styling.m */,
 			);
 			name = Styling;
-			sourceTree = "<group>";
-		};
-		9D8A2EEE1771A5D000307626 /* Binding */ = {
-			isa = PBXGroup;
-			children = (
-				9D8A2EEB1771A5CD00307626 /* UIView+Binding.h */,
-				9D8A2EEC1771A5CD00307626 /* UIView+Binding.m */,
-				9D614CE11772316F00534C5F /* UIViewController+Binding.h */,
-				9D614CE21772316F00534C5F /* UIViewController+Binding.m */,
-			);
-			name = Binding;
 			sourceTree = "<group>";
 		};
 		9D8A2EEF1771A5E900307626 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				9D5A7830177326FC002D4DD0 /* UIImage+Extensions.h */,
+				9D5A7831177326FC002D4DD0 /* UIImage+Extensions.m */,
 				9DF1711A176AAE5D0049ADD5 /* UIFont+Extensions.h */,
 				9DF1711B176AAE5D0049ADD5 /* UIFont+Extensions.m */,
 				9DF170FE176A4FEE0049ADD5 /* UIColor+Extensions.h */,
@@ -321,7 +314,6 @@
 				9D3FF6B41772575300C99096 /* Common */,
 				9D8A2EEF1771A5E900307626 /* Extensions */,
 				9D8A2EE91771A59D00307626 /* Styling */,
-				9D8A2EEE1771A5D000307626 /* Binding */,
 			);
 			name = iXAML;
 			sourceTree = "<group>";
@@ -452,8 +444,6 @@
 				9DDA4977176B663200B4045E /* NSObject+Extensions.m in Sources */,
 				9DDA4978176B663200B4045E /* UIView+Glimpse.m in Sources */,
 				9D8A2EE81771A3BE00307626 /* UIView+Styling.m in Sources */,
-				9D8A2EED1771A5CD00307626 /* UIView+Binding.m in Sources */,
-				9D614CE31772316F00534C5F /* UIViewController+Binding.m in Sources */,
 				9D3FF6B91772582E00C99096 /* Glimpse.m in Sources */,
 				9D3FF6BA1772582E00C99096 /* GlimpseVersion.m in Sources */,
 				9D3FF6BE17725F0800C99096 /* UIDevice+Extensions.m in Sources */,
@@ -461,6 +451,8 @@
 				9D5A78231772DC6A002D4DD0 /* UIButton+Styling.m in Sources */,
 				9D5A78261772DC7E002D4DD0 /* UILabel+Styling.m in Sources */,
 				9D5A78291772DCB6002D4DD0 /* UITextField+Styling.m in Sources */,
+				9D5A7832177326FC002D4DD0 /* UIImage+Extensions.m in Sources */,
+				9D5A7835177338DD002D4DD0 /* UINavigationBar+Styling.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

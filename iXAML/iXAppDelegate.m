@@ -1,3 +1,5 @@
+#import "UINavigationBar+Styling.h"
+#import "iXStyle.h"
 #import "UIFont+Extensions.h"
 #import "iXAppDelegate.h"
 #import "iXStylesheet.h"
@@ -5,20 +7,23 @@
 #import "iXAML.h"
 #import "Glimpse.h"
 #import "UIDevice+Glimpse.h"
+#import "UIImage+Extensions.h"
 
 @implementation iXAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    NSLog(@"Glimpse %@", [Glimpse version]);
-    [UIDevice glimpse];
+    NSLog(@"%@", NSStringFromSelector(_cmd));
 
-    NSLog(@"iXAML %@", [iXAML version]);
+    //NSLog(@"Glimpse %@", [Glimpse version]);
+    //[UIDevice glimpse];
+
+    //NSLog(@"iXAML %@", [iXAML version]);
 
     [UIFont registerCustomFonts];
 
     // Loading stylesheet from XAML
     NSURL *url = [[NSURL alloc] initFileURLWithPath:[[NSBundle mainBundle]
-                                    pathForResource:@"dark-stylesheet"
+                                    pathForResource:@"light-stylesheet"
                                              ofType:@"xaml"]];
     iXStylesheet *stylesheet = [[iXStylesheet alloc] initWithXAML:url];
 
@@ -29,33 +34,41 @@
     // iXStylesheet *stylesheet = [[iXStylesheet alloc] initWithContentsOfURL:url];
 
     [[UIApplication sharedApplication] setStylesheet:stylesheet];
+    
+//               
+//    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+//                                                            [UIColor whiteColor], UITextAttributeTextColor,
+//                                                            [UIFont fontWithName:@"SegoeUI-Bold" size:17], UITextAttributeFont,
+//      nil]];
 
-    // iXStyle *style = [[iXStyle alloc] init];
-    // [style setValue:@"#000000" forKey:@"background-color"];
-    // [style setValue:@"#FFFFFF" forKey:@"text-color"];
-    // [style setValue:@"SegoeUI-Light 17" forKey:@"font"];
+    iXStyle *style = [[iXStyle alloc] init];
+    [style setValue:@"#000000" forKey:@"background-color"];
+    [style setValue:@"#FFFFFF" forKey:@"text-color"];
+    [style setValue:@"SegoeUI-Light 17" forKey:@"font"];
 
-    // [UITextField applyStyle:style];
-    // [UIButton applyStyle:style];
-    // [UILabel applyStyle:style];
-
+    [UINavigationBar applyStyle:style];
 
     return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
 }
 
 @end
