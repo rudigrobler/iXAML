@@ -2,6 +2,6 @@
 
 @interface iXStylesheet : NSMutableDictionary <NSXMLParserDelegate>
 
-- (id)initWithXAML:(NSURL *)url;
+- (id) initWithXAML:(NSURL *)url;
 
 @end

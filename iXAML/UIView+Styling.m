@@ -9,51 +9,72 @@
 
 @implementation UIView (Styling)
 
-- (void)setStyle:(NSString *)style {
+- (void) setStyle:(NSString *)style
+{
     objc_setAssociatedObject(self, @"___style", style, OBJC_ASSOCIATION_COPY_NONATOMIC);
 
     dispatch_barrier_async(dispatch_get_main_queue(), ^{
-        [self applyStyle];
-    });
+                               [self applyStyle];
+                           }
+
+
+                           );
 }
 
-- (NSString *)style {
+
+- (NSString *) style
+{
     return objc_getAssociatedObject(self, @"___style");
 }
 
-- (void)applyStyle {
+
+- (void) applyStyle
+{
     NSString *style = [self style];
-    if (style) {
+    if (style)
+    {
         iXStylesheet *stylesheet = [UIApplication sharedApplication].stylesheet;
-        if (stylesheet) {
+        if (stylesheet)
+        {
             [self applyStyle:[stylesheet valueForKey:style]];
         }
     }
 }
 
-- (void)applyStyle:(iXStyle *)style {
-    if (style) {
-        for (NSString *property in style.keyEnumerator) {
+
+- (void) applyStyle:(iXStyle *)style
+{
+    if (style)
+    {
+        for (NSString *property in style.keyEnumerator)
+        {
             NSString *value = [style valueForKey:property];
 
-            if ([property isEqualToString:@"style-name"]) {
+            if ([property isEqualToString:@"style-name"])
+            {
             }
-            else if ([property isEqualToString:@"background-color"]) {
+            else if ([property isEqualToString:@"background-color"])
+            {
                 [self setBackgroundColor:[UIColor colorFromString:value]];
             }
-            else if ([property isEqualToString:@"border-color"]) {
+            else if ([property isEqualToString:@"border-color"])
+            {
                 [self.layer setBorderColor:[UIColor colorFromString:value].CGColor];
             }
-            else if ([property isEqualToString:@"border-width"]) {
+            else if ([property isEqualToString:@"border-width"])
+            {
                 [self.layer setBorderWidth:[value floatValue]];
             }
-            else if ([property isEqualToString:@"corner-radius"]) {
+            else if ([property isEqualToString:@"corner-radius"])
+            {
                 [self.layer setCornerRadius:[value floatValue]];
             }
-            else {
+            else
+            {
             }
         }
     }
 }
+
 
 @end

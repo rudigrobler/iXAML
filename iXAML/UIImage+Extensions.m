@@ -2,12 +2,15 @@
 
 @implementation UIImage (Extensions)
 
-CGFloat edgeSizeFromCornerRadius(CGFloat cornerRadius) {
+CGFloat edgeSizeFromCornerRadius(CGFloat cornerRadius)
+{
     return cornerRadius * 2 + 1;
 }
 
-+ (UIImage *)imageWithColor:(UIColor *)color
-               cornerRadius:(CGFloat)cornerRadius {
+
++ (UIImage *) imageWithColor:(UIColor *)color
+                cornerRadius:(CGFloat)cornerRadius
+{
     CGFloat minEdgeSize = edgeSizeFromCornerRadius(cornerRadius);
     CGRect rect = CGRectMake(0, 0, minEdgeSize, minEdgeSize);
     UIBezierPath *roundedRect = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius];
@@ -22,11 +25,12 @@ CGFloat edgeSizeFromCornerRadius(CGFloat cornerRadius) {
     return [image resizableImageWithCapInsets:UIEdgeInsetsMake(cornerRadius, cornerRadius, cornerRadius, cornerRadius)];
 }
 
-+ (UIImage *)buttonImageWithColor:(UIColor *)color
-                     cornerRadius:(CGFloat)cornerRadius
-                      shadowColor:(UIColor *)shadowColor
-                     shadowInsets:(UIEdgeInsets)shadowInsets {
 
++ (UIImage *) buttonImageWithColor:(UIColor *)color
+                      cornerRadius:(CGFloat)cornerRadius
+                       shadowColor:(UIColor *)shadowColor
+                      shadowInsets:(UIEdgeInsets)shadowInsets
+{
     UIImage *topImage = [self imageWithColor:color cornerRadius:cornerRadius];
     UIImage *bottomImage = [self imageWithColor:shadowColor cornerRadius:cornerRadius];
     CGFloat totalHeight = edgeSizeFromCornerRadius(cornerRadius) + shadowInsets.top + shadowInsets.bottom;
@@ -36,21 +40,24 @@ CGFloat edgeSizeFromCornerRadius(CGFloat cornerRadius) {
     CGRect topRect = CGRectMake(shadowInsets.left, shadowInsets.top, topWidth, topHeight);
     CGRect bottomRect = CGRectMake(0, 0, totalWidth, totalHeight);
     UIGraphicsBeginImageContextWithOptions(CGSizeMake(totalWidth, totalHeight), NO, 0.0f);
-    if (!CGRectEqualToRect(bottomRect, topRect)) {
+    if ( !CGRectEqualToRect(bottomRect, topRect) )
+    {
         [bottomImage drawInRect:bottomRect];
     }
+
     [topImage drawInRect:topRect];
     UIImage *buttonImage = UIGraphicsGetImageFromCurrentImageContext();
     UIEdgeInsets resizeableInsets = UIEdgeInsetsMake(cornerRadius + shadowInsets.top,
-            cornerRadius + shadowInsets.left,
-            cornerRadius + shadowInsets.bottom,
-            cornerRadius + shadowInsets.right);
+                                                     cornerRadius + shadowInsets.left,
+                                                     cornerRadius + shadowInsets.bottom,
+                                                     cornerRadius + shadowInsets.right);
     return [buttonImage resizableImageWithCapInsets:resizeableInsets];
-
 }
 
-+ (UIImage *)circularImageWithColor:(UIColor *)color
-                               size:(CGSize)size {
+
++ (UIImage *) circularImageWithColor:(UIColor *)color
+                                size:(CGSize)size
+{
     CGRect rect = CGRectMake(0, 0, size.width, size.height);
     UIBezierPath *circle = [UIBezierPath bezierPathWithOvalInRect:rect];
     UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0.0f);
@@ -64,7 +71,9 @@ CGFloat edgeSizeFromCornerRadius(CGFloat cornerRadius) {
     return image;
 }
 
-- (UIImage *)imageWithMinimumSize:(CGSize)size {
+
+- (UIImage *) imageWithMinimumSize:(CGSize)size
+{
     CGRect rect = CGRectMake(0, 0, size.width, size.height);
     UIGraphicsBeginImageContextWithOptions(CGSizeMake(size.width, size.height), NO, 0.0f);
     [self drawInRect:rect];
@@ -72,44 +81,52 @@ CGFloat edgeSizeFromCornerRadius(CGFloat cornerRadius) {
     return [resized resizableImageWithCapInsets:UIEdgeInsetsMake(size.height / 2, size.width / 2, size.height / 2, size.width / 2)];
 }
 
-+ (UIImage *)stepperPlusImageWithColor:(UIColor *)color {
+
++ (UIImage *) stepperPlusImageWithColor:(UIColor *)color
+{
     CGFloat iconEdgeSize = 15;
     CGFloat iconInternalEdgeSize = 3;
     UIGraphicsBeginImageContextWithOptions(CGSizeMake(iconEdgeSize, iconEdgeSize), NO, 0.0f);
     CGContextRef context = UIGraphicsGetCurrentContext();
     [color setFill];
     CGFloat padding = (iconEdgeSize - iconInternalEdgeSize) / 2;
-    CGContextFillRect(context, CGRectMake(padding, 0, iconInternalEdgeSize, iconEdgeSize));
-    CGContextFillRect(context, CGRectMake(0, padding, iconEdgeSize, iconInternalEdgeSize));
+    CGContextFillRect( context, CGRectMake(padding, 0, iconInternalEdgeSize, iconEdgeSize) );
+    CGContextFillRect( context, CGRectMake(0, padding, iconEdgeSize, iconInternalEdgeSize) );
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return image;
 }
 
-+ (UIImage *)stepperMinusImageWithColor:(UIColor *)color {
+
++ (UIImage *) stepperMinusImageWithColor:(UIColor *)color
+{
     CGFloat iconEdgeSize = 15;
     CGFloat iconInternalEdgeSize = 3;
     UIGraphicsBeginImageContextWithOptions(CGSizeMake(iconEdgeSize, iconEdgeSize), NO, 0.0f);
     CGContextRef context = UIGraphicsGetCurrentContext();
     [color setFill];
     CGFloat padding = (iconEdgeSize - iconInternalEdgeSize) / 2;
-    CGContextFillRect(context, CGRectMake(0, padding, iconEdgeSize, iconInternalEdgeSize));
+    CGContextFillRect( context, CGRectMake(0, padding, iconEdgeSize, iconInternalEdgeSize) );
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return image;
 }
 
-+ (UIImage *)backButtonImageWithColor:(UIColor *)color
-                           barMetrics:(UIBarMetrics)metrics
-                         cornerRadius:(CGFloat)cornerRadius {
 
++ (UIImage *) backButtonImageWithColor:(UIColor *)color
+                            barMetrics:(UIBarMetrics)metrics
+                          cornerRadius:(CGFloat)cornerRadius
+{
     CGSize size;
-    if (metrics == UIBarMetricsDefault) {
+    if (metrics == UIBarMetricsDefault)
+    {
         size = CGSizeMake(50, 30);
     }
-    else {
+    else
+    {
         size = CGSizeMake(60, 23);
     }
+
     UIBezierPath *path = [self bezierPathForBackButtonInRect:CGRectMake(0, 0, size.width, size.height) cornerRadius:cornerRadius];
     UIGraphicsBeginImageContextWithOptions(size, NO, 0.0f);
     [color setFill];
@@ -118,21 +135,25 @@ CGFloat edgeSizeFromCornerRadius(CGFloat cornerRadius) {
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return [image resizableImageWithCapInsets:UIEdgeInsetsMake(cornerRadius, 15, cornerRadius, cornerRadius)];
-
 }
 
-+ (UIBezierPath *)bezierPathForBackButtonInRect:(CGRect)rect cornerRadius:(CGFloat)radius {
+
++ (UIBezierPath *) bezierPathForBackButtonInRect:(CGRect)rect cornerRadius:(CGFloat)radius
+{
     UIBezierPath *path = [UIBezierPath bezierPath];
     CGPoint mPoint = CGPointMake(CGRectGetMaxX(rect) - radius, rect.origin.y);
     CGPoint ctrlPoint = mPoint;
-    CGFloat endAngle = (CGFloat) M_PI_2;
-    CGFloat startAngle = (CGFloat) M_PI + endAngle;
+    CGFloat endAngle = (CGFloat)M_PI_2;
+    CGFloat startAngle = (CGFloat)M_PI + endAngle;
     [path moveToPoint:mPoint];
 
     ctrlPoint.y += radius;
     mPoint.x += radius;
     mPoint.y += radius;
-    if (radius > 0) [path addArcWithCenter:ctrlPoint radius:radius startAngle:startAngle endAngle:0 clockwise:YES];
+    if (radius > 0)
+    {
+        [path addArcWithCenter:ctrlPoint radius:radius startAngle:startAngle endAngle:0 clockwise:YES];
+    }
 
     mPoint.y = CGRectGetMaxY(rect) - radius;
     [path addLineToPoint:mPoint];
@@ -141,12 +162,15 @@ CGFloat edgeSizeFromCornerRadius(CGFloat cornerRadius) {
     mPoint.y += radius;
     mPoint.x -= radius;
     ctrlPoint.x -= radius;
-    if (radius > 0) [path addArcWithCenter:ctrlPoint radius:radius startAngle:0 endAngle:endAngle clockwise:YES];
+    if (radius > 0)
+    {
+        [path addArcWithCenter:ctrlPoint radius:radius startAngle:0 endAngle:endAngle clockwise:YES];
+    }
 
     mPoint.x = rect.origin.x + (10.0f);
     [path addLineToPoint:mPoint];
 
-    [path addLineToPoint:CGPointMake(rect.origin.x, CGRectGetMidY(rect))];
+    [path addLineToPoint:CGPointMake( rect.origin.x, CGRectGetMidY(rect) )];
 
     mPoint.y = rect.origin.y;
     [path addLineToPoint:mPoint];

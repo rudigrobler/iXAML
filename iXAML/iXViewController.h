@@ -6,8 +6,8 @@
 
 @property NSString *timestamp;
 
-- (IBAction)onLight:(id)sender;
+- (IBAction) onLight:(id)sender;
 
-- (IBAction)onDark:(id)sender;
+- (IBAction) onDark:(id)sender;
 
 @end

@@ -7,32 +7,46 @@
 
 @implementation iXStyle
 
-- (id)init {
-    if (self = [super init]) {
+- (id) init
+{
+    if (self = [super init])
+    {
         self.proxy = [[NSMutableDictionary alloc] init];
     }
 
     return self;
 }
 
-- (void)setObject:(id)obj forKey:(id)key {
-    if (obj) {
+
+- (void) setObject:(id)obj forKey:(id)key
+{
+    if (obj)
+    {
         [self.proxy setObject:obj forKey:key];
-    } else {
+    }
+    else
+    {
         [self.proxy removeObjectForKey:key];
     }
 }
 
-- (id)objectForKey:(id)aKey {
+
+- (id) objectForKey:(id)aKey
+{
     return [self.proxy objectForKey:aKey];
 }
 
-- (NSUInteger)count {
+
+- (NSUInteger) count
+{
     return self.proxy.count;
 }
 
-- (NSEnumerator *)keyEnumerator {
+
+- (NSEnumerator *) keyEnumerator
+{
     return self.proxy.keyEnumerator;
 }
+
 
 @end

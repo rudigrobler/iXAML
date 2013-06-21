@@ -1,15 +1,20 @@
 #import "iXAppDelegate.h"
 
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[])
+{
     @autoreleasepool {
         int returnCode = -1;
-        @try {
-            returnCode = UIApplicationMain(argc, argv, nil, NSStringFromClass([iXAppDelegate class]));
+        @try
+        {
+            returnCode = UIApplicationMain( argc, argv, nil, NSStringFromClass([iXAppDelegate class]) );
         }
-        @catch (NSException *exception) {
+        @catch (NSException *exception)
+        {
             NSLog(@"%@", exception);
         }
-        @finally {
+
+        @finally
+        {
             return returnCode;
         }
     }

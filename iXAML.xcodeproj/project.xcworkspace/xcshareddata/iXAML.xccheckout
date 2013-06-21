@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5CCB239E-4684-4980-A712-EB7C3841CE29</string>
+	<key>IDESourceControlProjectName</key>
+	<string>iXAML</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>173B84BA-780F-476F-BEF2-94697B9BC88D</key>
+		<string>https://github.com/rudigrobler/iXAML.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iXAML.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>173B84BA-780F-476F-BEF2-94697B9BC88D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/rudigrobler/iXAML.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>173B84BA-780F-476F-BEF2-94697B9BC88D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>173B84BA-780F-476F-BEF2-94697B9BC88D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iXAML</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -5,8 +5,8 @@
 
 @property iXStylesheet *stylesheet;
 
-- (void)setStylesheet:(iXStylesheet *)stylesheet;
+- (void) setStylesheet:(iXStylesheet *)stylesheet;
 
-- (iXStylesheet *)stylesheet;
+- (iXStylesheet *) stylesheet;
 
 @end

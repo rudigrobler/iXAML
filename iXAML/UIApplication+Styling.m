@@ -4,35 +4,49 @@
 
 @implementation UIApplication (Styling)
 
-- (void)applyStylesheet {
-    for (UIWindow *window in self.windows) {
-        for (UIView *subview in window.subviews) {
+- (void) applyStylesheet
+{
+    for (UIWindow *window in self.windows)
+    {
+        for (UIView *subview in window.subviews)
+        {
             [self applyStyleToView:subview];
         }
     }
 }
 
-- (void)applyStyleToView:(UIView *)view {
+
+- (void) applyStyleToView:(UIView *)view
+{
     [view applyStyle];
 
-    for (UIView *subview in view.subviews) {
+    for (UIView *subview in view.subviews)
+    {
         [self applyStyleToView:subview];
     }
 }
 
-- (void)setStylesheet:(iXStylesheet *)stylesheet {
+
+- (void) setStylesheet:(iXStylesheet *)stylesheet
+{
     objc_setAssociatedObject(self, @"___stylesheet", stylesheet, OBJC_ASSOCIATION_COPY_NONATOMIC);
 
     dispatch_barrier_async(dispatch_get_main_queue(), ^{
-        [self applyStylesheet];
-    });
+                               [self applyStylesheet];
+                           }
+
+
+                           );
 //    dispatch_async(dispatch_get_main_queue(), ^{
 //        [self applyStylesheet];
 //    });
 }
 
-- (iXStylesheet *)stylesheet {
+
+- (iXStylesheet *) stylesheet
+{
     return objc_getAssociatedObject(self, @"___stylesheet");
 }
+
 
 @end

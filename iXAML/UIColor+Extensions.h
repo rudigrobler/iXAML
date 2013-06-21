@@ -2,6 +2,6 @@
 
 @interface UIColor (Extensions)
 
-+ (UIColor *)colorFromString:(NSString *)str;
++ (UIColor *) colorFromString:(NSString *)str;
 
 @end

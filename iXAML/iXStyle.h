@@ -3,4 +3,3 @@
 @interface iXStyle : NSMutableDictionary
 
 @end
-
