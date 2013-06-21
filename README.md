@@ -20,7 +20,7 @@ iXAML adds support for declarative stylesheets
 
 ## Styling
 
-[Getting Started](https://github.com/rudigrobler/iXAML/wiki/Styling---Getting-Started)
+[Getting Started](https://github.com/rudigrobler/iXAML/wiki/Getting-Started)
 
 ## Similar Projects
 
