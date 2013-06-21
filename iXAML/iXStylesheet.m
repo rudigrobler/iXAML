@@ -65,7 +65,14 @@
     }
     else if ([elementName isEqualToString:@"Setter"])
     {
-        [_currentElement setValue:[attributeDict valueForKey:@"value"] forKey:[attributeDict valueForKey:@"property"]];
+        NSString *property = [attributeDict valueForKey:@"property"];
+        NSString *state = [attributeDict valueForKey:@"state"];
+        if (state)
+        {
+            property = [NSString stringWithFormat:@"%@[%@]", property, state];
+        }
+
+        [_currentElement setValue:[attributeDict valueForKey:@"value"] forKey:property];
     }
 }
 

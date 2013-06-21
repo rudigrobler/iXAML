@@ -58,9 +58,31 @@
         {
             NSString *value = [style valueForKey:property];
 
-            if ([property isEqualToString:iX_backgroundColor])
+            NSRange range = [property rangeOfString:iX_backgroundColor];
+            if (range.length == iX_backgroundColor.length)
             {
-                [self setBackgroundColor:[UIColor colorFromString:value]];
+                NSString *state = @"[UIControlStateNormal]";
+                if (property.length > iX_backgroundColor.length)
+                {
+                    state = [property stringByReplacingOccurrencesOfString:iX_backgroundColor withString:@""];
+                }
+
+                if ([state isEqualToString:@"[UIControlStateDisabled]"])
+                {
+                    [self setBackgroundImage:[UIImage imageWithColor:[UIColor colorFromString:value] cornerRadius:0] forState:UIControlStateDisabled];
+                }
+                else if ([state isEqualToString:@"[UIControlStateHighlighted]"])
+                {
+                    [self setBackgroundImage:[UIImage imageWithColor:[UIColor colorFromString:value] cornerRadius:0] forState:UIControlStateHighlighted];
+                }
+                else if ([state isEqualToString:@"[UIControlStateSelected]"])
+                {
+                    [self setBackgroundImage:[UIImage imageWithColor:[UIColor colorFromString:value] cornerRadius:0] forState:UIControlStateSelected];
+                }
+                else
+                {
+                    [self setBackgroundImage:[UIImage imageWithColor:[UIColor colorFromString:value] cornerRadius:0] forState:UIControlStateNormal];
+                }
             }
             else if ([property isEqualToString:iX_borderColor])
             {

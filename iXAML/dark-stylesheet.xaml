@@ -14,7 +14,8 @@
         <Setter property="borderColor" value="#7F7F7F" />
     </Style>
     <Style name="buttonStyle">
-        <Setter property="backgroundColor" value="#FFFFFF" />
+        <Setter property="backgroundColor" value="#FFFFFF" state="UIControlStateNormal" />
+        <Setter property="backgroundColor" value="#7F7F7F" state="UIControlStateHighlighted" />
         <Setter property="textColor" value="#000000" />
         <Setter property="cornerRadius" value="0" />
         <Setter property="font" value="SegoeUI-Bold 17" />
