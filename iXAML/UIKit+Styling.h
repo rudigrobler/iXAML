@@ -20,5 +20,4 @@
 #define iX_borderColor          @"borderColor"
 #define iX_borderWidth          @"borderWidth"
 #define iX_cornerRadius         @"cornerRadius"
-
-#endif
+#endif /* ifndef iXAML_UIKit_Styling_h */
