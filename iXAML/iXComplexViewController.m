@@ -4,18 +4,16 @@
 
 - (id) initWithCoder:(NSCoder *)aDecoder
 {
-    if (self = [super initWithCoder:aDecoder])
-    {
-    }
+	if (self = [super initWithCoder:aDecoder])
+	{
+	}
 
-    return self;
+	return self;
 }
-
 
 - (void) viewDidLoad
 {
-    [super viewDidLoad];
+	[super viewDidLoad];
 }
-
 
 @end

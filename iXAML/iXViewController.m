@@ -2,7 +2,7 @@
 #import "iXViewController.h"
 
 @interface iXViewController () {
-    NSDateFormatter *dateFormatter;
+	NSDateFormatter *dateFormatter;
 }
 
 @end
@@ -11,40 +11,36 @@
 
 - (id) initWithCoder:(NSCoder *)aDecoder
 {
-    if (self = [super initWithCoder:aDecoder])
-    {
-        dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:@"MM/dd/yyyy hh:mm:ss"];
-    }
+	if (self = [super initWithCoder:aDecoder])
+	{
+		dateFormatter = [[NSDateFormatter alloc] init];
+		[dateFormatter setDateFormat:@"MM/dd/yyyy hh:mm:ss"];
+	}
 
-    return self;
+	return self;
 }
-
 
 - (void) viewDidLoad
 {
-    [super viewDidLoad];
-    self.applicationTitle = @"iXAML";
-    self.timestamp = [dateFormatter stringFromDate:[NSDate dateWithTimeIntervalSinceNow:0]];
+	[super viewDidLoad];
+	self.applicationTitle = @"iXAML";
+	self.timestamp = [dateFormatter stringFromDate:[NSDate dateWithTimeIntervalSinceNow:0]];
 }
-
 
 - (IBAction) onLight:(id)sender
 {
-    NSURL *url = [[NSURL alloc] initFileURLWithPath:[[NSBundle mainBundle] pathForResource:@"light-stylesheet" ofType:@"xaml"]];
-    iXStylesheet *stylesheet = [[iXStylesheet alloc] initWithXAML:url];
+	NSURL *url = [[NSURL alloc] initFileURLWithPath:[[NSBundle mainBundle] pathForResource:@"light-stylesheet" ofType:@"xaml"]];
+	iXStylesheet *stylesheet = [[iXStylesheet alloc] initWithXAML:url];
 
-    [[UIApplication sharedApplication] setStylesheet:stylesheet];
+	[[UIApplication sharedApplication] setStylesheet:stylesheet];
 }
-
 
 - (IBAction) onDark:(id)sender
 {
-    NSURL *url = [[NSURL alloc] initFileURLWithPath:[[NSBundle mainBundle] pathForResource:@"dark-stylesheet" ofType:@"xaml"]];
-    iXStylesheet *stylesheet = [[iXStylesheet alloc] initWithXAML:url];
+	NSURL *url = [[NSURL alloc] initFileURLWithPath:[[NSBundle mainBundle] pathForResource:@"dark-stylesheet" ofType:@"xaml"]];
+	iXStylesheet *stylesheet = [[iXStylesheet alloc] initWithXAML:url];
 
-    [[UIApplication sharedApplication] setStylesheet:stylesheet];
+	[[UIApplication sharedApplication] setStylesheet:stylesheet];
 }
-
 
 @end
