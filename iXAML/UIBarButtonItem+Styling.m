@@ -39,6 +39,7 @@
             else if ([property isEqualToString:@"text-color"])
             {
                 NSMutableDictionary *attributes = [[[UIBarButtonItem appearance] titleTextAttributesForState:UIControlStateNormal] mutableCopy];
+
                 if (!attributes)
                 {
                     attributes = [NSMutableDictionary dictionary];
@@ -52,6 +53,7 @@
             else if ([property isEqualToString:@"font"])
             {
                 NSMutableDictionary *attributes = [[[UIBarButtonItem appearance] titleTextAttributesForState:UIControlStateNormal] mutableCopy];
+
                 if (!attributes)
                 {
                     attributes = [NSMutableDictionary dictionary];

@@ -6,6 +6,7 @@
 + (void) registerCustomFonts
 {
     NSArray *paths = [[NSBundle mainBundle] pathsForResourcesOfType:@"ttf" inDirectory:nil];
+
     for (NSString *path in paths)
     {
         CFURLRef url = CFURLCreateWithFileSystemPath(kCFAllocatorDefault, (__bridge CFStringRef)path, kCFURLPOSIXPathStyle, false);
@@ -22,9 +23,11 @@
 + (UIFont *) fontWithNameAndSize:(NSString *)nameAndSize
 {
     static NSMutableArray *fontNames = nil;
+
     if (fontNames == nil)
     {
         fontNames = [[NSMutableArray alloc] init];
+
         for (NSString *familyName in [UIFont familyNames])
         {
             for (NSString *fontName in [UIFont fontNamesForFamilyName : familyName])
@@ -37,6 +40,7 @@
     for (NSString *fontName in fontNames)
     {
         NSRange range = [nameAndSize rangeOfString:fontName];
+
         if (range.length > 0)
         {
             if (nameAndSize.length == range.length)

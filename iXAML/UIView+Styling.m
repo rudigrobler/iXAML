@@ -31,9 +31,11 @@
 - (void) applyStyle
 {
     NSString *style = [self style];
+
     if (style)
     {
         iXStylesheet *stylesheet = [UIApplication sharedApplication].stylesheet;
+
         if (stylesheet)
         {
             [self applyStyle:[stylesheet valueForKey:style]];

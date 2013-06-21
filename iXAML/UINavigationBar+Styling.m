@@ -36,6 +36,7 @@
             else if ([property isEqualToString:@"text-color"])
             {
                 NSMutableDictionary *attributes = [[[UINavigationBar appearance] titleTextAttributes] mutableCopy];
+
                 if (!attributes)
                 {
                     attributes = [NSMutableDictionary dictionary];
@@ -49,6 +50,7 @@
             else if ([property isEqualToString:@"font"])
             {
                 NSMutableDictionary *attributes = [[[UINavigationBar appearance] titleTextAttributes] mutableCopy];
+
                 if (!attributes)
                 {
                     attributes = [NSMutableDictionary dictionary];

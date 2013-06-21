@@ -14,6 +14,7 @@ CGFloat edgeSizeFromCornerRadius(CGFloat cornerRadius)
     CGFloat minEdgeSize = edgeSizeFromCornerRadius(cornerRadius);
     CGRect rect = CGRectMake(0, 0, minEdgeSize, minEdgeSize);
     UIBezierPath *roundedRect = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius];
+
     roundedRect.lineWidth = 0;
     UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0.0f);
     [color setFill];
@@ -39,7 +40,9 @@ CGFloat edgeSizeFromCornerRadius(CGFloat cornerRadius)
     CGFloat topHeight = edgeSizeFromCornerRadius(cornerRadius);
     CGRect topRect = CGRectMake(shadowInsets.left, shadowInsets.top, topWidth, topHeight);
     CGRect bottomRect = CGRectMake(0, 0, totalWidth, totalHeight);
+
     UIGraphicsBeginImageContextWithOptions(CGSizeMake(totalWidth, totalHeight), NO, 0.0f);
+
     if ( !CGRectEqualToRect(bottomRect, topRect) )
     {
         [bottomImage drawInRect:bottomRect];
@@ -60,6 +63,7 @@ CGFloat edgeSizeFromCornerRadius(CGFloat cornerRadius)
 {
     CGRect rect = CGRectMake(0, 0, size.width, size.height);
     UIBezierPath *circle = [UIBezierPath bezierPathWithOvalInRect:rect];
+
     UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0.0f);
     [color setFill];
     [color setStroke];
@@ -75,6 +79,7 @@ CGFloat edgeSizeFromCornerRadius(CGFloat cornerRadius)
 - (UIImage *) imageWithMinimumSize:(CGSize)size
 {
     CGRect rect = CGRectMake(0, 0, size.width, size.height);
+
     UIGraphicsBeginImageContextWithOptions(CGSizeMake(size.width, size.height), NO, 0.0f);
     [self drawInRect:rect];
     UIImage *resized = UIGraphicsGetImageFromCurrentImageContext();
@@ -86,6 +91,7 @@ CGFloat edgeSizeFromCornerRadius(CGFloat cornerRadius)
 {
     CGFloat iconEdgeSize = 15;
     CGFloat iconInternalEdgeSize = 3;
+
     UIGraphicsBeginImageContextWithOptions(CGSizeMake(iconEdgeSize, iconEdgeSize), NO, 0.0f);
     CGContextRef context = UIGraphicsGetCurrentContext();
     [color setFill];
@@ -102,6 +108,7 @@ CGFloat edgeSizeFromCornerRadius(CGFloat cornerRadius)
 {
     CGFloat iconEdgeSize = 15;
     CGFloat iconInternalEdgeSize = 3;
+
     UIGraphicsBeginImageContextWithOptions(CGSizeMake(iconEdgeSize, iconEdgeSize), NO, 0.0f);
     CGContextRef context = UIGraphicsGetCurrentContext();
     [color setFill];
@@ -118,6 +125,7 @@ CGFloat edgeSizeFromCornerRadius(CGFloat cornerRadius)
                           cornerRadius:(CGFloat)cornerRadius
 {
     CGSize size;
+
     if (metrics == UIBarMetricsDefault)
     {
         size = CGSizeMake(50, 30);
@@ -145,11 +153,13 @@ CGFloat edgeSizeFromCornerRadius(CGFloat cornerRadius)
     CGPoint ctrlPoint = mPoint;
     CGFloat endAngle = (CGFloat)M_PI_2;
     CGFloat startAngle = (CGFloat)M_PI + endAngle;
+
     [path moveToPoint:mPoint];
 
     ctrlPoint.y += radius;
     mPoint.x += radius;
     mPoint.y += radius;
+
     if (radius > 0)
     {
         [path addArcWithCenter:ctrlPoint radius:radius startAngle:startAngle endAngle:0 clockwise:YES];
@@ -162,6 +172,7 @@ CGFloat edgeSizeFromCornerRadius(CGFloat cornerRadius)
     mPoint.y += radius;
     mPoint.x -= radius;
     ctrlPoint.x -= radius;
+
     if (radius > 0)
     {
         [path addArcWithCenter:ctrlPoint radius:radius startAngle:0 endAngle:endAngle clockwise:YES];

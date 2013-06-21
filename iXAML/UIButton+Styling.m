@@ -32,6 +32,7 @@
             else if ([property isEqualToString:@"text-color"])
             {
                 NSMutableAttributedString *attributedString = [[[UIButton appearance] attributedTitleForState:UIControlStateNormal] mutableCopy];
+
                 if (!attributedString)
                 {
                     attributedString = [[NSMutableAttributedString alloc] init];
@@ -45,6 +46,7 @@
             else if ([property isEqualToString:@"font"])
             {
                 NSMutableAttributedString *attributedString = [[[UIButton appearance] attributedTitleForState:UIControlStateNormal] mutableCopy];
+
                 if (!attributedString)
                 {
                     attributedString = [[NSMutableAttributedString alloc] init];
@@ -93,6 +95,7 @@
             else if ([property isEqualToString:@"text-color"])
             {
                 NSMutableAttributedString *attributedString = [[self attributedTitleForState:UIControlStateNormal] mutableCopy];
+
                 if (!attributedString)
                 {
                     attributedString = [[NSMutableAttributedString alloc] initWithString:[self titleForState:UIControlStateNormal]];
@@ -106,6 +109,7 @@
             else if ([property isEqualToString:@"font"])
             {
                 NSMutableAttributedString *attributedString = [[self attributedTitleForState:UIControlStateNormal] mutableCopy];
+
                 if (!attributedString)
                 {
                     attributedString = [[NSMutableAttributedString alloc] initWithString:[self titleForState:UIControlStateNormal]];
