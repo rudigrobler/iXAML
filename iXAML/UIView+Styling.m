@@ -26,22 +26,7 @@
     if (style) {
         iXStylesheet *stylesheet = [UIApplication sharedApplication].stylesheet;
         if (stylesheet) {
-            NSString *className = NSStringFromClass([self class]);
-
-            if ([className isEqualToString:@"UIButton"]) {
-                [((UIButton *) self) applyStyle:[stylesheet valueForKey:style]];
-            }
-            else if ([className isEqualToString:@"UILabel"]) {
-                [((UILabel *) self) applyStyle:[stylesheet valueForKey:style]];
-            }
-            else if ([className isEqualToString:@"UITextField"]) {
-                [((UITextField *) self) applyStyle:[stylesheet valueForKey:style]];
-            }
-            else if ([className isEqualToString:@"UIView"]) {
-                [self applyStyle:[stylesheet valueForKey:style]];
-            }
-            else {
-            }
+            [self applyStyle:[stylesheet valueForKey:style]];
         }
     }
 }

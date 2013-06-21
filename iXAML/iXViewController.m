@@ -10,9 +10,7 @@
 @implementation iXViewController
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
-    self = [super initWithCoder:aDecoder];
-
-    if (self) {
+    if (self = [super initWithCoder:aDecoder]) {
         dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"MM/dd/yyyy hh:mm:ss"];
     }
@@ -21,6 +19,7 @@
 }
 
 - (void)viewDidLoad {
+    [super viewDidLoad];
     self.applicationTitle = @"iXAML";
     self.timestamp = [dateFormatter stringFromDate:[NSDate dateWithTimeIntervalSinceNow:0]];
 }
