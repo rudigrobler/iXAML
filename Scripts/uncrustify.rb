@@ -66,7 +66,9 @@
 
 # Location of uncrustify config. A default one will be created here if
 # none exists
-UNCRUSTIFY_CONFIG_FILE = File.join ENV['HOME'], '.nah_xcode_uncrustify.cfg'
+
+#UNCRUSTIFY_CONFIG_FILE = File.join ENV['HOME'], '.nah_xcode_uncrustify.cfg'
+UNCRUSTIFY_CONFIG_FILE = File.join ENV['XcodeProjectPath'], '.uncrustify.cfg'
 
 # Valid extensions of file to uncrust
 VALID_EXTENSIONS = ['m', 'mm', 'h', 'c', 'cc', 'cp', 'cpp']
