@@ -1,7 +1,4 @@
-#import "UIButton+Styling.h"
-#import "UIColor+Extensions.h"
-#import "UIFont+Extensions.h"
-#import <QuartzCore/QuartzCore.h>
+#import "UIKit+Styling.h"
 
 @implementation UIButton (Styling)
 
@@ -13,23 +10,11 @@
         {
             NSString *value = [style valueForKey:property];
 
-            if ([property isEqualToString:@"style-name"])
-            {
-            }
-            else if ([property isEqualToString:@"background-color"])
+            if ([property isEqualToString:iX_backgroundColor])
             {
                 [[UIButton appearance] setBackgroundColor:[UIColor colorFromString:value]];
             }
-            else if ([property isEqualToString:@"border-color"])
-            {
-            }
-            else if ([property isEqualToString:@"border-width"])
-            {
-            }
-            else if ([property isEqualToString:@"corner-radius"])
-            {
-            }
-            else if ([property isEqualToString:@"text-color"])
+            else if ([property isEqualToString:iX_textColor])
             {
                 NSMutableAttributedString *attributedString = [[[UIButton appearance] attributedTitleForState:UIControlStateNormal] mutableCopy];
 
@@ -43,7 +28,7 @@
                                          range:NSMakeRange(0, [attributedString length])];
                 [[UIButton appearance] setAttributedTitle:attributedString forState:UIControlStateNormal];
             }
-            else if ([property isEqualToString:@"font"])
+            else if ([property isEqualToString:iX_font])
             {
                 NSMutableAttributedString *attributedString = [[[UIButton appearance] attributedTitleForState:UIControlStateNormal] mutableCopy];
 
@@ -73,26 +58,23 @@
         {
             NSString *value = [style valueForKey:property];
 
-            if ([property isEqualToString:@"style-name"])
-            {
-            }
-            else if ([property isEqualToString:@"background-color"])
+            if ([property isEqualToString:iX_backgroundColor])
             {
                 [self setBackgroundColor:[UIColor colorFromString:value]];
             }
-            else if ([property isEqualToString:@"border-color"])
+            else if ([property isEqualToString:iX_borderColor])
             {
                 [self.layer setBorderColor:[UIColor colorFromString:value].CGColor];
             }
-            else if ([property isEqualToString:@"border-width"])
+            else if ([property isEqualToString:iX_borderWidth])
             {
                 [self.layer setBorderWidth:[value floatValue]];
             }
-            else if ([property isEqualToString:@"corner-radius"])
+            else if ([property isEqualToString:iX_cornerRadius])
             {
                 [self.layer setCornerRadius:[value floatValue]];
             }
-            else if ([property isEqualToString:@"text-color"])
+            else if ([property isEqualToString:iX_textColor])
             {
                 NSMutableAttributedString *attributedString = [[self attributedTitleForState:UIControlStateNormal] mutableCopy];
 
@@ -106,7 +88,7 @@
                                          range:NSMakeRange(0, [attributedString length])];
                 [self setAttributedTitle:attributedString forState:UIControlStateNormal];
             }
-            else if ([property isEqualToString:@"font"])
+            else if ([property isEqualToString:iX_font])
             {
                 NSMutableAttributedString *attributedString = [[self attributedTitleForState:UIControlStateNormal] mutableCopy];
 

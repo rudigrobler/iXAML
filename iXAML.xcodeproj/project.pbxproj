@@ -64,6 +64,7 @@
 /* Begin PBXFileReference section */
 		9D16B0721773867E00016888 /* UIBarButtonItem+Styling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Styling.h"; sourceTree = "<group>"; };
 		9D16B0731773867E00016888 /* UIBarButtonItem+Styling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Styling.m"; sourceTree = "<group>"; };
+		9D334AFE1774D12E001C4B9B /* UIKit+Styling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIKit+Styling.h"; sourceTree = "<group>"; };
 		9D4CC9541774139C0029FD65 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
 		9D4CC9551774139C0029FD65 /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
 		9D4CC9561774139C0029FD65 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
@@ -161,8 +162,6 @@
 				9DF170FB176A48050049ADD5 /* iXStylesheet.m */,
 				9DF170F5176A47710049ADD5 /* UIApplication+Styling.h */,
 				9DF170F6176A47710049ADD5 /* UIApplication+Styling.m */,
-				9D8A2EE61771A3BE00307626 /* UIView+Styling.h */,
-				9D8A2EE71771A3BE00307626 /* UIView+Styling.m */,
 			);
 			name = Styling;
 			sourceTree = "<group>";
@@ -183,6 +182,9 @@
 		9DC1983F17739AC2008FC4C3 /* UIKit+Styling */ = {
 			isa = PBXGroup;
 			children = (
+				9D334AFE1774D12E001C4B9B /* UIKit+Styling.h */,
+				9D8A2EE61771A3BE00307626 /* UIView+Styling.h */,
+				9D8A2EE71771A3BE00307626 /* UIView+Styling.m */,
 				9D5A78241772DC7E002D4DD0 /* UILabel+Styling.h */,
 				9D5A78251772DC7E002D4DD0 /* UILabel+Styling.m */,
 				9D5A78211772DC6A002D4DD0 /* UIButton+Styling.h */,

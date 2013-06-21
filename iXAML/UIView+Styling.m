@@ -1,11 +1,6 @@
+#import "UIKit+Styling.h"
 #import "UIApplication+Styling.h"
-#import "UIButton+Styling.h"
-#import "UIColor+Extensions.h"
-#import "UILabel+Styling.h"
-#import "UITextField+Styling.h"
-#import "UIView+Styling.h"
 #import <objc/runtime.h>
-#import <QuartzCore/QuartzCore.h>
 
 @implementation UIView (Styling)
 
@@ -52,22 +47,19 @@
         {
             NSString *value = [style valueForKey:property];
 
-            if ([property isEqualToString:@"style-name"])
-            {
-            }
-            else if ([property isEqualToString:@"background-color"])
+            if ([property isEqualToString:iX_backgroundColor])
             {
                 [self setBackgroundColor:[UIColor colorFromString:value]];
             }
-            else if ([property isEqualToString:@"border-color"])
+            else if ([property isEqualToString:iX_borderColor])
             {
                 [self.layer setBorderColor:[UIColor colorFromString:value].CGColor];
             }
-            else if ([property isEqualToString:@"border-width"])
+            else if ([property isEqualToString:iX_borderWidth])
             {
                 [self.layer setBorderWidth:[value floatValue]];
             }
-            else if ([property isEqualToString:@"corner-radius"])
+            else if ([property isEqualToString:iX_cornerRadius])
             {
                 [self.layer setCornerRadius:[value floatValue]];
             }

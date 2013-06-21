@@ -1,27 +1,27 @@
 <Stylesheet>
     <Style name="textHeaderStyle">
-        <Setter property="text-color" value="#FFFFFF" />
+        <Setter property="textColor" value="#FFFFFF" />
         <Setter property="font" value="SegoeUI-Bold 20" />
     </Style>
     <Style name="textBodyStyle">
-        <Setter property="text-color" value="#FFFFFF" />
+        <Setter property="textColor" value="#FFFFFF" />
         <Setter property="font" value="SegoeUI-Light 17" />
     </Style>
     <Style name="pageStyle">
-        <Setter property="background-color" value="#000000" />
-        <Setter property="corner-radius" value="0" />
-        <Setter property="border-width" value="1" />
-        <Setter property="border-color" value="#7F7F7F" />        
+        <Setter property="backgroundColor" value="#000000" />
+        <Setter property="cornerRadius" value="0" />
+        <Setter property="borderWidth" value="1" />
+        <Setter property="borderColor" value="#7F7F7F" />
     </Style>
     <Style name="buttonStyle">
-        <Setter property="background-color" value="#FFFFFF" />
-        <Setter property="text-color" value="#000000" />
-        <Setter property="corner-radius" value="0" />
+        <Setter property="backgroundColor" value="#FFFFFF" />
+        <Setter property="textColor" value="#000000" />
+        <Setter property="cornerRadius" value="0" />
         <Setter property="font" value="SegoeUI-Bold 17" />
     </Style>
     <Style name="textFieldStyle">
         <Setter property="font" value="SegoeUI-Light 17" />
-        <Setter property="background-color" value="#FFFFFF" />
-        <Setter property="text-color" value="#000000" />
+        <Setter property="backgroundColor" value="#FFFFFF" />
+        <Setter property="textColor" value="#000000" />
     </Style>
 </Stylesheet>

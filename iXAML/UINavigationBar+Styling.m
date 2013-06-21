@@ -1,8 +1,4 @@
-#import "UIColor+Extensions.h"
-#import "UIFont+Extensions.h"
-#import "UIImage+Extensions.h"
-#import "UINavigationBar+Styling.h"
-#import <QuartzCore/QuartzCore.h>
+#import "UIKit+Styling.h"
 
 @implementation UINavigationBar (Styling)
 
@@ -14,26 +10,14 @@
         {
             NSString *value = [style valueForKey:property];
 
-            if ([property isEqualToString:@"style-name"])
-            {
-            }
-            else if ([property isEqualToString:@"background-color"])
+            if ([property isEqualToString:iX_backgroundColor])
             {
                 UIColor *color = [UIColor colorFromString:value];
                 UIImage *backgroundImage = [UIImage imageWithColor:color cornerRadius:0];
                 [[UINavigationBar appearance] setBackgroundImage:backgroundImage
                                                    forBarMetrics:UIBarMetricsDefault];
             }
-            else if ([property isEqualToString:@"border-color"])
-            {
-            }
-            else if ([property isEqualToString:@"border-width"])
-            {
-            }
-            else if ([property isEqualToString:@"corner-radius"])
-            {
-            }
-            else if ([property isEqualToString:@"text-color"])
+            else if ([property isEqualToString:iX_textColor])
             {
                 NSMutableDictionary *attributes = [[[UINavigationBar appearance] titleTextAttributes] mutableCopy];
 
@@ -47,7 +31,7 @@
 
                 [[UINavigationBar appearance] setTitleTextAttributes:attributes];
             }
-            else if ([property isEqualToString:@"font"])
+            else if ([property isEqualToString:iX_font])
             {
                 NSMutableDictionary *attributes = [[[UINavigationBar appearance] titleTextAttributes] mutableCopy];
 
@@ -63,7 +47,6 @@
             }
             else
             {
-                NSLog( @"'%@' not found on '%@'", property, NSStringFromClass([self class]) );
             }
         }
     }

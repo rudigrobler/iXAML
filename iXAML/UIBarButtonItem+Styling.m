@@ -1,8 +1,4 @@
-#import "UIBarButtonItem+Styling.h"
-#import "UIColor+Extensions.h"
-#import "UIFont+Extensions.h"
-#import "UIImage+Extensions.h"
-#import <QuartzCore/QuartzCore.h>
+#import "UIKit+Styling.h"
 
 @implementation UIBarButtonItem (Styling)
 
@@ -14,10 +10,7 @@
         {
             NSString *value = [style valueForKey:property];
 
-            if ([property isEqualToString:@"style-name"])
-            {
-            }
-            else if ([property isEqualToString:@"background-color"])
+            if ([property isEqualToString:iX_backgroundColor])
             {
                 UIColor *color = [UIColor colorFromString:value];
                 UIImage *backgroundImage = [UIImage backButtonImageWithColor:color
@@ -27,16 +20,7 @@
                                                                   forState:UIControlStateNormal
                                                                 barMetrics:UIBarMetricsDefault];
             }
-            else if ([property isEqualToString:@"border-color"])
-            {
-            }
-            else if ([property isEqualToString:@"border-width"])
-            {
-            }
-            else if ([property isEqualToString:@"corner-radius"])
-            {
-            }
-            else if ([property isEqualToString:@"text-color"])
+            else if ([property isEqualToString:iX_textColor])
             {
                 NSMutableDictionary *attributes = [[[UIBarButtonItem appearance] titleTextAttributesForState:UIControlStateNormal] mutableCopy];
 
@@ -50,7 +34,7 @@
 
                 [[UIBarButtonItem appearance] setTitleTextAttributes:attributes forState:UIControlStateNormal];
             }
-            else if ([property isEqualToString:@"font"])
+            else if ([property isEqualToString:iX_font])
             {
                 NSMutableDictionary *attributes = [[[UIBarButtonItem appearance] titleTextAttributesForState:UIControlStateNormal] mutableCopy];
 
@@ -66,7 +50,6 @@
             }
             else
             {
-                NSLog( @"'%@' not found on '%@'", property, NSStringFromClass([self class]) );
             }
         }
     }
