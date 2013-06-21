@@ -10,14 +10,7 @@
                        shadowColor:(UIColor *)shadowColor
                       shadowInsets:(UIEdgeInsets)shadowInsets;
 
-+ (UIImage *) circularImageWithColor:(UIColor *)color
-                                size:(CGSize)size;
-
 - (UIImage *) imageWithMinimumSize:(CGSize)size;
-
-+ (UIImage *) stepperPlusImageWithColor:(UIColor *)color;
-
-+ (UIImage *) stepperMinusImageWithColor:(UIColor *)color;
 
 + (UIImage *) backButtonImageWithColor:(UIColor *)color
                             barMetrics:(UIBarMetrics)metrics

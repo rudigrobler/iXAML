@@ -29,7 +29,7 @@
 
     if (style)
     {
-        iXStylesheet *stylesheet = [UIApplication sharedApplication].stylesheet;
+        iXStylesheet *stylesheet = [[UIApplication sharedApplication] stylesheet];
 
         if (stylesheet)
         {

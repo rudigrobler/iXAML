@@ -3,8 +3,6 @@
 
 @interface UIApplication (Styling)
 
-@property iXStylesheet *stylesheet;
-
 - (void) setStylesheet:(iXStylesheet *)stylesheet;
 
 - (iXStylesheet *) stylesheet;

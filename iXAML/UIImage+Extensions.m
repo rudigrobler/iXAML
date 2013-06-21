@@ -82,8 +82,7 @@ CGFloat edgeSizeFromCornerRadius(CGFloat cornerRadius)
 
     UIGraphicsBeginImageContextWithOptions(CGSizeMake(size.width, size.height), NO, 0.0f);
     [self drawInRect:rect];
-    UIImage *resized = UIGraphicsGetImageFromCurrentImageContext();
-    return [resized resizableImageWithCapInsets:UIEdgeInsetsMake(size.height / 2, size.width / 2, size.height / 2, size.width / 2)];
+    return [UIGraphicsGetImageFromCurrentImageContext() resizableImageWithCapInsets:UIEdgeInsetsMake(size.height / 2, size.width / 2, size.height / 2, size.width / 2)];
 }
 
 
