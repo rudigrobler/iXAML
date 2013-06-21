@@ -59,8 +59,6 @@
 		9DF1712B176AF42C0049ADD5 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DF1712A176AF42C0049ADD5 /* icon.png */; };
 		9DF1712E176B05E70049ADD5 /* dark-stylesheet.xaml in Resources */ = {isa = PBXBuildFile; fileRef = 9DF1712D176B05E70049ADD5 /* dark-stylesheet.xaml */; };
 		9DF17130176B1A5D0049ADD5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9DF1712F176B1A5D0049ADD5 /* README.md */; };
-		9DF17182176B21740049ADD5 /* iXAML.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF1717F176B21740049ADD5 /* iXAML.m */; };
-		9DF17183176B21740049ADD5 /* iXAMLVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF17181176B21740049ADD5 /* iXAMLVersion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -135,10 +133,6 @@
 		9DF1712A176AF42C0049ADD5 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
 		9DF1712D176B05E70049ADD5 /* dark-stylesheet.xaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "dark-stylesheet.xaml"; sourceTree = "<group>"; };
 		9DF1712F176B1A5D0049ADD5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
-		9DF1717E176B21740049ADD5 /* iXAML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iXAML.h; sourceTree = "<group>"; };
-		9DF1717F176B21740049ADD5 /* iXAML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iXAML.m; sourceTree = "<group>"; };
-		9DF17180176B21740049ADD5 /* iXAMLVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iXAMLVersion.h; sourceTree = "<group>"; };
-		9DF17181176B21740049ADD5 /* iXAMLVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iXAMLVersion.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,17 +151,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9D3FF6B41772575300C99096 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				9DF1717E176B21740049ADD5 /* iXAML.h */,
-				9DF1717F176B21740049ADD5 /* iXAML.m */,
-				9DF17180176B21740049ADD5 /* iXAMLVersion.h */,
-				9DF17181176B21740049ADD5 /* iXAMLVersion.m */,
-			);
-			name = Common;
-			sourceTree = "<group>";
-		};
 		9D8A2EE91771A59D00307626 /* Styling */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,7 +273,6 @@
 		9DF17101176A52320049ADD5 /* iXAML */ = {
 			isa = PBXGroup;
 			children = (
-				9D3FF6B41772575300C99096 /* Common */,
 				9D8A2EEF1771A5E900307626 /* Extensions */,
 				9D8A2EE91771A59D00307626 /* Styling */,
 			);
@@ -438,8 +420,6 @@
 				9DF170FD176A4B300049ADD5 /* iXStylesheet.m in Sources */,
 				9DF17100176A4FEE0049ADD5 /* UIColor+Extensions.m in Sources */,
 				9DF1711C176AAE5D0049ADD5 /* UIFont+Extensions.m in Sources */,
-				9DF17182176B21740049ADD5 /* iXAML.m in Sources */,
-				9DF17183176B21740049ADD5 /* iXAMLVersion.m in Sources */,
 				9D8A2EE81771A3BE00307626 /* UIView+Styling.m in Sources */,
 				9D5A78231772DC6A002D4DD0 /* UIButton+Styling.m in Sources */,
 				9D5A78261772DC7E002D4DD0 /* UILabel+Styling.m in Sources */,
