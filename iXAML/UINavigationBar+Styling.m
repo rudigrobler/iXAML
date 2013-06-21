@@ -14,8 +14,10 @@
             if ([property isEqualToString:@"style-name"]) {
             }
             else if ([property isEqualToString:@"background-color"]) {
-                [[UINavigationBar appearance] setBackgroundImage:[UIImage imageWithColor:[UIColor colorFromString:value] cornerRadius:0]
-                                                   forBarMetrics:UIBarMetricsDefault & UIBarMetricsLandscapePhone];
+                UIColor *color = [UIColor colorFromString:value];
+                UIImage *backgroundImage = [UIImage imageWithColor:color cornerRadius:0];
+                [[UINavigationBar appearance] setBackgroundImage:backgroundImage
+                                                   forBarMetrics:UIBarMetricsDefault];
             }
             else if ([property isEqualToString:@"border-color"]) {
             }

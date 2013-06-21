@@ -22,13 +22,30 @@
             else if ([property isEqualToString:@"corner-radius"]) {
             }
             else if ([property isEqualToString:@"text-color"]) {
-                [[UIButton appearance] setTitleColor:[UIColor colorFromString:value] forState:UIControlStateNormal];
+                NSMutableAttributedString *attributedString = [[[UIButton appearance] attributedTitleForState:UIControlStateNormal] mutableCopy];
+                if (!attributedString)
+                {
+                    attributedString = [[NSMutableAttributedString alloc] init];
+                }
+                
+                [attributedString addAttribute:NSForegroundColorAttributeName
+                                         value:[UIColor colorFromString:value]
+                                         range:NSMakeRange(0, [attributedString length])];
+                [[UIButton appearance] setAttributedTitle:attributedString forState:UIControlStateNormal];
             }
             else if ([property isEqualToString:@"font"]) {
-                [[UIButton appearance] setFont:[UIFont fontWithNameAndSize:value]];
+                NSMutableAttributedString *attributedString = [[[UIButton appearance] attributedTitleForState:UIControlStateNormal] mutableCopy];
+                if (!attributedString)
+                {
+                    attributedString = [[NSMutableAttributedString alloc] init];
+                }
+                
+                [attributedString addAttribute:UITextAttributeFont
+                                         value:[UIFont fontWithNameAndSize:value]
+                                         range:NSMakeRange(0, [attributedString length])];
+                [[UIButton appearance] setAttributedTitle:attributedString forState:UIControlStateNormal];
             }
             else {
-                NSLog(@"'%@' not found on '%@'", property, NSStringFromClass([self class]));
             }
         }
     }
@@ -54,13 +71,30 @@
                 [self.layer setCornerRadius:[value floatValue]];
             }
             else if ([property isEqualToString:@"text-color"]) {
-                [self setTitleColor:[UIColor colorFromString:value] forState:UIControlStateNormal];
+                NSMutableAttributedString *attributedString = [[self attributedTitleForState:UIControlStateNormal] mutableCopy];
+                if (!attributedString)
+                {
+                    attributedString = [[NSMutableAttributedString alloc] initWithString:[self titleForState:UIControlStateNormal]];
+                }
+                
+                [attributedString addAttribute:NSForegroundColorAttributeName
+                                         value:[UIColor colorFromString:value]
+                                         range:NSMakeRange(0, [attributedString length])];
+                [self setAttributedTitle:attributedString forState:UIControlStateNormal];
             }
             else if ([property isEqualToString:@"font"]) {
-                [self.titleLabel setFont:[UIFont fontWithNameAndSize:value]];
+                NSMutableAttributedString *attributedString = [[self attributedTitleForState:UIControlStateNormal] mutableCopy];
+                if (!attributedString)
+                {
+                    attributedString = [[NSMutableAttributedString alloc] initWithString:[self titleForState:UIControlStateNormal]];
+                }
+
+                [attributedString addAttribute:UITextAttributeFont
+                                         value:[UIFont fontWithNameAndSize:value]
+                                         range:NSMakeRange(0, [attributedString length])];
+                [self setAttributedTitle:attributedString forState:UIControlStateNormal];
             }
             else {
-                NSLog(@"'%@' not found on '%@'", property, NSStringFromClass([self class]));
             }
         }
     }
