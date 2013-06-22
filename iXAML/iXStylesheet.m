@@ -107,29 +107,36 @@
 
 #pragma mark - Forwarding
 
-- (BOOL)respondsToSelector:(SEL)aSelector
+- (BOOL) respondsToSelector:(SEL)aSelector
 {
 	if ( [super respondsToSelector:aSelector] )
+	{
 		return YES;
+	}
 
 	if ([self.proxy respondsToSelector:aSelector])
+	{
 		return YES;
+	}
 
 	return NO;
 }
 
-- (NSMethodSignature*) methodSignatureForSelector:(SEL)selector
+- (NSMethodSignature *) methodSignatureForSelector:(SEL)selector
 {
-	NSMethodSignature* signature = [super methodSignatureForSelector:selector];
+	NSMethodSignature *signature = [super methodSignatureForSelector:selector];
 
 	if (!signature)
+	{
 		signature = [self.proxy methodSignatureForSelector:selector];
+	}
 
 	return signature;
 }
 
-- (void)forwardInvocation:(NSInvocation *)anInvocation {
-	NSLog(@"forwardInvocation: %@ %@", NSStringFromClass([self class]), NSStringFromSelector([anInvocation selector]));
+- (void) forwardInvocation:(NSInvocation *)anInvocation
+{
+	NSLog( @"forwardInvocation: %@ %@", NSStringFromClass([self class]), NSStringFromSelector([anInvocation selector]) );
 
 	if ([self.proxy respondsToSelector:[anInvocation selector]])
 	{
@@ -141,10 +148,13 @@
 	}
 }
 
-- (id)forwardingTargetForSelector:(SEL)sel
+- (id) forwardingTargetForSelector:(SEL)sel
 {
 	if ([self.proxy respondsToSelector:sel])
+	{
 		return self.proxy;
+	}
+
 	return nil;
 }
 
